@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ESTESIQUESI" id="5C8F6867-1964-3861-37B6-1C67BEFD53F9" version="3.5">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:18:57 UTC</createdTime>
-<ownerDesignName>modelo_v1</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>5C8F6867-1964-3861-37B6-1C67BEFD53F9</designId>
-</OSDM_Design>
