@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="40BE58E3-18EA-8C76-DEDE-CF4C06D6B089" name="TOKEN">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:45:15 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<ordsAlias>table_23</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_token" id="404333BB-2D70-5C4C-4E04-723FF7131975">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="token" id="C35713EE-FB81-82D0-5E6D-CC015E66D7E6">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="device_name" id="CEF47355-A16D-3DC1-2AA2-698A1E8ECD91">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="adress" id="353EDE5D-3155-B264-76D5-37357A64405A">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="baned" id="00747979-8635-8CCC-E744-8EAEBCED2AB2">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Usuario_id_usu" id="E53F2D3A-A4D9-8685-7D12-60CD07A7FF91">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:28 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0AB99EE2-2B6B-7B74-2E8E-1F37F18BFBEE" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9CDECEAB-1A6C-699C-23E3-214BF200FA0D" name="TOKEN_PK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="404333BB-2D70-5C4C-4E04-723FF7131975"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="02427DA8-024A-6D3C-2BF4-D453DEFA010C" name="TOKEN_Usuario_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:28 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E53F2D3A-A4D9-8685-7D12-60CD07A7FF91"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

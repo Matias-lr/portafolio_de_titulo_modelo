@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EAEBFC0C-D260-3675-A71A-0AACEC41C846" name="AREA_EDIFICIO">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:47:01 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<ordsAlias>table_24</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_area_edificio" id="FCF1FB3A-747F-C721-EA48-E050BAE2565C">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:48:38 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_implemento" id="CC0E2037-5444-17F4-7603-5FDA32935FFB">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:48:38 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cantidad_implemento" id="6481311C-0B55-FC33-E46C-9E6FB999F691">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:48:38 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4D3019D8-4C4B-E72B-BFCC-88D8D4A44BAF" name="IMPLEMENTOS_EDIFICIO_PK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:48:38 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCF1FB3A-747F-C721-EA48-E050BAE2565C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

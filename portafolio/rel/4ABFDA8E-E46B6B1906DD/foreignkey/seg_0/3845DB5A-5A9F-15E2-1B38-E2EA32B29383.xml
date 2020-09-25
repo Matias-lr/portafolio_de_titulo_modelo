@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3845DB5A-5A9F-15E2-1B38-E2EA32B29383" containerWithKeyObject="66A01CF3-3015-63F2-05B8-6267C62CF745" localFKIndex="C94A560A-6832-5338-5DE4-BAFEE3A7AE4B" name="DETA_SERV_DEPA_SERVICIOS_DEPA_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 20:04:25 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<referredTableLongName>SERVICIOS_DEPA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>019A4488-651F-6054-F401-862F5E1CC41E</referredTableID>
+<keyObject>E432002B-D47A-3A0F-CE36-2CB1FAC1E44B</keyObject>
+<referredKeyID>E432002B-D47A-3A0F-CE36-2CB1FAC1E44B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_servi_depa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

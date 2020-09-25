@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F0B54C0D-4616-FAD3-093E-F8652947CFC7" containerWithKeyObject="80DA620A-D844-2965-AB12-FB033DB65F8D" localFKIndex="9458F78B-2272-BF7F-5388-F4BB797FE4F8" name="implementos_departamentov2_IMPLEMENTOS_DEPARTAMENTO_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:20:49 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<referredTableLongName>IMPLEMENTOS_DEPARTAMENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9D9CDD35-D0F0-A462-D57E-103881E266C1</referredTableID>
+<keyObject>F387C740-22F9-FE8E-0B60-01AC7DAF4674</keyObject>
+<referredKeyID>F387C740-22F9-FE8E-0B60-01AC7DAF4674</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_implemento</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

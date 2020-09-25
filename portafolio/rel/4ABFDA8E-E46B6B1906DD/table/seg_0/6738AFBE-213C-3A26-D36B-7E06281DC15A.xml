@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6738AFBE-213C-3A26-D36B-7E06281DC15A" name="ENCARGADO">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:54:19 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<ordsAlias>table_28</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_encargado" id="6D019CE0-741E-640A-2F8D-20BEC2A74D4F">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:54:34 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="9837347D-40E9-7E7F-9DC4-AD0B0EA2A0D0">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 20:01:08 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4DEA9920-17C6-6587-8A1A-445322DEE037" name="ENCARGADO_PK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:54:34 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D019CE0-741E-640A-2F8D-20BEC2A74D4F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

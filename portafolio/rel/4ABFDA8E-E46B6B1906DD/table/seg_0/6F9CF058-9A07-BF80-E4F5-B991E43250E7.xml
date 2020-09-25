@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6F9CF058-9A07-BF80-E4F5-B991E43250E7" name="SERVICIO_DE_TRANSPORTE">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:54:42 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<ordsAlias>table_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_servicio_transporte" id="062E3D76-4A24-EAF8-6044-3ECA6D3C4077">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:57:42 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VEHICULO_id_vehiculo" id="90F8559D-0CD1-2F12-7BAA-2494A21F7257">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:55:19 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91C3DCF1-B542-AEEC-0336-68D388ED38D6" referredColumn="7094AF13-ABB0-8F7E-E507-309EF27BEA1D"/>
+</associations>
+</Column>
+<Column name="CHOFER_id_chofer" id="D6ABDAB7-99AF-2384-A9E6-650C8B1C4E95">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:55:45 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A432C5A2-C424-7EB3-A21A-4A31F3A0B94C" referredColumn="CABF9F0B-DD35-76DC-4165-A3134986A6FC"/>
+</associations>
+</Column>
+<Column name="TRANSPORTE_id_transporte" id="B9E990F5-51E2-8885-24B7-E11EE3AEEE19">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:56:04 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A117F61-4C10-E8B5-11AF-65EB3527CE13" referredColumn="EE1A05BC-32E8-926C-F503-4E3C29A5242E"/>
+</associations>
+</Column>
+<Column name="Arriendo_id_arriendo" id="0612BBD5-BDB7-B260-2995-6EE5457FC6E8">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:58:51 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="558A5B3C-47B8-C2AF-57AF-7AA2643C114B" referredColumn="73435828-199C-0CD1-B000-53C27CC3C820"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FAE1D73C-C300-8FD5-B5C2-2B52788CAFC8" name="SERVICIO_DE_TRANSPORTE_PK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:57:42 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="062E3D76-4A24-EAF8-6044-3ECA6D3C4077"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98DA342A-F45C-A963-BBAE-1CD3B41722A3" name="SERVICIO_DE_TRANSPORTE_VEHICULO_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:55:19 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90F8559D-0CD1-2F12-7BAA-2494A21F7257"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8EC91566-25AB-3B4E-7438-9CAD7992EEBC" name="SERVICIO_DE_TRANSPORTE_CHOFER_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:55:45 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D6ABDAB7-99AF-2384-A9E6-650C8B1C4E95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D582F64-74F8-301E-B1CE-62AC926BE8B2" name="SERVICIO_DE_TRANSPORTE_TRANSPORTE_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:56:04 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9E990F5-51E2-8885-24B7-E11EE3AEEE19"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD941AD6-5FD5-3658-6D53-A75756BF4FB4" name="SERVICIO_DE_TRANSPORTE_Arriendo_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:58:51 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0612BBD5-BDB7-B260-2995-6EE5457FC6E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

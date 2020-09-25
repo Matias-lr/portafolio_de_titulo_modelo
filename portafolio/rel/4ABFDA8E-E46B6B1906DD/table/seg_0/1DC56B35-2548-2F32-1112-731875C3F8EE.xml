@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1DC56B35-2548-2F32-1112-731875C3F8EE" name="TOUR">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 01:19:52 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_turismo" id="65EB60BA-7ADA-93AA-959A-5888638D4C35">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 01:25:43 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="7E35837A-62F7-0D1A-0D41-6555D0F9B28B">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:43:54 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="17B84C36-5B48-A4F3-79AC-F5CAA7310F6B">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:43:54 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lugar_visita" id="C45784BF-E1E1-100C-6007-3230E975B372">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:43:54 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valor" id="C7A3BBFB-88F0-BA25-3BF9-BD3089E0FAB7">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:43:54 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_salida" id="06C35140-3A9F-CC12-40AB-65C60AE0DB76">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:43:54 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_llegada" id="A8C7F286-490F-6AAC-58E7-CF21D720B817">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:43:54 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EDIFICIO_id_edificio" id="556407B3-35E6-D0D8-5E78-76215F63F41D">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:45:11 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="09A252A6-2DCC-AAC1-6577-33BC97F2BE5F" referredColumn="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
+</associations>
+</Column>
+<Column name="GUIA_TURISTICO_id_guia_turistico" id="32586017-E6C7-9B5B-CE11-FF5F0A3643E8">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:05:30 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8ABB622A-9B69-C59D-D388-A2800B63B0FC" referredColumn="CF991109-9CA1-C50D-5CB5-2CD70408B4CB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="24E4397F-AAF8-FEB1-6133-EA98D18DB1B7" name="TURISMO_PK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:44:32 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65EB60BA-7ADA-93AA-959A-5888638D4C35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6ACE144A-4462-B969-833F-5635DDA066D8" name="TURISMO_EDIFICIO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:45:11 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="556407B3-35E6-D0D8-5E78-76215F63F41D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="907D0D4B-A4CE-F9F6-F745-0E6B058DB1D0" name="TOUR_GUIA_TURISTICO_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:05:30 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32586017-E6C7-9B5B-CE11-FF5F0A3643E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
