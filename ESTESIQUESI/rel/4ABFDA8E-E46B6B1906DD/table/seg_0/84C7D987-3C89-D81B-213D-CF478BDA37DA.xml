@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="84C7D987-3C89-D81B-213D-CF478BDA37DA" name="DETALLE_PAGO">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:59:05 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<ordsAlias>table_31</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_detalle_pago" id="7C46DFA7-13FC-83A9-DDC6-08789039FF27">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:59:22 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="codigo" id="9499B0E0-C92D-5E14-DCB2-8444996EA7FA">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 19:02:03 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C860C00C-FEDC-3FB5-441C-B4517320AA33" name="DETALLE_PAGO_PK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 19:02:52 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C46DFA7-13FC-83A9-DDC6-08789039FF27"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

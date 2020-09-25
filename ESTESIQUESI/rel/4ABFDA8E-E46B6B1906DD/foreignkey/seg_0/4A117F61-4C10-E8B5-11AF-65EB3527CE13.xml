@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4A117F61-4C10-E8B5-11AF-65EB3527CE13" containerWithKeyObject="6F9CF058-9A07-BF80-E4F5-B991E43250E7" localFKIndex="3D582F64-74F8-301E-B1CE-62AC926BE8B2" name="SERVICIO_DE_TRANSPORTE_TRANSPORTE_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:56:04 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<referredTableLongName>TRANSPORTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>307AB782-29D9-440E-D5FD-A455725D2DC0</referredTableID>
+<keyObject>B8AC33C0-EECF-A0FD-5D08-5DDC50C2746E</keyObject>
+<referredKeyID>B8AC33C0-EECF-A0FD-5D08-5DDC50C2746E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_transporte</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

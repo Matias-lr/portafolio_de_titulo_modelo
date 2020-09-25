@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EEA0B40B-7E7B-EDA1-D1C7-9357DAFF8D0C" name="MULTA">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:37:54 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<ordsAlias>table_22</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_multa" id="717379B8-0291-7FEC-475A-A4564D2AA3BA">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:39:57 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_creacion" id="CE84EF41-85EF-E68F-F9DA-947B4F0D4301">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:39:57 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="periodo_de_gracia" id="AABD5258-1B24-EF99-1E2D-297CD5192DD3">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:39:57 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_expiracion_del_pago" id="ED5C12F6-9945-69C3-9E63-2245CFD744C4">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:39:57 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_MULTAS_id_multas" id="C9AFCD74-6F80-2DA2-6D63-F601FFEC2575">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:41:46 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BF0E3811-C114-C274-C9B4-CA7B218D2FBB" referredColumn="1457952B-901A-7925-DF65-BBC87A877380"/>
+</associations>
+</Column>
+<Column name="Arriendo_id_arriendo" id="B9D472A2-85AB-6FE7-F257-D46B4B049F09">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:41:50 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CF3D93FC-CCBB-5E14-E5EA-BBE136F7CC0F" referredColumn="73435828-199C-0CD1-B000-53C27CC3C820"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="16744235-D88C-1131-22CD-7B0E6D414540" name="MULTA_PK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:39:57 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="717379B8-0291-7FEC-475A-A4564D2AA3BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5295EE8E-2368-42EE-67FA-A0DCA64C0232" name="MULTA_TIPO_MULTAS_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:41:46 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9AFCD74-6F80-2DA2-6D63-F601FFEC2575"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0B2DE1B-C48F-1BF8-4B0F-B0E94DDAFCC3" name="MULTA_Arriendo_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:41:50 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9D472A2-85AB-6FE7-F257-D46B4B049F09"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

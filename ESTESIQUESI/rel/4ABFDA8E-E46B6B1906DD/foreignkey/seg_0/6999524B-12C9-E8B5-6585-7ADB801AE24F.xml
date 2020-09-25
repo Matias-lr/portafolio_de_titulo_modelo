@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6999524B-12C9-E8B5-6585-7ADB801AE24F" containerWithKeyObject="6169302B-E770-7E02-C4FE-21485211F44D" localFKIndex="DCBB6D49-3DFC-FEC6-4295-2B4C9512157D" name="Arriendo_TOUR_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:05:54 UTC</createdTime>
+<ownerDesignName>ESTESIQUESI</ownerDesignName>
+<referredTableLongName>TOUR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1DC56B35-2548-2F32-1112-731875C3F8EE</referredTableID>
+<keyObject>24E4397F-AAF8-FEB1-6133-EA98D18DB1B7</keyObject>
+<referredKeyID>24E4397F-AAF8-FEB1-6133-EA98D18DB1B7</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id_turismo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
