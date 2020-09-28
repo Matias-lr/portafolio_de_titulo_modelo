@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="558A5B3C-47B8-C2AF-57AF-7AA2643C114B" containerWithKeyObject="6F9CF058-9A07-BF80-E4F5-B991E43250E7" localFKIndex="CD941AD6-5FD5-3658-6D53-A75756BF4FB4" name="SERVICIO_DE_TRANSPORTE_Arriendo_FK">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 02:58:51 UTC</createdTime>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="51A9F8F1-0A0B-3ACE-46D5-C064CC36355B" containerWithKeyObject="6F9CF058-9A07-BF80-E4F5-B991E43250E7" localFKIndex="D600D50A-A60A-D1B2-A582-934EC15A4455" name="ARRIENDO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-28 04:46:01 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
-<referredTableLongName>Arriendo</referredTableLongName>
+<referredTableLongName>ARRIENDO</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>6169302B-E770-7E02-C4FE-21485211F44D</referredTableID>
 <keyObject>64DDB6CB-269B-50EA-1ED1-303EC1E3444F</keyObject>

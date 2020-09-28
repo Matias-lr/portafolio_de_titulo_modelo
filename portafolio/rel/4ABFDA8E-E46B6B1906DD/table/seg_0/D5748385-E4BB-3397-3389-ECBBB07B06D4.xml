@@ -8,9 +8,9 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="fk_id_area_edificio" id="40CD4371-4E69-2352-8CDE-AA820B2B8648">
+<Column name="EDIFICIO_id_edificio" id="7F115924-995D-F898-4804-B7FDE5FB5E25">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-25 19:09:42 UTC</createdTime>
+<createdTime>2020-09-28 04:28:15 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -19,12 +19,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="5F72B8BA-4EF5-208B-C0CC-2A0703F4567E" referredColumn="FCF1FB3A-747F-C721-EA48-E050BAE2565C"/>
+<colAssociation fkAssociation="BE8CE760-2AC1-079E-1B1F-F1F88A131E0E" referredColumn="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
 </associations>
 </Column>
-<Column name="fk_id_edificio" id="614FC510-4E4F-26B5-ECAC-9B46F19DF460">
+<Column name="AREA_EDIFICIO_id_area_edificio" id="12CFCB8B-BAB0-374D-1244-D5E71F6A52DF">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-25 19:09:47 UTC</createdTime>
+<createdTime>2020-09-28 04:28:18 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="850C3586-9DE9-3BE8-2A87-2E5FCB9A624B" referredColumn="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
+<colAssociation fkAssociation="E4FE95C5-C1B7-FB59-8492-BC87112C0B65" referredColumn="FCF1FB3A-747F-C721-EA48-E050BAE2565C"/>
 </associations>
 </Column>
 <Column name="cantidad_implemento" id="DFFF0D8B-F21C-1A1F-E16F-C69AF23C6236">
@@ -48,24 +48,24 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="05F4C1AF-FE42-1519-B91D-A040541A1CBA" name="DETALLE_AREA_EDI_AREA_EDIFICIO_FK">
+<ind_PK_UK id="DC9DE214-C516-E6FA-7F02-611B0F516870" name="DETA_AREA_EDI_EDIFICIO_FK">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-25 19:09:42 UTC</createdTime>
+<createdTime>2020-09-28 04:28:15 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="40CD4371-4E69-2352-8CDE-AA820B2B8648"/>
+<colUsage columnID="7F115924-995D-F898-4804-B7FDE5FB5E25"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="E535D30D-0D40-EAD3-5FDC-879C3038A379" name="DETALLE_AREA_EDI_EDIFICIO_FK">
+<ind_PK_UK id="327C2DF8-16B4-C8CF-419A-11558A4B855D" name="DETA_AREA_EDI_AREA_EDIFICIO_FK">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-25 19:09:47 UTC</createdTime>
+<createdTime>2020-09-28 04:28:18 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="614FC510-4E4F-26B5-ECAC-9B46F19DF460"/>
+<colUsage columnID="12CFCB8B-BAB0-374D-1244-D5E71F6A52DF"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

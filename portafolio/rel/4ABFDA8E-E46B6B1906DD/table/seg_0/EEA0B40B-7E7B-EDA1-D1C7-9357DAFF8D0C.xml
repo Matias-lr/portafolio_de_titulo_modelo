@@ -52,7 +52,8 @@
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:41:46 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -97,7 +98,7 @@
 <colUsage columnID="C9AFCD74-6F80-2DA2-6D63-F601FFEC2575"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="A0B2DE1B-C48F-1BF8-4B0F-B0E94DDAFCC3" name="MULTA_Arriendo_FK">
+<ind_PK_UK id="A0B2DE1B-C48F-1BF8-4B0F-B0E94DDAFCC3" name="MULTA_ARRIENDO_FK">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:41:50 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

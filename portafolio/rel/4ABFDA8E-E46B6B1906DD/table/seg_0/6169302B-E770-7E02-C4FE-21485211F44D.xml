@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6169302B-E770-7E02-C4FE-21485211F44D" name="Arriendo">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6169302B-E770-7E02-C4FE-21485211F44D" name="ARRIENDO">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 02:49:43 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -57,20 +57,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="fk_id_usu" id="C1749C1B-F9DE-6F37-B8A2-112581FCEC7E">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 02:50:30 UTC</createdTime>
-<ownerDesignName>portafolio</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="81122CF0-5132-AA58-A59D-B7D11A7978AA" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
-</associations>
 </Column>
 <Column name="fk_id_departamento" id="5CCD9D6E-8E70-89A3-2D95-10885F716234">
 <createdBy>matias</createdBy>
@@ -130,6 +116,20 @@
 <colAssociation fkAssociation="8AF0ABA9-9E6C-BF53-260B-C57BDE402D36" referredColumn="991CC07B-4AC8-6B38-AE75-ECE6EBF849E5"/>
 </associations>
 </Column>
+<Column name="Usuario_id_usu" id="E4153415-D6ED-09AD-64D5-EA11093C51B7">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-28 04:48:00 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E057C15-B72C-8D33-49CA-A9F9A4201CE6" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="64DDB6CB-269B-50EA-1ED1-303EC1E3444F" name="Arriendo_PK">
@@ -143,17 +143,7 @@
 <colUsage columnID="73435828-199C-0CD1-B000-53C27CC3C820"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="3C3195A7-E24D-8A12-45A7-26E43966630C" name="Arriendo_Usuario_FK">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 02:50:30 UTC</createdTime>
-<ownerDesignName>portafolio</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="C1749C1B-F9DE-6F37-B8A2-112581FCEC7E"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="5E0D2EF2-6500-F335-6053-64F06ECDECD8" name="Arriendo_DEPARTAMENTO_FK">
+<ind_PK_UK id="5E0D2EF2-6500-F335-6053-64F06ECDECD8" name="ARRIENDO_DEPARTAMENTO_FK">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 02:50:44 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -163,7 +153,7 @@
 <colUsage columnID="5CCD9D6E-8E70-89A3-2D95-10885F716234"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="DCBB6D49-3DFC-FEC6-4295-2B4C9512157D" name="Arriendo_TOUR_FK">
+<ind_PK_UK id="DCBB6D49-3DFC-FEC6-4295-2B4C9512157D" name="ARRIENDO_TOUR_FK">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:05:54 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -173,7 +163,7 @@
 <colUsage columnID="B10BA772-2460-D1E7-9534-46DA99F61482"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="94D3E876-08A5-13DD-A218-494F94D7C97D" name="Arriendo_CHECK_OUT_FK">
+<ind_PK_UK id="94D3E876-08A5-13DD-A218-494F94D7C97D" name="ARRIENDO_CHECK_OUT_FK">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:31:30 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -183,7 +173,7 @@
 <colUsage columnID="49098F02-276F-93D1-B039-4ECF9258D03D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="4A131C87-3C40-6EFE-70BA-DC5EB2CE2D7B" name="Arriendo_SERVICIO_EXTRA_FK">
+<ind_PK_UK id="4A131C87-3C40-6EFE-70BA-DC5EB2CE2D7B" name="ARRIENDO_SERVICIO_EXTRA_FK">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 18:55:56 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -191,6 +181,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="7C663A4C-C6B0-B4AC-7F0E-6F712F0D72F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E23FD248-EB09-C47D-3134-75DA08D0BD23" name="ARRIENDO_Usuario_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-28 04:48:00 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4153415-D6ED-09AD-64D5-EA11093C51B7"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

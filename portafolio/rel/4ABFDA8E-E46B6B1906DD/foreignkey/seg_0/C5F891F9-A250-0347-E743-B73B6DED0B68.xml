@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9325EF18-F9E8-D8B2-509B-7060EA0AFCB5" containerWithKeyObject="80DA620A-D844-2965-AB12-FB033DB65F8D" localFKIndex="BAA4A867-104B-3D2A-08A2-97C1BD56DADB" name="implementos_departamentov2_DEPARTAMENTO_FK">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 03:20:54 UTC</createdTime>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C5F891F9-A250-0347-E743-B73B6DED0B68" containerWithKeyObject="66A01CF3-3015-63F2-05B8-6267C62CF745" localFKIndex="04445282-A487-76DF-DEDB-E11B19801A8E" name="DT_DEPARTAMENTO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-28 04:44:01 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <referredTableLongName>DEPARTAMENTO</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

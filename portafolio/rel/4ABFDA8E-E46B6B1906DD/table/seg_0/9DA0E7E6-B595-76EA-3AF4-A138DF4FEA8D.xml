@@ -66,7 +66,7 @@
 <colUsage columnID="DD56D207-08C7-1A9A-03B4-F61FD3F3B4E2"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="E31A5F8F-DD70-7DF4-2D4B-DB62D6B37573" name="CHECK_IN_Arriendo_FK">
+<ind_PK_UK id="E31A5F8F-DD70-7DF4-2D4B-DB62D6B37573" name="CHECK_IN_ARRIENDO_FK">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:28:04 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

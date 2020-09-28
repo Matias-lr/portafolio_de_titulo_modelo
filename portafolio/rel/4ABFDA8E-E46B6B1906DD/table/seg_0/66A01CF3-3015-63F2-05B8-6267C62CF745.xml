@@ -22,9 +22,9 @@
 <colAssociation fkAssociation="3845DB5A-5A9F-15E2-1B38-E2EA32B29383" referredColumn="9575D4CC-3F02-5CAA-86A3-5FF9932A412F"/>
 </associations>
 </Column>
-<Column name="fk_id_departamento" id="5C9A0339-735A-8859-6465-7563715CB1CC">
+<Column name="fk_id_departamento" id="2E12C846-41A8-9C68-43FD-09710CFA2DD5">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-25 20:04:29 UTC</createdTime>
+<createdTime>2020-09-28 04:44:01 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,12 +33,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="8F261249-2E27-D0E2-5E6A-E59732C5ECC9" referredColumn="3230EACA-B457-9A16-9AB3-0C9E7425C7AE"/>
+<colAssociation fkAssociation="C5F891F9-A250-0347-E743-B73B6DED0B68" referredColumn="3230EACA-B457-9A16-9AB3-0C9E7425C7AE"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="C94A560A-6832-5338-5DE4-BAFEE3A7AE4B" name="DETA_SERV_DEPA_SERVICIOS_DEPA_FK">
+<ind_PK_UK id="C94A560A-6832-5338-5DE4-BAFEE3A7AE4B" name="SERVICIOS_DEPA_FK">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 20:04:25 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -48,14 +48,14 @@
 <colUsage columnID="A8EFFB40-5507-9E01-07DD-C6B7CA9DA15D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5D7FBF1C-2DFD-3B8A-92C3-4FCC0C5B6B90" name="DETA_SERV_DEPA_DEPARTAMENTO_FK">
+<ind_PK_UK id="04445282-A487-76DF-DEDB-E11B19801A8E" name="DT_DEPARTAMENTO_FK">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-25 20:04:29 UTC</createdTime>
+<createdTime>2020-09-28 04:44:01 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="5C9A0339-735A-8859-6465-7563715CB1CC"/>
+<colUsage columnID="2E12C846-41A8-9C68-43FD-09710CFA2DD5"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

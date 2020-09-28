@@ -25,8 +25,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
-<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="descripcion" id="17B84C36-5B48-A4F3-79AC-F5CAA7310F6B">
@@ -47,8 +47,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
-<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="valor" id="C7A3BBFB-88F0-BA25-3BF9-BD3089E0FAB7">
@@ -95,9 +95,9 @@
 <colAssociation fkAssociation="09A252A6-2DCC-AAC1-6577-33BC97F2BE5F" referredColumn="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
 </associations>
 </Column>
-<Column name="fk_id_guia_turistico" id="32586017-E6C7-9B5B-CE11-FF5F0A3643E8">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 03:05:30 UTC</createdTime>
+<Column name="fk_id_guia" id="84A44C01-63B3-6DEE-0FF2-A121B4427A35">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-28 04:32:05 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -106,7 +106,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="8ABB622A-9B69-C59D-D388-A2800B63B0FC" referredColumn="CF991109-9CA1-C50D-5CB5-2CD70408B4CB"/>
+<colAssociation fkAssociation="40891750-8D95-C613-CC4F-7194774DBA6C" referredColumn="CF991109-9CA1-C50D-5CB5-2CD70408B4CB"/>
 </associations>
 </Column>
 </columns>
@@ -132,14 +132,14 @@
 <colUsage columnID="556407B3-35E6-D0D8-5E78-76215F63F41D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="907D0D4B-A4CE-F9F6-F745-0E6B058DB1D0" name="TOUR_GUIA_TURISTICO_FK">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 03:05:30 UTC</createdTime>
+<ind_PK_UK id="D0E7FCC8-6638-CA5E-D52E-9A85BA141992" name="TOUR_GUIA_TURISTICO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-28 04:32:05 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="32586017-E6C7-9B5B-CE11-FF5F0A3643E8"/>
+<colUsage columnID="84A44C01-63B3-6DEE-0FF2-A121B4427A35"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

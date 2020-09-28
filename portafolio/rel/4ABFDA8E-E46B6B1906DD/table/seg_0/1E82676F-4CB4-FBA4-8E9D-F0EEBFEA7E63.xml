@@ -12,7 +12,9 @@
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:35:23 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>

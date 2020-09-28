@@ -1,5 +1,5 @@
 -- Generado por Oracle SQL Developer Data Modeler 18.2.0.179.0756
---   en:        2020-09-28 01:11:48 CLST
+--   en:        2020-09-28 01:55:01 CLST
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -84,11 +84,11 @@ CREATE TABLE arriendo (
     fecha_hasta            DATE NOT NULL,
     acompañantes           NUMBER NOT NULL,
     precio                 NUMBER NOT NULL,
-    fk_id_usu              NUMBER NOT NULL,
     fk_id_departamento     NUMBER NOT NULL,
     fk_id_turismo          NUMBER,
     fk_id_check_out        NUMBER NOT NULL,
-    fk_id_servicio_extra   NUMBER
+    fk_id_servicio_extra   NUMBER,
+    usuario_id_usu         NUMBER NOT NULL
 );
 
 ALTER TABLE arriendo ADD CONSTRAINT arriendo_pk PRIMARY KEY ( id_arriendo );
@@ -114,8 +114,7 @@ CREATE TABLE chofer (
     id_chofer   NUMBER NOT NULL,
     nombre      VARCHAR2(255) NOT NULL,
     rut         VARCHAR2(15) NOT NULL,
-    foto        unknown 
---  ERROR: Datatype UNKNOWN is not allowed 
+    foto        VARCHAR2(255)
 );
 
 ALTER TABLE chofer ADD CONSTRAINT chofer_pk PRIMARY KEY ( id_chofer );
@@ -142,14 +141,14 @@ CREATE TABLE departamento (
 ALTER TABLE departamento ADD CONSTRAINT departamento_pk PRIMARY KEY ( id_departamento );
 
 CREATE TABLE deta_area_edi (
-    fk_id_area_edificio   NUMBER NOT NULL,
-    fk_id_edificio        NUMBER NOT NULL,
-    cantidad_implemento   NUMBER NOT NULL
+    edificio_id_edificio             NUMBER NOT NULL,
+    area_edificio_id_area_edificio   NUMBER NOT NULL,
+    cantidad_implemento              NUMBER NOT NULL
 );
 
 CREATE TABLE deta_imp_depa (
-    fk_id_implemento      NUMBER NOT NULL,
-    fk_id_departamento    NUMBER NOT NULL,
+    id_implemento         NUMBER NOT NULL,
+    id_departamento       NUMBER NOT NULL,
     cantidad_implemento   NUMBER NOT NULL
 );
 
@@ -198,12 +197,11 @@ CREATE TABLE estado_pago (
 ALTER TABLE estado_pago ADD CONSTRAINT estado_pago_pk PRIMARY KEY ( id_estado );
 
 CREATE TABLE guia_turistico (
-    id_guia_turistico   NUMBER NOT NULL,
-    nombre              VARCHAR2 
---  ERROR: VARCHAR2 size not specified 
+    id_guia   NUMBER NOT NULL,
+    nombre    VARCHAR2(255) NOT NULL
 );
 
-ALTER TABLE guia_turistico ADD CONSTRAINT guia_turistico_pk PRIMARY KEY ( id_guia_turistico );
+ALTER TABLE guia_turistico ADD CONSTRAINT guia_turistico_pk PRIMARY KEY ( id_guia );
 
 CREATE TABLE implementos_departamento (
     id_implemento       NUMBER NOT NULL,
@@ -233,9 +231,7 @@ CREATE TABLE multa (
     fecha_creacion              DATE NOT NULL,
     periodo_de_gracia           NUMBER NOT NULL,
     fecha_expiracion_del_pago   DATE NOT NULL,
-    fk_id_multas                unknown 
---  ERROR: Datatype UNKNOWN is not allowed 
-     NOT NULL,
+    fk_id_multas                NUMBER NOT NULL,
     fk_id_arriendo              NUMBER NOT NULL
 );
 
@@ -262,8 +258,8 @@ CREATE TABLE servicio_de_transporte (
     id_servicio_transporte   NUMBER NOT NULL,
     fk_id_vehiculo           NUMBER NOT NULL,
     fk_id_chofer             NUMBER NOT NULL,
-    fk_id_transporte         NUMBER NOT NULL,
-    fk_id_arriendo           NUMBER NOT NULL
+    fk_id_arriendo           NUMBER NOT NULL,
+    fk_id_transporte         NUMBER NOT NULL
 );
 
 ALTER TABLE servicio_de_transporte ADD CONSTRAINT servicio_de_transporte_pk PRIMARY KEY ( id_servicio_transporte );
@@ -288,9 +284,7 @@ CREATE TABLE servicios_depa (
 ALTER TABLE servicios_depa ADD CONSTRAINT servicios_depa_pk PRIMARY KEY ( id_servi_depa );
 
 CREATE TABLE tipo_multas (
-    id_multas           unknown 
---  ERROR: Datatype UNKNOWN is not allowed 
-     NOT NULL,
+    id_multas           NUMBER NOT NULL,
     nombre              VARCHAR2(50) NOT NULL,
     descripcion_multa   VARCHAR2(250) NOT NULL,
     monto               NUMBER NOT NULL,
@@ -301,9 +295,7 @@ ALTER TABLE tipo_multas ADD CONSTRAINT multas_pk PRIMARY KEY ( id_multas );
 
 CREATE TABLE tipo_pago (
     id_tipo   NUMBER NOT NULL,
-    nombre    VARCHAR2 
---  ERROR: VARCHAR2 size not specified 
-     NOT NULL
+    nombre    VARCHAR2(255) NOT NULL
 );
 
 ALTER TABLE tipo_pago ADD CONSTRAINT tipo_pago_pk PRIMARY KEY ( id_tipo );
@@ -317,12 +309,8 @@ ALTER TABLE tipo_usuario ADD CONSTRAINT tipo_usuario_pk PRIMARY KEY ( id_tipo_us
 
 CREATE TABLE token (
     id_token      NUMBER NOT NULL,
-    token         VARCHAR2 
---  ERROR: VARCHAR2 size not specified 
-     NOT NULL,
-    device_name   unknown 
---  ERROR: Datatype UNKNOWN is not allowed 
-     NOT NULL,
+    token         VARCHAR2(100) NOT NULL,
+    device_name   VARCHAR2(255) NOT NULL,
     adress        NUMBER NOT NULL,
     baned         CHAR(1) NOT NULL,
     fk_id_usu     NUMBER NOT NULL
@@ -331,15 +319,15 @@ CREATE TABLE token (
 ALTER TABLE token ADD CONSTRAINT token_pk PRIMARY KEY ( id_token );
 
 CREATE TABLE tour (
-    id_turismo             NUMBER NOT NULL,
-    nombre                 VARCHAR2(255) NOT NULL,
-    descripcion            VARCHAR2(255) NOT NULL,
-    lugar_visita           VARCHAR2(255) NOT NULL,
-    valor                  NUMBER NOT NULL,
-    fecha_salida           DATE NOT NULL,
-    fecha_llegada          DATE NOT NULL,
-    fk_id_edificio         NUMBER NOT NULL,
-    fk_id_guia_turistico   NUMBER NOT NULL
+    id_turismo       NUMBER NOT NULL,
+    nombre           VARCHAR2(100) NOT NULL,
+    descripcion      VARCHAR2(255) NOT NULL,
+    lugar_visita     VARCHAR2(100) NOT NULL,
+    valor            NUMBER NOT NULL,
+    fecha_salida     DATE NOT NULL,
+    fecha_llegada    DATE NOT NULL,
+    fk_id_edificio   NUMBER NOT NULL,
+    fk_id_guia       NUMBER NOT NULL
 );
 
 ALTER TABLE tour ADD CONSTRAINT turismo_pk PRIMARY KEY ( id_turismo );
@@ -391,6 +379,10 @@ ALTER TABLE arriendo
     ADD CONSTRAINT arriendo_departamento_fk FOREIGN KEY ( fk_id_departamento )
         REFERENCES departamento ( id_departamento );
 
+ALTER TABLE servicio_de_transporte
+    ADD CONSTRAINT arriendo_fk FOREIGN KEY ( fk_id_arriendo )
+        REFERENCES arriendo ( id_arriendo );
+
 ALTER TABLE arriendo
     ADD CONSTRAINT arriendo_servicio_extra_fk FOREIGN KEY ( fk_id_servicio_extra )
         REFERENCES servicio_extra ( id_servicio_extra );
@@ -400,12 +392,16 @@ ALTER TABLE arriendo
         REFERENCES tour ( id_turismo );
 
 ALTER TABLE arriendo
-    ADD CONSTRAINT arriendo_usuario_fk FOREIGN KEY ( fk_id_usu )
+    ADD CONSTRAINT arriendo_usuario_fk FOREIGN KEY ( usuario_id_usu )
         REFERENCES usuario ( id_usu );
 
 ALTER TABLE check_in
     ADD CONSTRAINT check_in_arriendo_fk FOREIGN KEY ( fk_id_arriendo )
         REFERENCES arriendo ( id_arriendo );
+
+ALTER TABLE servicio_de_transporte
+    ADD CONSTRAINT chofer_fk FOREIGN KEY ( fk_id_chofer )
+        REFERENCES chofer ( id_chofer );
 
 ALTER TABLE comuna
     ADD CONSTRAINT comuna_region_fk FOREIGN KEY ( fk_id_descripcion )
@@ -419,40 +415,32 @@ ALTER TABLE departamento
     ADD CONSTRAINT departamento_estado_fk FOREIGN KEY ( fk_id_estado )
         REFERENCES estado ( id_estado );
 
-ALTER TABLE deta_serv_depa
-    ADD CONSTRAINT deta_serv_depa_departamento_fk FOREIGN KEY ( fk_id_departamento )
+ALTER TABLE deta_imp_depa
+    ADD CONSTRAINT departamento_fk FOREIGN KEY ( id_departamento )
         REFERENCES departamento ( id_departamento );
 
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE deta_serv_depa
-    ADD CONSTRAINT deta_serv_depa_servicios_depa_fk FOREIGN KEY ( fk_id_servi_depa )
-        REFERENCES servicios_depa ( id_servi_depa );
-
---  ERROR: FK name length exceeds maximum allowed length(30) 
 ALTER TABLE deta_area_edi
-    ADD CONSTRAINT detalle_area_edi_area_edificio_fk FOREIGN KEY ( fk_id_area_edificio )
+    ADD CONSTRAINT deta_area_edi_area_edificio_fk FOREIGN KEY ( area_edificio_id_area_edificio )
         REFERENCES area_edificio ( id_area_edificio );
 
 ALTER TABLE deta_area_edi
-    ADD CONSTRAINT detalle_area_edi_edificio_fk FOREIGN KEY ( fk_id_edificio )
+    ADD CONSTRAINT deta_area_edi_edificio_fk FOREIGN KEY ( edificio_id_edificio )
         REFERENCES edificio ( id_edificio );
 
 ALTER TABLE detalle_pago
     ADD CONSTRAINT detalle_pago_pago_fk FOREIGN KEY ( fk_id_pago )
         REFERENCES pago ( id_pago );
 
+ALTER TABLE deta_serv_depa
+    ADD CONSTRAINT dt_departamento_fk FOREIGN KEY ( fk_id_departamento )
+        REFERENCES departamento ( id_departamento );
+
 ALTER TABLE edificio
     ADD CONSTRAINT edificio_comuna_fk FOREIGN KEY ( fk_id_comuna )
         REFERENCES comuna ( id_comuna );
 
---  ERROR: FK name length exceeds maximum allowed length(30) 
 ALTER TABLE deta_imp_depa
-    ADD CONSTRAINT implementos_departamentov2_departamento_fk FOREIGN KEY ( fk_id_departamento )
-        REFERENCES departamento ( id_departamento );
-
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE deta_imp_depa
-    ADD CONSTRAINT implementos_departamentov2_implementos_departamento_fk FOREIGN KEY ( fk_id_implemento )
+    ADD CONSTRAINT implementos_departamento_fk FOREIGN KEY ( id_implemento )
         REFERENCES implementos_departamento ( id_implemento );
 
 ALTER TABLE modelo
@@ -479,26 +467,6 @@ ALTER TABLE pago
     ADD CONSTRAINT pago_tipo_pago_fk FOREIGN KEY ( fk_id_tipo )
         REFERENCES tipo_pago ( id_tipo );
 
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE servicio_de_transporte
-    ADD CONSTRAINT servicio_de_transporte_arriendo_fk FOREIGN KEY ( fk_id_arriendo )
-        REFERENCES arriendo ( id_arriendo );
-
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE servicio_de_transporte
-    ADD CONSTRAINT servicio_de_transporte_chofer_fk FOREIGN KEY ( fk_id_chofer )
-        REFERENCES chofer ( id_chofer );
-
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE servicio_de_transporte
-    ADD CONSTRAINT servicio_de_transporte_transporte_fk FOREIGN KEY ( fk_id_transporte )
-        REFERENCES transporte ( id_transporte );
-
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE servicio_de_transporte
-    ADD CONSTRAINT servicio_de_transporte_vehiculo_fk FOREIGN KEY ( fk_id_vehiculo )
-        REFERENCES vehiculo ( id_vehiculo );
-
 ALTER TABLE servicio_extra
     ADD CONSTRAINT servicio_extra_edificio_fk FOREIGN KEY ( fk_id_edificio )
         REFERENCES edificio ( id_edificio );
@@ -507,17 +475,25 @@ ALTER TABLE servicio_extra
     ADD CONSTRAINT servicio_extra_encargado_fk FOREIGN KEY ( fk_id_encargado )
         REFERENCES encargado ( id_encargado );
 
+ALTER TABLE deta_serv_depa
+    ADD CONSTRAINT servicios_depa_fk FOREIGN KEY ( fk_id_servi_depa )
+        REFERENCES servicios_depa ( id_servi_depa );
+
 ALTER TABLE token
     ADD CONSTRAINT token_usuario_fk FOREIGN KEY ( fk_id_usu )
         REFERENCES usuario ( id_usu );
 
 ALTER TABLE tour
-    ADD CONSTRAINT tour_guia_turistico_fk FOREIGN KEY ( fk_id_guia_turistico )
-        REFERENCES guia_turistico ( id_guia_turistico );
+    ADD CONSTRAINT tour_guia_turistico_fk FOREIGN KEY ( fk_id_guia )
+        REFERENCES guia_turistico ( id_guia );
 
 ALTER TABLE transporte
     ADD CONSTRAINT transporte_edificio_fk FOREIGN KEY ( fk_id_edificio )
         REFERENCES edificio ( id_edificio );
+
+ALTER TABLE servicio_de_transporte
+    ADD CONSTRAINT transporte_fk FOREIGN KEY ( fk_id_transporte )
+        REFERENCES transporte ( id_transporte );
 
 ALTER TABLE tour
     ADD CONSTRAINT turismo_edificio_fk FOREIGN KEY ( fk_id_edificio )
@@ -526,6 +502,10 @@ ALTER TABLE tour
 ALTER TABLE usuario
     ADD CONSTRAINT usuario_tipo_usuario_fk FOREIGN KEY ( fk_id_tipo_usu )
         REFERENCES tipo_usuario ( id_tipo_usu );
+
+ALTER TABLE servicio_de_transporte
+    ADD CONSTRAINT vehiculo_fk FOREIGN KEY ( fk_id_vehiculo )
+        REFERENCES vehiculo ( id_vehiculo );
 
 ALTER TABLE vehiculo
     ADD CONSTRAINT vehiculo_modelo_fk FOREIGN KEY ( fk_id_modelo )
@@ -573,5 +553,5 @@ ALTER TABLE vehiculo
 -- ORDS ENABLE SCHEMA                       0
 -- ORDS ENABLE OBJECT                       0
 -- 
--- ERRORS                                  15
+-- ERRORS                                   0
 -- WARNINGS                                 1

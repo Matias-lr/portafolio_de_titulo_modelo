@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_guia_turistico" id="CF991109-9CA1-C50D-5CB5-2CD70408B4CB">
+<Column name="id_guia" id="CF991109-9CA1-C50D-5CB5-2CD70408B4CB">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:03:38 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -22,11 +22,11 @@
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 20:03:14 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

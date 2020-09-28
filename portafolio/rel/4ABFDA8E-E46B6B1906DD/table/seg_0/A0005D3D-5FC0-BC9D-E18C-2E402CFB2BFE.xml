@@ -93,7 +93,7 @@
 <colUsage columnID="B21C1498-A973-28DD-D65F-4E2AE346CB11"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="3FADE990-07E7-8517-C0DD-DA79BA187552" name="PAGO_Arriendo_FK">
+<ind_PK_UK id="3FADE990-07E7-8517-C0DD-DA79BA187552" name="PAGO_ARRIENDO_FK">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 19:03:57 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
