@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F43C1A5C-EECC-9699-87D0-48597E7D7D6B" containerWithKeyObject="F6DEFA87-E772-42D0-FF58-F2318055A16A" localFKIndex="EBD56395-6717-935E-887F-587F5225B2FD" name="COMUNA_REGION_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0BFF1880-76DD-436A-711C-DDDFF859FF03" containerWithKeyObject="F6DEFA87-E772-42D0-FF58-F2318055A16A" localFKIndex="294EF119-8751-FC56-E1BA-E4F76D5688B3" name="COMUNA_REGION_FK">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-24 02:28:58 UTC</createdTime>
+<createdTime>2020-09-28 05:04:17 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <referredTableLongName>REGION</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
@@ -9,7 +9,7 @@
 <keyObject>9C2A2E57-1211-96AA-74B2-229E4D365426</keyObject>
 <referredKeyID>9C2A2E57-1211-96AA-74B2-229E4D365426</referredKeyID>
 <mandatory>true</mandatory>
-<refColNames>id_descripcion</refColNames>
+<refColNames>id_region</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>

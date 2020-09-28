@@ -29,9 +29,9 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fk_id_descripcion" id="49699B2A-82C7-EF13-FB7F-1FB6F4705C7B">
+<Column name="fk_id_region" id="5676BFD2-AE3E-1D65-1117-E06522188E0A">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-24 02:28:58 UTC</createdTime>
+<createdTime>2020-09-28 05:04:17 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -40,7 +40,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="F43C1A5C-EECC-9699-87D0-48597E7D7D6B" referredColumn="7F0BFECD-66B0-CF44-3741-663819A263E7"/>
+<colAssociation fkAssociation="0BFF1880-76DD-436A-711C-DDDFF859FF03" referredColumn="7F0BFECD-66B0-CF44-3741-663819A263E7"/>
 </associations>
 </Column>
 </columns>
@@ -56,14 +56,14 @@
 <colUsage columnID="34C2681F-5AD4-D24F-DEE6-E5B37D7C3033"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="EBD56395-6717-935E-887F-587F5225B2FD" name="COMUNA_REGION_FK">
+<ind_PK_UK id="294EF119-8751-FC56-E1BA-E4F76D5688B3" name="COMUNA_REGION_FK">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-24 02:28:58 UTC</createdTime>
+<createdTime>2020-09-28 05:04:17 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="49699B2A-82C7-EF13-FB7F-1FB6F4705C7B"/>
+<colUsage columnID="5676BFD2-AE3E-1D65-1117-E06522188E0A"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

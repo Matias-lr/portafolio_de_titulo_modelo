@@ -1,5 +1,5 @@
 -- Generado por Oracle SQL Developer Data Modeler 18.2.0.179.0756
---   en:        2020-09-28 01:55:01 CLST
+--   en:        2020-09-28 02:04:48 CLST
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -120,9 +120,9 @@ CREATE TABLE chofer (
 ALTER TABLE chofer ADD CONSTRAINT chofer_pk PRIMARY KEY ( id_chofer );
 
 CREATE TABLE comuna (
-    id_comuna           NUMBER NOT NULL,
-    nombre              VARCHAR2(255) NOT NULL,
-    fk_id_descripcion   NUMBER NOT NULL
+    id_comuna      NUMBER NOT NULL,
+    nombre         VARCHAR2(255) NOT NULL,
+    fk_id_region   NUMBER NOT NULL
 );
 
 ALTER TABLE comuna ADD CONSTRAINT comuna_pk PRIMARY KEY ( id_comuna );
@@ -248,11 +248,11 @@ CREATE TABLE pago (
 ALTER TABLE pago ADD CONSTRAINT pago_pk PRIMARY KEY ( id_pago );
 
 CREATE TABLE region (
-    id_descripcion   NUMBER NOT NULL,
-    nombre           VARCHAR2(255) NOT NULL
+    id_region   NUMBER NOT NULL,
+    nombre      VARCHAR2(255) NOT NULL
 );
 
-ALTER TABLE region ADD CONSTRAINT region_pk PRIMARY KEY ( id_descripcion );
+ALTER TABLE region ADD CONSTRAINT region_pk PRIMARY KEY ( id_region );
 
 CREATE TABLE servicio_de_transporte (
     id_servicio_transporte   NUMBER NOT NULL,
@@ -404,8 +404,8 @@ ALTER TABLE servicio_de_transporte
         REFERENCES chofer ( id_chofer );
 
 ALTER TABLE comuna
-    ADD CONSTRAINT comuna_region_fk FOREIGN KEY ( fk_id_descripcion )
-        REFERENCES region ( id_descripcion );
+    ADD CONSTRAINT comuna_region_fk FOREIGN KEY ( fk_id_region )
+        REFERENCES region ( id_region );
 
 ALTER TABLE departamento
     ADD CONSTRAINT departamento_edificio_fk FOREIGN KEY ( fk_id_edificio )
