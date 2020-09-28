@@ -58,7 +58,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Usuario_id_usu" id="C1749C1B-F9DE-6F37-B8A2-112581FCEC7E">
+<Column name="fk_id_usu" id="C1749C1B-F9DE-6F37-B8A2-112581FCEC7E">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 02:50:30 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -72,7 +72,7 @@
 <colAssociation fkAssociation="81122CF0-5132-AA58-A59D-B7D11A7978AA" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
 </associations>
 </Column>
-<Column name="DEPARTAMENTO_id_departamento" id="5CCD9D6E-8E70-89A3-2D95-10885F716234">
+<Column name="fk_id_departamento" id="5CCD9D6E-8E70-89A3-2D95-10885F716234">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 02:50:44 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -86,7 +86,7 @@
 <colAssociation fkAssociation="4B300E09-C110-2127-3400-26B5176C8121" referredColumn="3230EACA-B457-9A16-9AB3-0C9E7425C7AE"/>
 </associations>
 </Column>
-<Column name="TOUR_id_turismo" id="B10BA772-2460-D1E7-9534-46DA99F61482">
+<Column name="fk_id_turismo" id="B10BA772-2460-D1E7-9534-46DA99F61482">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:05:54 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -101,7 +101,7 @@
 <colAssociation fkAssociation="6999524B-12C9-E8B5-6585-7ADB801AE24F" referredColumn="65EB60BA-7ADA-93AA-959A-5888638D4C35"/>
 </associations>
 </Column>
-<Column name="CHECK_OUT_id_check_out" id="49098F02-276F-93D1-B039-4ECF9258D03D">
+<Column name="fk_id_check_out" id="49098F02-276F-93D1-B039-4ECF9258D03D">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:31:30 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -115,7 +115,7 @@
 <colAssociation fkAssociation="19BCC04A-6E28-01B9-F7D3-EDF2CC5BCD1E" referredColumn="47869D5A-0F09-2B4E-B564-E47BD902BA6A"/>
 </associations>
 </Column>
-<Column name="SERVICIO_EXTRA_id_servicio_extra" id="7C663A4C-C6B0-B4AC-7F0E-6F712F0D72F6">
+<Column name="fk_id_servicio_extra" id="7C663A4C-C6B0-B4AC-7F0E-6F712F0D72F6">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 18:55:56 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

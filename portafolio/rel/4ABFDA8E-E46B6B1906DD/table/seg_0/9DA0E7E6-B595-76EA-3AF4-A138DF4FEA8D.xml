@@ -39,7 +39,7 @@
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Arriendo_id_arriendo" id="FF86E610-DE8C-6512-5D48-7D597E47091C">
+<Column name="fk_id_arriendo" id="FF86E610-DE8C-6512-5D48-7D597E47091C">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:28:04 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

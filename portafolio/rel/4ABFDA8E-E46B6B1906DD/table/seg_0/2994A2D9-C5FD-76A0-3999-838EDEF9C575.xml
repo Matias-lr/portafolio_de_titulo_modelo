@@ -68,7 +68,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="EDIFICIO_id_edificio" id="A4D22A26-3F08-5958-5FC5-456E5443BD69">
+<Column name="fk_id_edificio" id="A4D22A26-3F08-5958-5FC5-456E5443BD69">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 01:19:00 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -82,7 +82,7 @@
 <colAssociation fkAssociation="E5C49C28-3CDA-8C99-63D0-4CD81959ED47" referredColumn="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
 </associations>
 </Column>
-<Column name="ESTADO_id_estado" id="363A305B-D74C-E35F-ECBB-64276C8028DF">
+<Column name="fk_id_estado" id="363A305B-D74C-E35F-ECBB-64276C8028DF">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 18:51:28 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

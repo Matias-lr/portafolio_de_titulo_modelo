@@ -38,7 +38,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="MODELO_id_modelo" id="EEBAB46C-7643-B7BA-975C-7C1D5AE4A454">
+<Column name="fk_id_modelo" id="EEBAB46C-7643-B7BA-975C-7C1D5AE4A454">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-24 02:01:16 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

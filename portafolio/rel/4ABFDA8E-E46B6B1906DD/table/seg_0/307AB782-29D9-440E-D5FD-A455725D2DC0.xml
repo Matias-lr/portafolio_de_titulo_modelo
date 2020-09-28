@@ -92,7 +92,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="EDIFICIO_id_edificio" id="76791A5D-AD28-2526-1B3A-6C0BA3C78D24">
+<Column name="fk_id_edificio" id="76791A5D-AD28-2526-1B3A-6C0BA3C78D24">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-24 01:51:22 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

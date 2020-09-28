@@ -29,7 +29,7 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="PAGO_id_pago" id="3B5B690A-C83D-9E29-6B0D-983090B483E4">
+<Column name="fk_id_pago" id="3B5B690A-C83D-9E29-6B0D-983090B483E4">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-25 20:10:41 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

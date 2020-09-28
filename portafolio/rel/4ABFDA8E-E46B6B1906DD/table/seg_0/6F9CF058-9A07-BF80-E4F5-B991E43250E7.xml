@@ -18,7 +18,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="VEHICULO_id_vehiculo" id="90F8559D-0CD1-2F12-7BAA-2494A21F7257">
+<Column name="fk_id_vehiculo" id="90F8559D-0CD1-2F12-7BAA-2494A21F7257">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 02:55:19 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -32,7 +32,7 @@
 <colAssociation fkAssociation="91C3DCF1-B542-AEEC-0336-68D388ED38D6" referredColumn="7094AF13-ABB0-8F7E-E507-309EF27BEA1D"/>
 </associations>
 </Column>
-<Column name="CHOFER_id_chofer" id="D6ABDAB7-99AF-2384-A9E6-650C8B1C4E95">
+<Column name="fk_id_chofer" id="D6ABDAB7-99AF-2384-A9E6-650C8B1C4E95">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 02:55:45 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -46,7 +46,7 @@
 <colAssociation fkAssociation="A432C5A2-C424-7EB3-A21A-4A31F3A0B94C" referredColumn="CABF9F0B-DD35-76DC-4165-A3134986A6FC"/>
 </associations>
 </Column>
-<Column name="TRANSPORTE_id_transporte" id="B9E990F5-51E2-8885-24B7-E11EE3AEEE19">
+<Column name="fk_id_transporte" id="B9E990F5-51E2-8885-24B7-E11EE3AEEE19">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 02:56:04 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -60,7 +60,7 @@
 <colAssociation fkAssociation="4A117F61-4C10-E8B5-11AF-65EB3527CE13" referredColumn="EE1A05BC-32E8-926C-F503-4E3C29A5242E"/>
 </associations>
 </Column>
-<Column name="Arriendo_id_arriendo" id="0612BBD5-BDB7-B260-2995-6EE5457FC6E8">
+<Column name="fk_id_arriendo" id="0612BBD5-BDB7-B260-2995-6EE5457FC6E8">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 02:58:51 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

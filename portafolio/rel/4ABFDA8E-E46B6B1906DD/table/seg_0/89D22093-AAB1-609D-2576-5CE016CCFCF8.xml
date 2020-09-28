@@ -50,7 +50,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ENCARGADO_id_encargado" id="BF2DEF54-2957-7076-C2B4-85FA6314C7B6">
+<Column name="fk_id_encargado" id="BF2DEF54-2957-7076-C2B4-85FA6314C7B6">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 18:55:32 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -64,7 +64,7 @@
 <colAssociation fkAssociation="9CAF1EE3-0CD6-1EC6-037C-259200A24FD8" referredColumn="6D019CE0-741E-640A-2F8D-20BEC2A74D4F"/>
 </associations>
 </Column>
-<Column name="EDIFICIO_id_edificio" id="4F63D740-824B-6EBE-344F-20495CC4732D">
+<Column name="fk_id_edificio" id="4F63D740-824B-6EBE-344F-20495CC4732D">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 19:59:04 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

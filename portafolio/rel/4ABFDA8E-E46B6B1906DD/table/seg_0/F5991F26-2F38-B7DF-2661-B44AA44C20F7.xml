@@ -40,7 +40,7 @@
 <ownDataTypeParameters>,15,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="COMUNA_id_comuna" id="F472BA0F-213F-D624-AA2D-1AB21A3CBD8A">
+<Column name="fk_id_comuna" id="F472BA0F-213F-D624-AA2D-1AB21A3CBD8A">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-24 02:29:10 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

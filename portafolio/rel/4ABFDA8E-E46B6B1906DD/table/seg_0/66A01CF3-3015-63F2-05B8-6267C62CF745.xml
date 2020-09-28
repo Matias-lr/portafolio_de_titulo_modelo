@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="SERVICIOS_DEPA_id_servi_depa" id="A8EFFB40-5507-9E01-07DD-C6B7CA9DA15D">
+<Column name="fk_id_servi_depa" id="A8EFFB40-5507-9E01-07DD-C6B7CA9DA15D">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 20:04:25 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -22,7 +22,7 @@
 <colAssociation fkAssociation="3845DB5A-5A9F-15E2-1B38-E2EA32B29383" referredColumn="9575D4CC-3F02-5CAA-86A3-5FF9932A412F"/>
 </associations>
 </Column>
-<Column name="DEPARTAMENTO_id_departamento" id="5C9A0339-735A-8859-6465-7563715CB1CC">
+<Column name="fk_id_departamento" id="5C9A0339-735A-8859-6465-7563715CB1CC">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-25 20:04:29 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

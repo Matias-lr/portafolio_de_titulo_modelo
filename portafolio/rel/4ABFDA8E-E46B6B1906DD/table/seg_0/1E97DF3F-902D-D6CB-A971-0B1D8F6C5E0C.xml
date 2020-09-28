@@ -96,7 +96,7 @@
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="TIPO_USUARIO_id_tipo_usu" id="E5055A30-FE01-0AB5-7DAE-8072C6CBF871">
+<Column name="fk_id_tipo_usu" id="E5055A30-FE01-0AB5-7DAE-8072C6CBF871">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 00:46:48 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

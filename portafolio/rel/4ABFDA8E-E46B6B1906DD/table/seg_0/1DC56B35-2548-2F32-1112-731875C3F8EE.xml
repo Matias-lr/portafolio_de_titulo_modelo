@@ -81,7 +81,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="EDIFICIO_id_edificio" id="556407B3-35E6-D0D8-5E78-76215F63F41D">
+<Column name="fk_id_edificio" id="556407B3-35E6-D0D8-5E78-76215F63F41D">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-24 01:45:11 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -95,7 +95,7 @@
 <colAssociation fkAssociation="09A252A6-2DCC-AAC1-6577-33BC97F2BE5F" referredColumn="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
 </associations>
 </Column>
-<Column name="GUIA_TURISTICO_id_guia_turistico" id="32586017-E6C7-9B5B-CE11-FF5F0A3643E8">
+<Column name="fk_id_guia_turistico" id="32586017-E6C7-9B5B-CE11-FF5F0A3643E8">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 03:05:30 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
