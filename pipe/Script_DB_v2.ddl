@@ -360,6 +360,16 @@ CREATE TABLE usuario (
 
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id_usu );
 
+CREATE SEQUENCE user_seq START WITH 1
+increment by 1;
+
+create or replace trigger user_autoincrement_id
+    before insert on usuario
+    for each row 
+begin
+    :new.id_usu := user_seq.nextval;
+end;
+
 CREATE TABLE vehiculo (
     id_vehiculo    NUMBER NOT NULL,
     puertas        NUMBER NOT NULL,
