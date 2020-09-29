@@ -420,3 +420,33 @@ INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(1,'Aire Acon
 INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(2,'Wifi','La habitacion cuenta con señal wifi para conectarse a internet');
 INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(3,'TV Cable','La habitacion cuenta con televisio  por cable');
 INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(4,'Agua Caliente','La habitacion cuenta con agua caliente con la habitacion de baño');																				
+
+INSERT INTO EDIFICIO(id_edificio,direccion_edificio,telefono,fk_id_comuna) values(1,'Avenida PlayaPescadito #1647',73547846,83);
+
+INSERT INTO DEPARTAMENTO(id_departamento,numero_habitaciones,metros_cuadrados,baños,piso,precio_noche,fk_id_edificio,fk_id_estado) values(1,2,500,1,2,12000,1,1);
+
+INSERT INTO TRANSPORTE(id_transporte,nombre_transporte,descripcion_transporte,lugar_salida,lugar_llegada,salida,llegada,valor,fk_id_edificio) VALUES (1,'El voy y vuelvo','Servicio de transporte desde el edificio hasta el terminal/aeropuerto','Aeropuerto','Edificio','28/09/2020','28/09/2020',7000,1);
+
+
+
+INSERT INTO SERVICIO_EXTRA(id_servicio_extra,nombre,descripcion,valor,fk_id_encargado,fk_id_edificio) values(1,'Paseo','Paseo por la zona',15000,1,1);
+
+INSERT INTO TOUR(id_turismo,nombre,descripcion,lugar_visita,valor,fecha_salida,fecha_llegada,fk_id_edificio,fk_id_guia) values (1,'Tur','Tur a la playita de pana','Playita fondo de bikini',10000,'28/09/2020','28/09/2020',1,1);
+
+INSERT INTO SERVICIO_DE_TRANSPORTE(id_servicio_transporte,fk_id_vehiculo,fk_id_chofer,fk_id_arriendo,fk_id_transporte) values(1,1,1,1,1);
+
+
+
+INSERT INTO CHECK_OUT(id_check_out,fecha_hora,validado) values (1,'28/09/2020','S');
+
+INSERT INTO Usuario (id_usu,nombre,password,email,foto,rut,direccion,telefono,fk_id_tipo_usu) values(1,'Felipe Soto','infloglobosconlaboca','pipeuchiha2005@gmail.com','mi fotito','19645364-9','Av SiempreViva','73564783',1);
+
+INSERT INTO ARRIENDO(id_arriendo,fecha_desde,fecha_hasta,acompañantes,precio,fk_id_departamento,fk_id_turismo,fk_id_check_out,fk_id_servicio_extra,Usuario_id_usu) values(1,'28/09/2020','29/09/2020',2,50000,1,1,1,1,1);
+
+INSERT INTO CHECK_IN(id_check_in,fecha_hora,validado,fk_id_arriendo) values (1,'9/28/2020','S',1);
+
+INSERT INTO MULTA(id_multa,fecha_creacion,periodo_de_gracia,fecha_expiracion_del_pago,fk_id_multas,fk_id_arriendo)values(1,'28/09/2020',5,'29/09/2020',1,1);
+
+INSERT INTO PAGO(id_pago,monto,fk_id_tipo,fk_id_arriendo,fk_id_estado)values(1,70000,1,1,1);
+
+INSERT INTO DETALLE_PAGO(id_detalle_pago,codigo,fk_id_pago) values(1,'a6sd7sdghs8',1);
