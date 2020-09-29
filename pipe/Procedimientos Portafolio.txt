@@ -1,0 +1,148 @@
+--pruebas insert
+CREATE OR REPLACE PROCEDURE INSERTAR(
+v_id NUMBER,
+v_puertas NUMBER,
+v_maleta CHAR,
+v_modelo_fk NUMBER)
+IS
+BEGIN
+INSERT INTO VEHICULO(id_vehiculo,puertas,maleta,fk_id_modelo)
+VALUES(v_id,v_puertas,v_maleta,v_modelo_fk);
+END ;
+
+BEGIN
+  INSERTAR(2,5,'S',1);
+END;
+
+
+CREATE OR REPLACE PROCEDURE INSERTAR_DEPTO(
+v_id_departamento NUMBER,
+v_numero_habitaciones NUMBER,
+v_metros_cuadrados NUMBER,
+v_baños NUMBER,
+v_piso NUMBER,
+v_precio_noche NUMBER,
+fk_id_edificio NUMBER,
+fk_id_estado NUMBER)
+IS
+BEGIN
+INSERT INTO DEPARTAMENTO(id_departamento,numero_habitaciones,metros_cuadrados,baños,piso,precio_noche,fk_id_edificio,fk_id_estado)
+VALUES(v_id_departamento,v_numero_habitaciones,v_metros_cuadrados,v_baños,v_piso,v_precio_noche,fk_id_edificio,fk_id_estado);
+END ;
+
+BEGIN
+  INSERTAR_DEPTO(2,2,300,1,1,30000,1,1);
+END;
+
+SELECT * FROM DEPARTAMENTO;
+
+--------------------
+--------------------
+
+
+-- Procedure Update departamento
+
+CREATE OR REPLACE PROCEDURE UPDATE_DEPTO(
+    v_id_departamento NUMBER,
+    v_precio_noche NUMBER) 
+    IS
+    dp_update varchar2(1000);
+BEGIN
+     dp_update:='update departamento set precio_noche=:v_precio_noche where id_departamento=:v_id_departamento';
+                        
+    EXECUTE IMMEDIATE dp_update USING v_precio_noche, v_id_departamento;
+END;
+
+BEGIN
+  UPDATE_DEPTO(250,2);
+END;
+
+-------
+
+
+-------
+--Procedure Insertar departamento
+-------
+CREATE OR REPLACE PROCEDURE insertar_chido(
+v_id_departamento NUMBER,
+v_numero_habitaciones NUMBER,
+v_metros_cuadrados NUMBER,
+v_baños NUMBER,
+v_piso NUMBER,
+v_precio_noche NUMBER,
+fk_id_edificio NUMBER,
+fk_id_estado NUMBER)
+IS
+din_insert varchar2(1000);
+BEGIN
+    din_insert:= 'insert into departamento (id_departamento,numero_habitaciones,metros_cuadrados,baños,piso,precio_noche,fk_id_edificio,fk_id_estado)
+                values(:v_id_departamento,:v_numero_habitaciones,:v_metros_cuadrados,:v_baños,:v_piso,:v_precio_noche,:fk_id_edificio,:fk_id_estado)';
+                
+execute IMMEDIATE din_insert using v_id_departamento,v_numero_habitaciones,v_metros_cuadrados,v_baños,v_piso,v_precio_noche,fk_id_edificio,fk_id_estado;
+END;
+
+BEGIN
+  insertar_chido(34,2,500,1,2,15000,1,1);
+END;
+
+-------
+--Procedure Eliminar departamento
+-------
+
+CREATE OR REPLACE PROCEDURE delete_depa(
+    v_id_departamento NUMBER) 
+    IS
+    dp_delete varchar2(1000);
+BEGIN
+     dp_delete:='delete from departamento where id_departamento=:v_id_departamento';
+                        
+    EXECUTE IMMEDIATE dp_delete USING v_id_departamento;
+END;
+
+
+BEGIN
+  delete_depa(3);
+END;
+
+-------
+--Procedure Eliminar General
+-------
+
+CREATE OR REPLACE PROCEDURE delete_general(
+    v_nombre_tabla varchar2,
+    v_id_columna varchar2,
+    v_id NUMBER)
+    IS
+    all_delete varchar2(1000);
+BEGIN
+     all_delete:='delete from '||v_nombre_tabla||' where '||v_id_columna||' = '||v_id;
+                        
+    EXECUTE IMMEDIATE all_delete;
+    
+END;
+
+BEGIN
+  delete_general('VEHICULO','id_vehiculo',2);
+END;
+
+-------
+--Procedure Update General
+-------
+
+CREATE OR REPLACE PROCEDURE update_general(
+    v_nombre_tabla varchar2,
+    v_nombre_columna varchar2,
+    v_n_columna varchar2,
+    v_nombre_id varchar2,
+    v_id_columna number) 
+    IS
+    all_update varchar2(1000);
+BEGIN
+     all_update:='update '||v_nombre_tabla||' set '||v_nombre_columna||'= '||v_n_columna||' where '||v_nombre_id||'='||v_id_columna;
+                        
+    EXECUTE IMMEDIATE all_update;
+END;
+
+BEGIN
+  update_general('DEPARTAMENTO','piso',100,'id_departamento',1);
+END;
