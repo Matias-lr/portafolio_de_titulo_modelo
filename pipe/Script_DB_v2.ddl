@@ -360,6 +360,16 @@ CREATE TABLE usuario (
 
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id_usu );
 
+CREATE SEQUENCE user_seq START WITH 1
+increment by 1;
+
+create or replace trigger user_autoincrement_id
+    before insert on usuario
+    for each row 
+begin
+    :new.id_usu := user_seq.nextval;
+end;
+
 CREATE TABLE vehiculo (
     id_vehiculo    NUMBER NOT NULL,
     puertas        NUMBER NOT NULL,
@@ -482,6 +492,16 @@ ALTER TABLE deta_serv_depa
 ALTER TABLE token
     ADD CONSTRAINT token_usuario_fk FOREIGN KEY ( fk_id_usu )
         REFERENCES usuario ( id_usu );
+        
+CREATE SEQUENCE token_seq START WITH 1
+increment by 1;
+
+create or replace trigger token_autoincrement_id
+    before insert on token
+    for each row 
+begin
+    :new.id_token := token_seq.nextval;
+end;
 
 ALTER TABLE tour
     ADD CONSTRAINT tour_guia_turistico_fk FOREIGN KEY ( fk_id_guia )
