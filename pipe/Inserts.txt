@@ -14,6 +14,8 @@ INSERT INTO region (id_region,nombre) VALUES (13,'Los Lagos');
 INSERT INTO region (id_region,nombre) VALUES (14,'Aisén del General Carlos Ibáñez del Campo');
 INSERT INTO region (id_region,nombre) VALUES (15,'Magallanes y de la Antártica Chilena');
 
+select * from region;
+
 
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (1,'Arica',1);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (2,'Camarones',1);
@@ -359,9 +361,9 @@ INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (341,'Porvenir',15);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (342,'Primavera',15);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (343,'Timaukel',15);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (344,'Natales',15);
-INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (345,'Torres del Paine',15);	
+INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (345,'Torres del Paine',15);
 
-
+SELECT * FROM COMUNA;
 
 INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(1,'Sofá',150000);
 INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(3,'Televisor',170000);
@@ -370,28 +372,43 @@ INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_imple
 INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(5,'Jarron',7000);
 INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(6,'Minibar',45000);
 
+SELECT * FROM IMPLEMENTOS_DEPARTAMENTO;
 
 INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(1,'Piscina');
 INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(2,'Restaurante');
 INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(3,'Gimnasio');
 INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(4,'Casino');
-INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(1,'Spa');
-INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(1,'Comedor');
+INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(5,'Spa');
+INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(6,'Comedor');
+
+SELECT * FROM AREA_EDIFICIO;
 
 INSERT INTO CHOFER(id_chofer,nombre,rut,foto) values(1,'Leandro Lagos','19546836-6','Foto Leandrito');
-INSERT INTO CHOFER(id_chofer,nombre,rut,foto) values(1,'Pablo Saldaña','12857362-2','Foto Saldaña');
+INSERT INTO CHOFER(id_chofer,nombre,rut,foto) values(2,'Pablo Saldaña','12857362-2','Foto Saldaña');
+
+SELECT * FROM CHOFER;
 
 INSERT INTO GUIA_TURISTICO(id_guia,nombre) values(1,'Juan Carrasco');
-INSERT INTO GUIA_TURISTICO(id_guia,nombre) values(1,'Esteban Paredes');
+INSERT INTO GUIA_TURISTICO(id_guia,nombre) values(2,'Esteban Paredes');
+
+SELECT * FROM GUIA_TURISTICO;
 
 INSERT INTO ENCARGADO(id_encargado,nombre) values(1,'Felipe Vidal');
-INSERT INTO ENCARGADO(id_encargado,nombre) values(1,'Jonatan Muñoz');
+INSERT INTO ENCARGADO(id_encargado,nombre) values(2,'Jonatan Muñoz');
+
+SELECT * FROM ENCARGADO;
 
 INSERT INTO MARCA(id_marca,nombre) values(1,'Hyundai');
 
-INSERT INTO MODELO(id_modelo,nombre,fk_id_marca) values(1,'Accent,1');
+SELECT * FROM MARCA;
+
+INSERT INTO MODELO(id_modelo,nombre,fk_id_marca) values(1,'Accent',1);
+
+SELECT * FROM MODELO;
 
 INSERT INTO VEHICULO(id_vehiculo,puertas,maleta,fk_id_modelo) values(1,5,'S',1);
+
+SELECT * FROM VEHICULO;
 
 INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(1,'Disponible','El apartamento esta disponible para su arriendo');
 INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(2,'Ocupado','El apartamento no esta disponible para su arriendo');
@@ -399,54 +416,87 @@ INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(3,'Mantenimiento','El ap
 INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(4,'Reservado','El apartamento se encuentra reservado');
 INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(5,'Reparación','El apartamento se encuentra en reparación');
 
+SELECT * FROM ESTADO;
 
 INSERT INTO TIPO_USUARIO(id_tipo_usu,nombre_tipo_usuario) values(1,'Cliente');
 INSERT INTO TIPO_USUARIO(id_tipo_usu,nombre_tipo_usuario) values(2,'Administrador');
 INSERT INTO TIPO_USUARIO(id_tipo_usu,nombre_tipo_usuario) values(3,'Funcionario');
 
+SELECT * FROM TIPO_USUARIO;
+
 INSERT INTO TIPO_MULTAS(id_multas,nombre,descripcion_multa,monto,interes) values(1,'Ruidos Molestos','Se generan ruidos molestos dentro del apartamento',100000,1.2);
 INSERT INTO TIPO_MULTAS(id_multas,nombre,descripcion_multa,monto,interes) values(2,'Daños Menores de Estructura','Se producieron daños menores a la estructura del apartamento',150000,1.2);
 
+SELECT * FROM TIPO_MULTAS;
 
 INSERT INTO ESTADO_PAGO(id_estado,nombre) values(1,'Pagado');
 INSERT INTO ESTADO_PAGO(id_estado,nombre) values(2,'No pagado');
 INSERT INTO ESTADO_PAGO(id_estado,nombre) values(3,'Por pagar');
 INSERT INTO ESTADO_PAGO(id_estado,nombre) values(4,'Medio pagar');
 
+SELECT * FROM ESTADO_PAGO;
+
 INSERT INTO TIPO_PAGO(id_tipo,nombre) values(1,'Transferencia');
 INSERT INTO TIPO_PAGO(id_tipo,nombre) values(2,'Tarjeta de Credito');
+
+SELECT * FROM TIPO_PAGO;
 
 INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(1,'Aire Acondicionado','La habitacion cuenta con aire acondicionado');
 INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(2,'Wifi','La habitacion cuenta con señal wifi para conectarse a internet');
 INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(3,'TV Cable','La habitacion cuenta con televisio  por cable');
-INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(4,'Agua Caliente','La habitacion cuenta con agua caliente con la habitacion de baño');																				
+INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(4,'Agua Caliente','La habitacion cuenta con agua caliente con la habitacion de baño');
+
+SELECT * FROM SERVICIOS_DEPA;
 
 INSERT INTO EDIFICIO(id_edificio,direccion_edificio,telefono,fk_id_comuna) values(1,'Avenida PlayaPescadito #1647',73547846,83);
 
+SELECT * FROM EDIFICIO;
+
 INSERT INTO DEPARTAMENTO(id_departamento,numero_habitaciones,metros_cuadrados,baños,piso,precio_noche,fk_id_edificio,fk_id_estado) values(1,2,500,1,2,12000,1,1);
 
-INSERT INTO TRANSPORTE(id_transporte,nombre_transporte,descripcion_transporte,lugar_salida,lugar_llegada,salida,llegada,valor,fk_id_edificio) VALUES (1,'El voy y vuelvo','Servicio de transporte desde el edificio hasta el terminal/aeropuerto','Aeropuerto','Edificio','28/09/2020','28/09/2020',7000,1);
+SELECT * FROM DEPARTAMENTO;
 
+INSERT INTO TRANSPORTE(id_transporte,nombre_transporte,descripcion_transporte,lugar_salida,lugar_llegada,salida,llegada,valor,fk_id_edificio) VALUES (1,'El voy y vuelvo','Servicio de transporte desde el edificio hasta el terminal/aeropuerto','Aeropuerto','Edificio',TO_DATE('28/09/2020','dd/mm/yyyy'),TO_DATE('28/09/2020','dd/mm/yyyy'),7000,1);
+
+SELECT * FROM TRANSPORTE;
 
 
 INSERT INTO SERVICIO_EXTRA(id_servicio_extra,nombre,descripcion,valor,fk_id_encargado,fk_id_edificio) values(1,'Paseo','Paseo por la zona',15000,1,1);
 
-INSERT INTO TOUR(id_turismo,nombre,descripcion,lugar_visita,valor,fecha_salida,fecha_llegada,fk_id_edificio,fk_id_guia) values (1,'Tur','Tur a la playita de pana','Playita fondo de bikini',10000,'28/09/2020','28/09/2020',1,1);
+SELECT * FROM SERVICIO_EXTRA;
+
+INSERT INTO TOUR(id_turismo,nombre,descripcion,lugar_visita,valor,fecha_salida,fecha_llegada,fk_id_edificio,fk_id_guia) values (1,'Tur','Tur a la playita de pana','Playita fondo de bikini',10000,TO_DATE('28/09/2020','dd/mm/yyyy'),TO_DATE('28/09/2020','dd/mm/yyyy'),1,1);
+
+SELECT * FROM TOUR;
 
 INSERT INTO SERVICIO_DE_TRANSPORTE(id_servicio_transporte,fk_id_vehiculo,fk_id_chofer,fk_id_arriendo,fk_id_transporte) values(1,1,1,1,1);
 
+SELECT * FROM SERVICIO_DE_TRANSPORTE;
 
+INSERT INTO CHECK_OUT(id_check_out,fecha_hora,validado) values (1,TO_DATE('28/09/2020','dd/mm/yyyy'),'S');
 
-INSERT INTO CHECK_OUT(id_check_out,fecha_hora,validado) values (1,'28/09/2020','S');
+SELECT * FROM CHECK_OUT;
 
-INSERT INTO Usuario (id_usu,nombre,password,email,foto,rut,direccion,telefono,fk_id_tipo_usu) values(1,'Felipe Soto','infloglobosconlaboca','pipeuchiha2005@gmail.com','mi fotito','19645364-9','Av SiempreViva','73564783',1);
+INSERT INTO Usuario(nombre,password,email,foto,rut,direccion,telefono,fk_id_tipo_usu) values('Felipe Soto','infloglobosconlaboca','pipeuchiha2005@gmail.com','mi fotito','19645364-9','Av SiempreViva','73564783',1);
 
-INSERT INTO ARRIENDO(id_arriendo,fecha_desde,fecha_hasta,acompañantes,precio,fk_id_departamento,fk_id_turismo,fk_id_check_out,fk_id_servicio_extra,Usuario_id_usu) values(1,'28/09/2020','29/09/2020',2,50000,1,1,1,1,1);
+SELECT * FROM Usuario;
 
-INSERT INTO CHECK_IN(id_check_in,fecha_hora,validado,fk_id_arriendo) values (1,'9/28/2020','S',1);
+INSERT INTO ARRIENDO(id_arriendo,fecha_desde,fecha_hasta,acompañantes,precio,fk_id_departamento,fk_id_turismo,fk_id_check_out,fk_id_servicio_extra,Usuario_id_usu) values(1,TO_DATE('28/09/2020','dd/mm/yyyy'),TO_DATE('29/09/2020','dd/mm/yyyy'),2,50000,1,1,1,1,1);
 
-INSERT INTO MULTA(id_multa,fecha_creacion,periodo_de_gracia,fecha_expiracion_del_pago,fk_id_multas,fk_id_arriendo)values(1,'28/09/2020',5,'29/09/2020',1,1);
+SELECT * FROM ARRIENDO;
+
+INSERT INTO CHECK_IN(id_check_in,fecha_hora,validado,fk_id_arriendo) values (1,TO_DATE('28/09/2020','dd/mm/yyyy'),'S',1);
+
+SELECT * FROM CHECK_IN;
+
+INSERT INTO MULTA(id_multa,fecha_creacion,periodo_de_gracia,fecha_expiracion_del_pago,fk_id_multas,fk_id_arriendo)values(1,TO_DATE('28/09/2020','dd/mm/yyyy'),5,TO_DATE('29/09/2020','dd/mm/yyyy'),1,1);
+
+SELECT * FROM MULTA;
 
 INSERT INTO PAGO(id_pago,monto,fk_id_tipo,fk_id_arriendo,fk_id_estado)values(1,70000,1,1,1);
 
+SELECT * FROM PAGO;
+
 INSERT INTO DETALLE_PAGO(id_detalle_pago,codigo,fk_id_pago) values(1,'a6sd7sdghs8',1);
+
+SELECT * FROM DETALLE_PAGO;
