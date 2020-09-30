@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8FE893C1-8410-A986-E2AD-C2C45EE75E78" name="ESTADO_PAGO">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-25 20:21:35 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<ordsAlias>table_33</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_estado" id="D9B706F9-6C05-0A7C-FDDD-CCF533357855">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-25 20:22:39 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="1F5A37D8-371C-F385-775F-7FDFB1CA1B92">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-25 20:22:39 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="86850150-9418-958B-70EF-8CC51DFE7141" name="ESTADO_PAGO_PK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-25 20:22:39 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9B706F9-6C05-0A7C-FDDD-CCF533357855"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

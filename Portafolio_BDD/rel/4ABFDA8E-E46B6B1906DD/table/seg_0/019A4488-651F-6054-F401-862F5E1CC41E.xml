@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="019A4488-651F-6054-F401-862F5E1CC41E" name="SERVICIOS_DEPA">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 19:20:56 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<ordsAlias>table_32</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_servi_depa" id="9575D4CC-3F02-5CAA-86A3-5FF9932A412F">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 20:02:09 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="16D19EAE-7BD3-5AA1-818C-CBEBD469D079">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 20:02:09 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="766B0798-6C6C-6742-8651-F377D0616984">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 20:02:09 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E432002B-D47A-3A0F-CE36-2CB1FAC1E44B" name="SERVICIOS_DEPA_PK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 20:02:09 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9575D4CC-3F02-5CAA-86A3-5FF9932A412F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

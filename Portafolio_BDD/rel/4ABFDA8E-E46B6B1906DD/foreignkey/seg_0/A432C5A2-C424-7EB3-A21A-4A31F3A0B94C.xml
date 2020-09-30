@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A432C5A2-C424-7EB3-A21A-4A31F3A0B94C" containerWithKeyObject="6F9CF058-9A07-BF80-E4F5-B991E43250E7" localFKIndex="8EC91566-25AB-3B4E-7438-9CAD7992EEBC" name="CHOFER_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 02:55:45 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<referredTableLongName>CHOFER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5278ED09-FA2C-0953-FE22-282A0510DEFF</referredTableID>
+<keyObject>026CADBF-5477-BD55-0D95-5FF6E667456E</keyObject>
+<referredKeyID>026CADBF-5477-BD55-0D95-5FF6E667456E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_chofer</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
