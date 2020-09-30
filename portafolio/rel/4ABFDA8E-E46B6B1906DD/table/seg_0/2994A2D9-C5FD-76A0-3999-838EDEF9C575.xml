@@ -38,7 +38,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="baños" id="81C51DF9-A61F-2D4A-2ABA-4789FBED4EB3">
+<Column name="banios" id="81C51DF9-A61F-2D4A-2ABA-4789FBED4EB3">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 01:00:15 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>

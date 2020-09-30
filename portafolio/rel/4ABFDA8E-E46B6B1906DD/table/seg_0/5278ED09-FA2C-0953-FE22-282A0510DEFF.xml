@@ -40,6 +40,16 @@
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="telefono" id="1749D17F-DB85-88ED-5860-2585CD267E69">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:10:53 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="foto" id="0FDD5F41-3C3F-3C41-2416-9F5EDE0248F8">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-24 02:09:56 UTC</createdTime>

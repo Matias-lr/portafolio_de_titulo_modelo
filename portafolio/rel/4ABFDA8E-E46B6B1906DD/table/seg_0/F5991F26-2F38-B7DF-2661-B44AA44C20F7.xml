@@ -18,6 +18,17 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="nombre" id="8E8552BA-6F60-0814-1219-5AE447DE6B1F">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:13:07 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="direccion_edificio" id="9665C9F1-54E1-C35B-97CC-8C8476BCE9C6">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 01:17:44 UTC</createdTime>

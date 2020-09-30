@@ -29,6 +29,39 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="rut" id="0BCB0B77-11F0-0CA4-439E-781640C90068">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:11:37 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="61BC8DEA-7246-BF2E-5FB0-9FDA13EA7476">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:11:37 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="foto" id="248E8E22-E4DA-1697-ADE7-A867E923CBA3">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:11:57 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="B645110C-1094-279B-15C9-4BB825A73F8B" name="GUIA_TURISTICO_PK">

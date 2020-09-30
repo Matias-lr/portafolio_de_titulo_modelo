@@ -1,5 +1,5 @@
 -- Generado por Oracle SQL Developer Data Modeler 18.2.0.179.0756
---   en:        2020-09-28 02:04:48 CLST
+--   en:        2020-09-30 19:26:23 CLST
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -82,13 +82,13 @@ CREATE TABLE arriendo (
     id_arriendo            NUMBER NOT NULL,
     fecha_desde            DATE NOT NULL,
     fecha_hasta            DATE NOT NULL,
-    acompañantes           NUMBER NOT NULL,
+    acompaniantes          NUMBER NOT NULL,
     precio                 NUMBER NOT NULL,
     fk_id_departamento     NUMBER NOT NULL,
     fk_id_turismo          NUMBER,
     fk_id_check_out        NUMBER NOT NULL,
     fk_id_servicio_extra   NUMBER,
-    usuario_id_usu         NUMBER NOT NULL
+    fk_id_usu              NUMBER NOT NULL
 );
 
 ALTER TABLE arriendo ADD CONSTRAINT arriendo_pk PRIMARY KEY ( id_arriendo );
@@ -114,6 +114,7 @@ CREATE TABLE chofer (
     id_chofer   NUMBER NOT NULL,
     nombre      VARCHAR2(255) NOT NULL,
     rut         VARCHAR2(15) NOT NULL,
+    telefono    NUMBER NOT NULL,
     foto        VARCHAR2(255)
 );
 
@@ -131,7 +132,7 @@ CREATE TABLE departamento (
     id_departamento       NUMBER NOT NULL,
     numero_habitaciones   NUMBER NOT NULL,
     metros_cuadrados      NUMBER NOT NULL,
-    baños                 NUMBER NOT NULL,
+    banios                NUMBER NOT NULL,
     piso                  NUMBER NOT NULL,
     precio_noche          NUMBER NOT NULL,
     fk_id_edificio        NUMBER NOT NULL,
@@ -167,6 +168,7 @@ ALTER TABLE detalle_pago ADD CONSTRAINT detalle_pago_pk PRIMARY KEY ( id_detalle
 
 CREATE TABLE edificio (
     id_edificio          NUMBER NOT NULL,
+    nombre               VARCHAR2(255) NOT NULL,
     direccion_edificio   VARCHAR2(255) NOT NULL,
     telefono             NUMBER(15) NOT NULL,
     fk_id_comuna         NUMBER NOT NULL
@@ -176,7 +178,10 @@ ALTER TABLE edificio ADD CONSTRAINT edificio_pk PRIMARY KEY ( id_edificio );
 
 CREATE TABLE encargado (
     id_encargado   NUMBER NOT NULL,
-    nombre         VARCHAR2(100) NOT NULL
+    nombre         VARCHAR2(100) NOT NULL,
+    rut            VARCHAR2(15) NOT NULL,
+    telefono       NUMBER NOT NULL,
+    foto           VARCHAR2(255)
 );
 
 ALTER TABLE encargado ADD CONSTRAINT encargado_pk PRIMARY KEY ( id_encargado );
@@ -197,8 +202,11 @@ CREATE TABLE estado_pago (
 ALTER TABLE estado_pago ADD CONSTRAINT estado_pago_pk PRIMARY KEY ( id_estado );
 
 CREATE TABLE guia_turistico (
-    id_guia   NUMBER NOT NULL,
-    nombre    VARCHAR2(255) NOT NULL
+    id_guia    NUMBER NOT NULL,
+    nombre     VARCHAR2(255) NOT NULL,
+    rut        VARCHAR2(15) NOT NULL,
+    telefono   NUMBER NOT NULL,
+    foto       VARCHAR2(255)
 );
 
 ALTER TABLE guia_turistico ADD CONSTRAINT guia_turistico_pk PRIMARY KEY ( id_guia );
@@ -349,7 +357,7 @@ ALTER TABLE transporte ADD CONSTRAINT transporte_pk PRIMARY KEY ( id_transporte 
 CREATE TABLE usuario (
     id_usu           NUMBER NOT NULL,
     nombre           VARCHAR2(50) NOT NULL,
-    password         VARCHAR2(255) NOT NULL,
+    contrasenia      VARCHAR2(255) NOT NULL,
     email            VARCHAR2(50) NOT NULL,
     foto             VARCHAR2(255),
     rut              VARCHAR2(15) NOT NULL,
@@ -360,22 +368,13 @@ CREATE TABLE usuario (
 
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id_usu );
 
-CREATE SEQUENCE user_seq START WITH 1
-increment by 1;
-
-create or replace trigger user_autoincrement_id
-    before insert on usuario
-    for each row 
-begin
-    :new.id_usu := user_seq.nextval;
-end;
-
 CREATE TABLE vehiculo (
     id_vehiculo    NUMBER NOT NULL,
     puertas        NUMBER NOT NULL,
     maleta         CHAR 
 --  WARNING: CHAR size not specified 
      NOT NULL,
+    patente        VARCHAR2(6) NOT NULL,
     fk_id_modelo   NUMBER NOT NULL
 );
 
@@ -402,7 +401,7 @@ ALTER TABLE arriendo
         REFERENCES tour ( id_turismo );
 
 ALTER TABLE arriendo
-    ADD CONSTRAINT arriendo_usuario_fk FOREIGN KEY ( usuario_id_usu )
+    ADD CONSTRAINT arriendo_usuario_fk FOREIGN KEY ( fk_id_usu )
         REFERENCES usuario ( id_usu );
 
 ALTER TABLE check_in
@@ -492,16 +491,6 @@ ALTER TABLE deta_serv_depa
 ALTER TABLE token
     ADD CONSTRAINT token_usuario_fk FOREIGN KEY ( fk_id_usu )
         REFERENCES usuario ( id_usu );
-        
-CREATE SEQUENCE token_seq START WITH 1
-increment by 1;
-
-create or replace trigger token_autoincrement_id
-    before insert on token
-    for each row 
-begin
-    :new.id_token := token_seq.nextval;
-end;
 
 ALTER TABLE tour
     ADD CONSTRAINT tour_guia_turistico_fk FOREIGN KEY ( fk_id_guia )

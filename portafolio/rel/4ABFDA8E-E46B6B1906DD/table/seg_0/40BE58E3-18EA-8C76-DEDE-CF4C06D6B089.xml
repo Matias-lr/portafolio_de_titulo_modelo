@@ -61,9 +61,9 @@
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fk_id_usu" id="E53F2D3A-A4D9-8685-7D12-60CD07A7FF91">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 03:46:28 UTC</createdTime>
+<Column name="fk_id_usu" id="EB1C610E-B0D8-8E5C-BCBE-B4761E3E690F">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:15:06 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -72,7 +72,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="0AB99EE2-2B6B-7B74-2E8E-1F37F18BFBEE" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
+<colAssociation fkAssociation="F2B8996B-9287-0593-D4AC-1E1F773FAA03" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
 </associations>
 </Column>
 </columns>
@@ -88,14 +88,14 @@
 <colUsage columnID="404333BB-2D70-5C4C-4E04-723FF7131975"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="02427DA8-024A-6D3C-2BF4-D453DEFA010C" name="TOKEN_Usuario_FK">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 03:46:28 UTC</createdTime>
+<ind_PK_UK id="589A5979-1F18-DC9E-D35B-1D8329F1575D" name="TOKEN_USUARIO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:15:06 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="E53F2D3A-A4D9-8685-7D12-60CD07A7FF91"/>
+<colUsage columnID="EB1C610E-B0D8-8E5C-BCBE-B4761E3E690F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

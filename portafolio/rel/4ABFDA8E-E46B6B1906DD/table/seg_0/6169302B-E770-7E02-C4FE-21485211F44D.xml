@@ -38,7 +38,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="acompañantes" id="A5700E7C-C09E-DAE4-6138-0966965BE58C">
+<Column name="acompaniantes" id="A5700E7C-C09E-DAE4-6138-0966965BE58C">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-25 20:17:12 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -116,9 +116,9 @@
 <colAssociation fkAssociation="8AF0ABA9-9E6C-BF53-260B-C57BDE402D36" referredColumn="991CC07B-4AC8-6B38-AE75-ECE6EBF849E5"/>
 </associations>
 </Column>
-<Column name="Usuario_id_usu" id="E4153415-D6ED-09AD-64D5-EA11093C51B7">
+<Column name="fk_id_usu" id="DE644442-1888-04E7-358F-EB6A635E1B7A">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-28 04:48:00 UTC</createdTime>
+<createdTime>2020-09-30 22:14:50 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -127,7 +127,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="9E057C15-B72C-8D33-49CA-A9F9A4201CE6" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
+<colAssociation fkAssociation="1CD3A677-AD2C-548A-DC2D-CD692965712B" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
 </associations>
 </Column>
 </columns>
@@ -183,14 +183,14 @@
 <colUsage columnID="7C663A4C-C6B0-B4AC-7F0E-6F712F0D72F6"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="E23FD248-EB09-C47D-3134-75DA08D0BD23" name="ARRIENDO_Usuario_FK">
+<ind_PK_UK id="45E47CEF-8272-DFAA-F841-06934C8E8B21" name="ARRIENDO_USUARIO_FK">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-28 04:48:00 UTC</createdTime>
+<createdTime>2020-09-30 22:14:50 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="E4153415-D6ED-09AD-64D5-EA11093C51B7"/>
+<colUsage columnID="DE644442-1888-04E7-358F-EB6A635E1B7A"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

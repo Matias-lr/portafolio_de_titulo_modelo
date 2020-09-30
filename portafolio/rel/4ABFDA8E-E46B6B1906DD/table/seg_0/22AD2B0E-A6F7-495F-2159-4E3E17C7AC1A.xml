@@ -38,6 +38,17 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="patente" id="B8575C6A-540D-A2E9-D0E5-E5E39A68BDF4">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:23:01 UTC</createdTime>
+<ownerDesignName>portafolio</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="fk_id_modelo" id="EEBAB46C-7643-B7BA-975C-7C1D5AE4A454">
 <createdBy>Pipe</createdBy>
 <createdTime>2020-09-24 02:01:16 UTC</createdTime>

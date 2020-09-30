@@ -1,33 +1,16 @@
---pruebas insert
-CREATE OR REPLACE PROCEDURE INSERTAR(
-v_id NUMBER,
-v_puertas NUMBER,
-v_maleta CHAR,
-v_modelo_fk NUMBER)
-IS
-BEGIN
-INSERT INTO VEHICULO(id_vehiculo,puertas,maleta,fk_id_modelo)
-VALUES(v_id,v_puertas,v_maleta,v_modelo_fk);
-END ;
-
-BEGIN
-  INSERTAR(2,5,'S',1);
-END;
-
-
 CREATE OR REPLACE PROCEDURE INSERTAR_DEPTO(
 v_id_departamento NUMBER,
 v_numero_habitaciones NUMBER,
 v_metros_cuadrados NUMBER,
-v_baños NUMBER,
+v_banios NUMBER,
 v_piso NUMBER,
 v_precio_noche NUMBER,
 fk_id_edificio NUMBER,
 fk_id_estado NUMBER)
 IS
 BEGIN
-INSERT INTO DEPARTAMENTO(id_departamento,numero_habitaciones,metros_cuadrados,baños,piso,precio_noche,fk_id_edificio,fk_id_estado)
-VALUES(v_id_departamento,v_numero_habitaciones,v_metros_cuadrados,v_baños,v_piso,v_precio_noche,fk_id_edificio,fk_id_estado);
+INSERT INTO DEPARTAMENTO(id_departamento,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,fk_id_edificio,fk_id_estado)
+VALUES(v_id_departamento,v_numero_habitaciones,v_metros_cuadrados,v_banios ,v_piso,v_precio_noche,fk_id_edificio,fk_id_estado);
 END ;
 
 BEGIN
@@ -63,11 +46,11 @@ END;
 -------
 --Procedure Insertar departamento
 -------
-CREATE OR REPLACE PROCEDURE insertar_chido(
+CREATE OR REPLACE PROCEDURE insert_depto(
 v_id_departamento NUMBER,
 v_numero_habitaciones NUMBER,
 v_metros_cuadrados NUMBER,
-v_baños NUMBER,
+v_banios NUMBER,
 v_piso NUMBER,
 v_precio_noche NUMBER,
 fk_id_edificio NUMBER,
@@ -75,14 +58,14 @@ fk_id_estado NUMBER)
 IS
 din_insert varchar2(1000);
 BEGIN
-    din_insert:= 'insert into departamento (id_departamento,numero_habitaciones,metros_cuadrados,baños,piso,precio_noche,fk_id_edificio,fk_id_estado)
-                values(:v_id_departamento,:v_numero_habitaciones,:v_metros_cuadrados,:v_baños,:v_piso,:v_precio_noche,:fk_id_edificio,:fk_id_estado)';
+    din_insert:= 'insert into departamento (id_departamento,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,fk_id_edificio,fk_id_estado)
+                values(:v_id_departamento,:v_numero_habitaciones,:v_metros_cuadrados,:v_banios ,:v_piso,:v_precio_noche,:fk_id_edificio,:fk_id_estado)';
                 
-execute IMMEDIATE din_insert using v_id_departamento,v_numero_habitaciones,v_metros_cuadrados,v_baños,v_piso,v_precio_noche,fk_id_edificio,fk_id_estado;
+execute IMMEDIATE din_insert using v_id_departamento,v_numero_habitaciones,v_metros_cuadrados,v_banios ,v_piso,v_precio_noche,fk_id_edificio,fk_id_estado;
 END;
 
 BEGIN
-  insertar_chido(34,2,500,1,2,15000,1,1);
+  insert_depto(34,2,500,1,2,15000,1,1);
 END;
 
 -------

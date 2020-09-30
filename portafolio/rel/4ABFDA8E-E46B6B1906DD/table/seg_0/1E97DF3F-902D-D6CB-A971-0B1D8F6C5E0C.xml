@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1E97DF3F-902D-D6CB-A971-0B1D8F6C5E0C" name="Usuario">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1E97DF3F-902D-D6CB-A971-0B1D8F6C5E0C" name="USUARIO">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 00:31:19 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
@@ -29,7 +29,7 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="password" id="417070D9-0902-5CAF-F655-80DEBA9D00CE">
+<Column name="contrasenia" id="417070D9-0902-5CAF-F655-80DEBA9D00CE">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 00:40:25 UTC</createdTime>
 <ownerDesignName>portafolio</ownerDesignName>
