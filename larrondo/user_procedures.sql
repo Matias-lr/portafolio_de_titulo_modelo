@@ -1,3 +1,5 @@
+set serveroutput on;
+
 create or replace procedure usuario_create_procedure
 (v_nombre usuario.nombre%type,
 v_password usuario.password%type,
@@ -31,13 +33,9 @@ begin
     execute IMMEDIATE 'select * from usuario';
 end;
 
-
-
 CREATE OR REPLACE PROCEDURE update_general(
     v_nombre_tabla varchar2,
-    v_nombre_columna varchar2,
-    v_n_columna varchar2,
-    v_nombre_id varchar2,
+    v_set varchar2,
     v_id_columna number) 
     IS
     all_update varchar2(1000);
@@ -47,12 +45,11 @@ BEGIN
       SELECT constraint_name FROM all_constraints 
       WHERE UPPER(table_name) = UPPER(v_nombre_tabla) AND CONSTRAINT_TYPE = 'P'
     );
-    dbms_output.put_line(id_tabla);
-     --all_update:='update '||v_nombre_tabla||' set '||v_nombre_columna||'= '||v_n_columna||' where '||v_nombre_id||'='||v_id_columna;
+     all_update:='update '||v_nombre_tabla||' set '|| v_set ||' where '||id_tabla||'='||v_id_columna;
                         
-    --EXECUTE IMMEDIATE all_update;
+    EXECUTE IMMEDIATE all_update;
 END;
 
 BEGIN
-  update_general('DEPARTAMENTO','piso',100,'id_departamento',1);
+  update_general('DEPARTAMENTO','piso = 30, precio_noche = 100',1);
 END;
