@@ -1,22 +1,5 @@
 set serveroutput on;
 
-create or replace procedure usuario_create_procedure
-(v_nombre usuario.nombre%type,
-v_password usuario.password%type,
-v_email usuario.email%type,
-v_foto usuario.foto%type,
-v_rut usuario.rut%type,
-v_direccion usuario.direccion%type,
-v_telefono usuario.telefono%type,
-v_id_tipo usuario.fk_id_tipo_usu%type)
-as
-begin
-    insert into usuario(nombre,password,email,foto,rut,direccion,telefono,fk_id_tipo_usu)
-    values(v_nombre,v_password,v_email,v_foto,v_rut,v_direccion,v_telefono,v_id_tipo);
-    commit;
-
-end usuario_create_procedure;
-
 create or replace procedure usuario_delete_procedure
 (v_id usuario.id_usu%type)
 as
@@ -24,14 +7,6 @@ begin
     delete from usuario where id_usu = v_id;
     commit;
 end usuario_delete_procedure;
-
-create or replace function user_select_function
-(tabla varchar2)
-return TABLE
-is
-begin
-    execute IMMEDIATE 'select * from usuario';
-end;
 
 CREATE OR REPLACE PROCEDURE update_general(
     v_nombre_tabla varchar2,
@@ -53,3 +28,32 @@ END;
 BEGIN
   update_general('DEPARTAMENTO','piso = 30, precio_noche = 100',1);
 END;
+
+create or replace procedure insert_global
+(v_tabla varchar2,v_insercion varchar2)
+is
+    v_string varchar2(255);
+    v_query varchar2(255);
+begin
+    for xd in (
+    SELECT column_name
+    FROM USER_TAB_COLUMNS
+    WHERE table_name = UPPER(v_tabla)
+    and column_name != (SELECT column_name FROM all_cons_columns WHERE constraint_name = (
+      SELECT constraint_name FROM all_constraints 
+      WHERE UPPER(table_name) = UPPER(v_tabla) AND CONSTRAINT_TYPE = 'P'
+    )))
+    loop
+        v_string := v_string || xd.column_name || ',';
+    end loop;
+    v_string := LPAD(v_string,length(v_string)-1);
+    v_query := 'insert into ' || UPPER(v_tabla) || '(' || v_string || ') values(' || v_insercion || ')';
+    dbms_output.put_line(v_query);
+    EXECUTE IMMEDIATE v_query;
+end;
+
+begin
+insert_global('usuario','''matias'',''1234'',''email@email.com'',''hdjaskdhasjkd'',''hsdjakhdsjkad'',''dsjdhkshdjksd'',''dhsj'',0');
+end;
+
+

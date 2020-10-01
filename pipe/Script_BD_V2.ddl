@@ -371,13 +371,12 @@ ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id_usu );
 CREATE TABLE vehiculo (
     id_vehiculo    NUMBER NOT NULL,
     puertas        NUMBER NOT NULL,
-    maleta         CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
+    maleta         CHAR NOT NULL,
     patente        VARCHAR2(6) NOT NULL,
     fk_id_modelo   NUMBER NOT NULL
 );
 
+drop sequence user_seq;
 
 CREATE SEQUENCE user_seq START WITH 1
 increment by 1;
