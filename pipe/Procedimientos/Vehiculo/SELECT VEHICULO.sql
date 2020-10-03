@@ -22,7 +22,8 @@ BEGIN
    LOOP 
    FETCH vehiculo_cur into v_id_vehiculo, v_puertas,v_maleta,v_patente,v_modelo,v_marca; 
       EXIT WHEN vehiculo_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_vehiculo || ',puertas:'|| v_puertas ||',maleta:"'|| v_maleta ||'"patente:"'||v_patente||'"modelo:"'||v_modelo||'"marca:"'||v_marca||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_vehiculo || ',"puertas":'|| v_puertas ||',"maleta":"'|| v_maleta ||'","patente":"'||v_patente||'","modelo":"'||v_modelo||'","marca":"'||v_marca||'"},'); 
+      
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE vehiculo_cur; 
@@ -39,7 +40,7 @@ JOIN MARCA mr on mr.id_marca = mo. fk_id_marca;
 --SELECT SERVICIOS DEPARTAMENTO ID
 -----------
 
-CREATE OR REPLACE PROCEDURE vehiculo_select_id
+CREATE OR REPLACE PROCEDURE vehiculo_id_select
 (id_carro number)
 is
 BEGIN
@@ -62,7 +63,7 @@ BEGIN
    LOOP 
    FETCH vehiculo_cur_id into v_id_vehiculo, v_puertas,v_maleta,v_patente,v_modelo,v_marca; 
       EXIT WHEN vehiculo_cur_id%notfound; 
-      dbms_output.put_line('{id:'||v_id_vehiculo || ',puertas:'|| v_puertas ||',maleta:"'|| v_maleta ||'"patente:"'||v_patente||'"modelo:"'||v_modelo||'"marca:"'||v_marca||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_vehiculo || ',"puertas":'|| v_puertas ||',"maleta":"'|| v_maleta ||'","patente":"'||v_patente||'","modelo":"'||v_modelo||'","marca":"'||v_marca||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE vehiculo_cur_id; 

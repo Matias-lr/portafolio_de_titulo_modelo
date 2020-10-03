@@ -37,9 +37,9 @@ BEGIN
    LOOP 
    FETCH arriendo_cur into v_id_arriendo, v_fecha_desde,v_fecha_hasta,v_acompaniantes,v_precio,v_habi_depa,v_nombre_edi,v_tour_name,v_fecha_in,v_in_valida,v_fecha_out,v_out_valida,v_servicio,v_cliente; 
       EXIT WHEN arriendo_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_arriendo || ',arriendoDesde:"'|| v_fecha_desde ||'",arriendoHasta:"'|| v_fecha_hasta ||'",acompaniantes:'||v_acompaniantes||',precio:'||v_precio||',departamento:'||v_habi_depa||
-                            ',edificio:"'|| v_nombre_edi||'",tour:"'||v_tour_name||'",fechaCheckIn:"'||v_fecha_in||'",checkInValidado:"'||v_in_valida||'",fechaCheckOut:"'||v_fecha_out||'",checkOutValidado:"'||v_out_valida||
-                            '",nombreServicio:"'||v_servicio||'",cliente:"'||v_cliente||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_arriendo || ',"arriendoDesde":"'|| v_fecha_desde ||'","arriendoHasta":"'|| v_fecha_hasta ||'","acompaniantes":'||v_acompaniantes||',"precio":'||v_precio||',"departamento":'||v_habi_depa||
+                            ',"edificio":"'|| v_nombre_edi||'","tour":"'||v_tour_name||'","fechaCheckIn":"'||v_fecha_in||'","checkInValidado":"'||v_in_valida||'","fechaCheckOut":"'||v_fecha_out||'","checkOutValidado":"'||v_out_valida||
+                            '","nombreServicio":"'||v_servicio||'","cliente":"'||v_cliente||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE arriendo_cur; 

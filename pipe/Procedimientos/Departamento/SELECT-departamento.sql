@@ -4,7 +4,7 @@ SET SERVEROUTPUT ON
 -----------------------
 --Procedure llamar departamentos
 -----------------------
-CREATE OR REPLACE PROCEDURE select_depa
+CREATE OR REPLACE PROCEDURE depa_select
 is
 BEGIN
     DECLARE 
@@ -28,7 +28,7 @@ BEGIN
    LOOP 
    FETCH departamento_cur into v_id_departamento,v_num_habitacion, v_numero_habitaciones, v_metros_cuadrados,v_banios,v_piso,v_precio_noche,v_nombre_edificio,v_nombre_es; 
       EXIT WHEN departamento_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_departamento ||',num_habitacion:'||v_num_habitacion|| ',num_habitaciones:' || v_numero_habitaciones || ',metros_cuadradros:' || v_metros_cuadrados  || ',banios:' || v_banios || ',piso:' || v_piso || ',precio_noche:' || v_precio_noche || ',edificio:"' || v_nombre_edificio || '",estado:' || v_nombre_es||'},'); 
+      dbms_output.put_line('{"id":'||v_id_departamento ||',"num_habitacion":'||v_num_habitacion|| ',"num_habitaciones":' || v_numero_habitaciones || ',"metros_cuadradros":' || v_metros_cuadrados  || ',"banios":' || v_banios || ',"piso":' || v_piso || ',"precio_noche":' || v_precio_noche || ',"edificio":"' || v_nombre_edificio || '","estado":' || v_nombre_es||'},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE departamento_cur; 
@@ -40,7 +40,7 @@ END;
 --Procedure llamar departamentos por id
 -----------------------
 
-CREATE OR REPLACE PROCEDURE select_depa_id
+CREATE OR REPLACE PROCEDURE depa_id_select
 (v_id_dep number)
 is
 BEGIN
@@ -66,7 +66,7 @@ BEGIN
    LOOP 
    FETCH departamento_cur_id into v_id_departamento,v_num_habitacion, v_numero_habitaciones, v_metros_cuadrados,v_banios,v_piso,v_precio_noche,v_nombre_edificio,v_nombre_es; 
       EXIT WHEN departamento_cur_id%notfound; 
-      dbms_output.put_line('{id:'||v_id_departamento ||',num_habitacion:'||v_num_habitacion|| ',num_habitaciones:' || v_numero_habitaciones || ',metros_cuadradros:' || v_metros_cuadrados  || ',banios:' || v_banios || ',piso:' || v_piso || ',precio_noche:' || v_precio_noche || ',edificio:"' || v_nombre_edificio || '",estado:' || v_nombre_es||'},'); 
+      dbms_output.put_line('{"id":'||v_id_departamento ||',"num_habitacion":'||v_num_habitacion|| ',"num_habitaciones":' || v_numero_habitaciones || ',"metros_cuadradros":' || v_metros_cuadrados  || ',"banios":' || v_banios || ',"piso":' || v_piso || ',"precio_noche":' || v_precio_noche || ',"edificio":"' || v_nombre_edificio || '","estado":' || v_nombre_es||'},'); 
    END LOOP; 
     DBMS_OUTPUT.put_line(']');
    CLOSE departamento_cur_id; 
@@ -78,7 +78,7 @@ END;
 --Procedure llamar departamentos por estado
 -----------------------
 
-CREATE OR REPLACE PROCEDURE select_depa_estado
+CREATE OR REPLACE PROCEDURE depa_estado_select
 (v_id_estado_depa number)
 is
 BEGIN
@@ -104,7 +104,7 @@ BEGIN
    LOOP 
    FETCH departamento_cur_estado into v_id_departamento,v_num_habitacion, v_numero_habitaciones, v_metros_cuadrados,v_banios,v_piso,v_precio_noche,v_nombre_edificio,v_nombre_es; 
       EXIT WHEN departamento_cur_estado%notfound; 
-      dbms_output.put_line('{id:'||v_id_departamento ||',num_habitacion:'||v_num_habitacion|| ',num_habitaciones:' || v_numero_habitaciones || ',metros_cuadradros:' || v_metros_cuadrados  || ',banios:' || v_banios || ',piso:' || v_piso || ',precio_noche:' || v_precio_noche || ',edificio:"' || v_nombre_edificio || '",estado:' || v_nombre_es||'},'); 
+      dbms_output.put_line('{"id":'||v_id_departamento ||',"num_habitacion":'||v_num_habitacion|| ',"num_habitaciones":' || v_numero_habitaciones || ',"metros_cuadradros":' || v_metros_cuadrados  || ',"banios":' || v_banios || ',"piso":' || v_piso || ',"precio_noche":' || v_precio_noche || ',"edificio":"' || v_nombre_edificio || '","estado":' || v_nombre_es||'},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE departamento_cur_estado; 

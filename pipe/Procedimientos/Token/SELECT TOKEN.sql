@@ -25,7 +25,7 @@ BEGIN
    LOOP 
    FETCH token_cur into v_id_token, v_token,v_device_name,v_adress,v_baned,v_id_usuario; 
       EXIT WHEN token_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_token || ',token:"'|| v_token ||'",deviceName:"'|| v_device_name ||'",adress:"'||v_adress||'",baned:"'||v_baned||'",idUsuario:'||v_id_usuario||'},'); 
+      dbms_output.put_line('{"id":'||v_id_token || ',"token":"'|| v_token ||'","deviceName":"'|| v_device_name ||'","adress":"'||v_adress||'","baned":"'||v_baned||'","idUsuario":'||v_id_usuario||'},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE token_cur; 
@@ -56,7 +56,7 @@ BEGIN
    LOOP 
    FETCH token_id_cur into v_id_token, v_token,v_device_name,v_adress,v_baned,v_id_usuario; 
       EXIT WHEN token_id_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_token || ',token:"'|| v_token ||'",deviceName:"'|| v_device_name ||'",adress:"'||v_adress||'",baned:"'||v_baned||'",idUsuario:'||v_id_usuario||'},'); 
+      dbms_output.put_line('{"id":'||v_id_token || ',"token":"'|| v_token ||'","deviceName":"'|| v_device_name ||'","adress":"'||v_adress||'","baned":"'||v_baned||'","idUsuario":'||v_id_usuario||'},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE token_id_cur; 
@@ -86,7 +86,7 @@ BEGIN
    LOOP 
    FETCH token_id_usu_cur into v_id_token, v_token,v_device_name,v_adress,v_baned,v_id_usuario; 
       EXIT WHEN token_id_usu_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_token || ',token:"'|| v_token ||'",deviceName:"'|| v_device_name ||'",adress:"'||v_adress||'",baned:"'||v_baned||'",idUsuario:'||v_id_usuario||'},'); 
+      dbms_output.put_line('{"id":'||v_id_token || ',"token":"'|| v_token ||'","deviceName":"'|| v_device_name ||'","adress":"'||v_adress||'","baned":"'||v_baned||'","idUsuario":'||v_id_usuario||'},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE token_id_usu_cur; 

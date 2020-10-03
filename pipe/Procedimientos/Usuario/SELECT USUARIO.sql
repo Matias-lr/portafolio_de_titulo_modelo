@@ -24,8 +24,8 @@ BEGIN
    LOOP 
    FETCH usuario_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo; 
       EXIT WHEN usuario_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_usu || ',nombre:"'|| v_nombre ||'",contrasenia:"'|| v_contrasenia ||'",email:"'||v_email||'",foto:"'||v_foto||'",rut:"'||v_rut||'",direccion:"'||v_direccion||
-                            '",telefono:"'||v_telefono||'",tipoUsuario:"'||v_usuario_tipo||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_usu || ',"nombre":"'|| v_nombre ||'","contrasenia":"'|| v_contrasenia ||'","email":"'||v_email||'","foto":"'||v_foto||'","rut":"'||v_rut||'","direccion":"'||v_direccion||
+                            '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE usuario_cur; 
@@ -36,7 +36,7 @@ END;
 ------------------
 --SELECT USUARIO POR ID
 -----------------
-CREATE OR REPLACE PROCEDURE usuario_select_id
+CREATE OR REPLACE PROCEDURE usuario_id_select
 (v_id_usuario NUMBER)
 is
 BEGIN
@@ -61,8 +61,8 @@ BEGIN
    LOOP 
    FETCH usuario_id_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo; 
       EXIT WHEN usuario_id_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_usu || ',nombre:"'|| v_nombre ||'",contrasenia:"'|| v_contrasenia ||'",email:"'||v_email||'",foto:"'||v_foto||'",rut:"'||v_rut||'",direccion:"'||v_direccion||
-                            '",telefono:"'||v_telefono||'",tipoUsuario:"'||v_usuario_tipo||'"},'); 
+         dbms_output.put_line('{"id":'||v_id_usu || ',"nombre":"'|| v_nombre ||'","contrasenia":"'|| v_contrasenia ||'","email":"'||v_email||'","foto":"'||v_foto||'","rut":"'||v_rut||'","direccion":"'||v_direccion||
+                            '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'"},');  
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE usuario_id_cur; 
@@ -72,7 +72,7 @@ END;
 ------------------
 --SELECT USUARIO POR TIPO USUARIO
 -----------------
-CREATE OR REPLACE PROCEDURE usuario_select_tipo
+CREATE OR REPLACE PROCEDURE usuario_tipo_select
 (v_id_tipo_usu NUMBER)
 is
 BEGIN
@@ -97,8 +97,8 @@ BEGIN
    LOOP 
    FETCH usuario_tipo_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo; 
       EXIT WHEN usuario_tipo_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_usu || ',nombre:"'|| v_nombre ||'",contrasenia:"'|| v_contrasenia ||'",email:"'||v_email||'",foto:"'||v_foto||'",rut:"'||v_rut||'",direccion:"'||v_direccion||
-                            '",telefono:"'||v_telefono||'",tipoUsuario:"'||v_usuario_tipo||'"},'); 
+        dbms_output.put_line('{"id":'||v_id_usu || ',"nombre":"'|| v_nombre ||'","contrasenia":"'|| v_contrasenia ||'","email":"'||v_email||'","foto":"'||v_foto||'","rut":"'||v_rut||'","direccion":"'||v_direccion||
+                            '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE usuario_tipo_cur; 

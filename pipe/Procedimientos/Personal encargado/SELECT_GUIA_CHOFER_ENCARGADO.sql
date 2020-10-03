@@ -3,7 +3,7 @@
 -----------
 --SELECT ENCARGADO 
 -----------
-CREATE OR REPLACE PROCEDURE select_encargado
+CREATE OR REPLACE PROCEDURE encargado_select
 is
 BEGIN
     DECLARE 
@@ -21,7 +21,7 @@ BEGIN
    LOOP 
    FETCH encargado_cur into v_id_encargado, v_nombre, v_rut,v_telefono,v_foto; 
       EXIT WHEN encargado_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_encargado || ',nombre:"' || v_nombre || '",rut:"' || v_rut  || '",telefono:' || v_telefono || ',foto:"' || v_foto || '"},'); 
+      dbms_output.put_line('{"id":'||v_id_encargado || ',"nombre":"' || v_nombre || '","rut":"' || v_rut  || '","telefono":' || v_telefono || ',"foto":"' || v_foto || '"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE encargado_cur; 
@@ -32,7 +32,7 @@ END;
 -----------
 --SELECT ENCARGADO POR ID
 -----------
-CREATE OR REPLACE PROCEDURE select_encargado_id(
+CREATE OR REPLACE PROCEDURE encargado_id_select(
 v_id_enc NUMBER)
 is
 BEGIN
@@ -52,7 +52,7 @@ BEGIN
    LOOP 
    FETCH encargado_id_cur into v_id_encargado, v_nombre, v_rut,v_telefono,v_foto; 
       EXIT WHEN encargado_id_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_encargado || ',nombre:"' || v_nombre || '",rut:"' || v_rut  || '",telefono:' || v_telefono || ',foto:"' || v_foto || '"},'); 
+      dbms_output.put_line('{"id":'||v_id_encargado || ',"nombre":"' || v_nombre || '","rut":"' || v_rut  || '","telefono":' || v_telefono || ',"foto":"' || v_foto || '"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE encargado_id_cur; 
@@ -73,7 +73,7 @@ END;
 -----------
 --SELECT GUIA TURISTICO 
 -----------
-CREATE OR REPLACE PROCEDURE select_guia
+CREATE OR REPLACE PROCEDURE guia_select
 is
 BEGIN
     DECLARE 
@@ -91,7 +91,7 @@ BEGIN
    LOOP 
    FETCH guia_cur into v_id_guia, v_nombre, v_rut,v_telefono,v_foto; 
       EXIT WHEN guia_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_guia || ',nombre:"' || v_nombre || '",rut:"' || v_rut  || '",telefono:' || v_telefono || ',foto:"' || v_foto || '"},'); 
+      dbms_output.put_line('{"id":'||v_id_guia || ',"nombre":"' || v_nombre || '","rut":"' || v_rut  || '","telefono":' || v_telefono || ',"foto":"' || v_foto || '"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE guia_cur; 
@@ -102,7 +102,7 @@ END;
 -----------
 --SELECT GUIA TURISTICO  POR ID
 -----------
-CREATE OR REPLACE PROCEDURE select_guia_id(
+CREATE OR REPLACE PROCEDURE guia_id_select(
 v_id_g NUMBER)
 is
 BEGIN
@@ -122,7 +122,7 @@ BEGIN
    LOOP 
    FETCH guia_cur_id into v_id_guia, v_nombre, v_rut,v_telefono,v_foto; 
       EXIT WHEN guia_cur_id%notfound; 
-      dbms_output.put_line('{id:'||v_id_guia || ',nombre:"' || v_nombre || '",rut:"' || v_rut  || '",telefono:' || v_telefono || ',foto:"' || v_foto || '"},'); 
+      dbms_output.put_line('{"id":'||v_id_guia || ',"nombre":"' || v_nombre || '","rut":"' || v_rut  || '","telefono":' || v_telefono || ',"foto":"' || v_foto || '"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE guia_cur_id; 
@@ -141,7 +141,7 @@ END;
 -----------
 --SELECT CHOFER 
 -----------
-CREATE OR REPLACE PROCEDURE select_chofer
+CREATE OR REPLACE PROCEDURE chofer_select
 is
 BEGIN
     DECLARE 
@@ -159,7 +159,7 @@ BEGIN
    LOOP 
    FETCH chofer_cur into v_id_chofer, v_nombre, v_rut,v_telefono,v_foto; 
       EXIT WHEN chofer_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_chofer || ',nombre:"' || v_nombre || '",rut:"' || v_rut  || '",telefono:' || v_telefono || ',foto:"' || v_foto || '"},'); 
+      dbms_output.put_line('{"id":'||v_id_chofer || ',"nombre":"' || v_nombre || '","rut":"' || v_rut  || '","telefono":' || v_telefono || ',"foto":"' || v_foto || '"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE chofer_cur; 
@@ -170,7 +170,7 @@ END;
 -----------
 --SELECT CHOFER  POR ID
 -----------
-CREATE OR REPLACE PROCEDURE select_chofer_id(
+CREATE OR REPLACE PROCEDURE chofer_id_select(
 v_id_cho NUMBER)
 is
 BEGIN
@@ -190,7 +190,7 @@ BEGIN
    LOOP 
    FETCH chofer_cur_id into v_id_chofer, v_nombre, v_rut,v_telefono,v_foto; 
       EXIT WHEN chofer_cur_id%notfound; 
-      dbms_output.put_line('{id:'||v_id_chofer || ',nombre:"' || v_nombre || '",rut:"' || v_rut  || '",telefono:' || v_telefono || ',foto:"' || v_foto || '"},'); 
+      dbms_output.put_line('{"id":'||v_id_chofer || ',"nombre":"' || v_nombre || '","rut":"' || v_rut  || '","telefono":' || v_telefono || ',"foto":"' || v_foto || '"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE chofer_cur_id; 

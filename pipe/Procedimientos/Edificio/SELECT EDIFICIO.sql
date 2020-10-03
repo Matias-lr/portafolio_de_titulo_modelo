@@ -19,7 +19,7 @@ BEGIN
    LOOP 
    FETCH edificio_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region; 
       EXIT WHEN edificio_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_edificio || ',nombre:"'|| v_nombre ||'",direccion:"'|| v_direccion ||'",telefono:'||v_telefono||',comuna:"'||v_comuna||'",region:"'||v_region||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE edificio_cur; 
@@ -27,7 +27,7 @@ END;
 END;
 
 
-CREATE OR REPLACE PROCEDURE edificio_select_id
+CREATE OR REPLACE PROCEDURE edificio_id_select
 (id_edi NUMBER)
 is
 BEGIN
@@ -50,7 +50,7 @@ BEGIN
    LOOP 
    FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region; 
       EXIT WHEN edificio_id_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_edificio || ',nombre:"'|| v_nombre ||'",direccion:"'|| v_direccion ||'",telefono:'||v_telefono||',comuna:"'||v_comuna||'",region:"'||v_region||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE edificio_id_cur; 

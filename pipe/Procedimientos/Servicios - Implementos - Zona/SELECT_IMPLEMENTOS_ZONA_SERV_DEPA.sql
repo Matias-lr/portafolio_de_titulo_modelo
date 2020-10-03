@@ -18,7 +18,7 @@ BEGIN
    LOOP 
    FETCH area_cur into v_id_area, v_nombre; 
       EXIT WHEN area_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_area || ',nombre:"'|| v_nombre ||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_area || ',"nombre":"'|| v_nombre ||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE area_cur; 
@@ -28,7 +28,7 @@ END;
 -----------
 --SELECT AREA EDIFICIO POR ID
 -----------
-CREATE OR REPLACE PROCEDURE area_edi_select_id
+CREATE OR REPLACE PROCEDURE area_edi_id_select
 (v_id_ar number)
 is
 BEGIN
@@ -45,7 +45,7 @@ BEGIN
    LOOP 
    FETCH area_cur_id into v_id_area, v_nombre; 
       EXIT WHEN area_cur_id%notfound; 
-      dbms_output.put_line('{id:'||v_id_area || ',nombre:"'|| v_nombre ||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_area || ',"nombre":"'|| v_nombre ||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE area_cur_id; 
@@ -80,7 +80,7 @@ BEGIN
    LOOP 
    FETCH implemento_cur into v_id_implemento, v_nombre,v_valor; 
       EXIT WHEN implemento_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_implemento || ',nombre:"'|| v_nombre ||'",valor:'|| v_valor ||'},'); 
+      dbms_output.put_line('{"id":'||v_id_implemento || ',"nombre":"'|| v_nombre ||'","valor":'|| v_valor ||'},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE implemento_cur; 
@@ -90,7 +90,7 @@ END;
 -----------
 --SELECT IMPLEMENTOS DEPARTAMENTO POR ID
 -----------
-CREATE OR REPLACE PROCEDURE imple_depa_select_id
+CREATE OR REPLACE PROCEDURE imple_depa_id_select
 (v_id_im number)
 is
 BEGIN
@@ -107,7 +107,7 @@ BEGIN
    LOOP 
    FETCH implemento_cur into v_id_implemento, v_nombre,v_valor; 
       EXIT WHEN implemento_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_implemento || ',nombre:"'|| v_nombre ||'",valor:'|| v_valor ||'},'); 
+      dbms_output.put_line('{"id":'||v_id_implemento || ',"nombre":"'|| v_nombre ||'","valor":'|| v_valor ||'},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE implemento_cur; 
@@ -141,7 +141,7 @@ BEGIN
    LOOP 
    FETCH servi_depa_cur into v_id_servi, v_nombre,v_descripcion; 
       EXIT WHEN servi_depa_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_servi || ',nombre:"'|| v_nombre ||'",descripcion:"'|| v_descripcion ||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_servi || ',"nombre":"'|| v_nombre ||'","descripcion":"'|| v_descripcion ||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE servi_depa_cur; 
@@ -153,7 +153,7 @@ END;
 --SELECT SERVICIOS DEPARTAMENTO ID
 -----------
 
-CREATE OR REPLACE PROCEDURE serv_depa_select_id
+CREATE OR REPLACE PROCEDURE serv_depa_id_select
 (v_id_sd number)
 is
 BEGIN
@@ -170,7 +170,7 @@ BEGIN
    LOOP 
    FETCH servi_depa_cur_id into v_id_servi, v_nombre,v_descripcion; 
       EXIT WHEN servi_depa_cur_id%notfound; 
-      dbms_output.put_line('{id:'||v_id_servi || ',nombre:"'|| v_nombre ||'",descripcion:"'|| v_descripcion ||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_servi || ',"nombre":"'|| v_nombre ||'","descripcion":"'|| v_descripcion ||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE servi_depa_cur_id; 
