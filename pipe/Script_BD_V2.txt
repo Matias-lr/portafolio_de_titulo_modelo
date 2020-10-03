@@ -130,6 +130,7 @@ ALTER TABLE comuna ADD CONSTRAINT comuna_pk PRIMARY KEY ( id_comuna );
 
 CREATE TABLE departamento (
     id_departamento       NUMBER NOT NULL,
+    numero_habitacion     NUMBER NOT NULL,
     numero_habitaciones   NUMBER NOT NULL,
     metros_cuadrados      NUMBER NOT NULL,
     banios                NUMBER NOT NULL,

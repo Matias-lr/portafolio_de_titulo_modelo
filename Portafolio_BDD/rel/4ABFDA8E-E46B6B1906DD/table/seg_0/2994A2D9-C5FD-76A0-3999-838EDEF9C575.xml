@@ -18,6 +18,16 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="numero_habitacion" id="AE174898-785B-63CC-0B8E-482A8DDD4C0B">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-10-03 19:06:20 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="numero_habitaciones" id="3EBEB5C1-AF1E-447A-2DDD-DC24C99E2558">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 01:00:15 UTC</createdTime>

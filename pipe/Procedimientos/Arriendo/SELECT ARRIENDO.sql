@@ -11,7 +11,7 @@ BEGIN
     v_fecha_hasta DATE;
     v_acompaniantes NUMBER;
     v_precio NUMBER;
-    v_id_depa NUMBER;
+    v_habi_depa NUMBER;
     v_nombre_edi VARCHAR2(255);
     v_tour_name VARCHAR2(255);
     v_fecha_in DATE;
@@ -21,7 +21,7 @@ BEGIN
     v_servicio VARCHAR(255);
     v_cliente VARCHAR(255);
    CURSOR arriendo_cur is 
-        select id_arriendo,fecha_desde,fecha_hasta,acompaniantes,precio,DEP.id_departamento "NUMERO DPTO",EDD.nombre AS "NOMBRE EDIFICIO",
+        select id_arriendo,fecha_desde,fecha_hasta,acompaniantes,precio,DEP.numero_habitacion "NUMERO HABITACION DPTO",EDD.nombre AS "NOMBRE EDIFICIO",
         TUR.nombre AS "NOMBRE TOUR",cin.fecha_hora AS "FECHA CHECK IN",cin.validado AS "CHECK IN VALIDADO",cout.fecha_hora AS "HORA CHECK OUT",cout.validado AS "CHECK OUT VALIDADO",se.nombre AS "SERVICIO EXTRA",usu.nombre CLIENTE  
         FROM ARRIENDO ARR
         JOIN DEPARTAMENTO DEP on DEP.id_departamento=ARR.fk_id_departamento
@@ -35,9 +35,9 @@ BEGIN
    OPEN arriendo_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH arriendo_cur into v_id_arriendo, v_fecha_desde,v_fecha_hasta,v_acompaniantes,v_precio,v_id_depa,v_nombre_edi,v_tour_name,v_fecha_in,v_in_valida,v_fecha_out,v_out_valida,v_servicio,v_cliente; 
+   FETCH arriendo_cur into v_id_arriendo, v_fecha_desde,v_fecha_hasta,v_acompaniantes,v_precio,v_habi_depa,v_nombre_edi,v_tour_name,v_fecha_in,v_in_valida,v_fecha_out,v_out_valida,v_servicio,v_cliente; 
       EXIT WHEN arriendo_cur%notfound; 
-      dbms_output.put_line('{id:'||v_id_arriendo || ',arriendoDesde:"'|| v_fecha_desde ||'",arriendoHasta:"'|| v_fecha_hasta ||'",acompaniantes:'||v_acompaniantes||',precio:'||v_precio||',departamento:'||v_id_depa||
+      dbms_output.put_line('{id:'||v_id_arriendo || ',arriendoDesde:"'|| v_fecha_desde ||'",arriendoHasta:"'|| v_fecha_hasta ||'",acompaniantes:'||v_acompaniantes||',precio:'||v_precio||',departamento:'||v_habi_depa||
                             ',edificio:"'|| v_nombre_edi||'",tour:"'||v_tour_name||'",fechaCheckIn:"'||v_fecha_in||'",checkInValidado:"'||v_in_valida||'",fechaCheckOut:"'||v_fecha_out||'",checkOutValidado:"'||v_out_valida||
                             '",nombreServicio:"'||v_servicio||'",cliente:"'||v_cliente||'"},'); 
    END LOOP; 
