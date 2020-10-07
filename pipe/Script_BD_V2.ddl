@@ -376,6 +376,17 @@ CREATE TABLE vehiculo (
     patente        VARCHAR2(6) NOT NULL,
     fk_id_modelo   NUMBER NOT NULL
 );
+drop sequence encargado_seq;
+
+CREATE SEQUENCE encargado_seq START WITH 1
+increment by 1;
+
+create or replace trigger encargado_autoincrement_id
+    before insert on encargado
+    for each row 
+begin
+    :new.id_encargado := encargado_seq.nextval;
+end;
 
 drop sequence user_seq;
 
@@ -387,6 +398,18 @@ create or replace trigger user_autoincrement_id
     for each row 
 begin
     :new.id_usu := user_seq.nextval;
+end;
+
+drop sequence edificio_seq;
+
+CREATE SEQUENCE edificio_seq START WITH 1
+increment by 1;
+
+create or replace trigger edificio_autoincrement_id
+    before insert on edificio
+    for each row 
+begin
+    :new.id_edificio := edificio_seq.nextval;
 end;
 
 
