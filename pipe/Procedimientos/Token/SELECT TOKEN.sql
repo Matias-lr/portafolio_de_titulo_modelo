@@ -1,6 +1,6 @@
 select id_token, token, device_name,adress,baned,fk_id_usu from token;
 
-insert into token values(1,'token','device',123,'n',1);
+insert into token values(2,'token2','device','direccion','n',1);
 
  SET serveroutput ON
 
@@ -14,7 +14,7 @@ BEGIN
     v_id_token NUMBER;
     v_token VARCHAR2(100);
     v_device_name VARCHAR2(255);
-    v_adress NUMBER;
+    v_adress VARCHAR2(255);
     v_baned CHAR;
     v_id_usuario NUMBER;
    CURSOR token_cur is 
@@ -44,7 +44,7 @@ BEGIN
     v_id_token NUMBER;
     v_token VARCHAR2(100);
     v_device_name VARCHAR2(255);
-    v_adress NUMBER;
+    v_adress VARCHAR2(255);
     v_baned CHAR;
     v_id_usuario NUMBER;
    CURSOR token_id_cur is 
@@ -74,7 +74,7 @@ BEGIN
     v_id_token NUMBER;
     v_token VARCHAR2(100);
     v_device_name VARCHAR2(255);
-    v_adress NUMBER;
+    v_adress VARCHAR2(255);
     v_baned CHAR;
     v_id_usuario NUMBER;
    CURSOR token_id_usu_cur is 
@@ -92,6 +92,42 @@ BEGIN
    CLOSE token_id_usu_cur; 
 END; 
 END;
+
+----------
+--
+----------
+
+CREATE OR REPLACE PROCEDURE token_token_select
+(v_s_token varchar2)
+is
+BEGIN
+    DECLARE 
+    v_id_token NUMBER;
+    v_token VARCHAR2(100);
+    v_device_name VARCHAR2(255);
+    v_adress VARCHAR2(255);
+    v_baned CHAR;
+    v_id_usuario NUMBER;
+   CURSOR token_tk_cur is 
+       select id_token, token, device_name,adress,baned,fk_id_usu from token
+       where token = v_s_token;
+    BEGIN 
+   OPEN token_tk_cur; 
+    DBMS_OUTPUT.put_line('[');
+   LOOP 
+   FETCH token_tk_cur into v_id_token, v_token,v_device_name,v_adress,v_baned,v_id_usuario; 
+      EXIT WHEN token_tk_cur%notfound; 
+      dbms_output.put_line('{"id":'||v_id_token || ',"token":"'|| v_token ||'","deviceName":"'|| v_device_name ||'","adress":"'||v_adress||'","baned":"'||v_baned||'","idUsuario":'||v_id_usuario||'},'); 
+   END LOOP; 
+   DBMS_OUTPUT.put_line(']');
+   CLOSE token_tk_cur; 
+END; 
+END;
+
+BEGIN
+    token_token_select('token');
+END;
+
 
 BEGIN
     token_select();
