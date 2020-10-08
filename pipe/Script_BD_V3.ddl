@@ -71,6 +71,13 @@ DROP TABLE usuario CASCADE CONSTRAINTS;
 
 DROP TABLE vehiculo CASCADE CONSTRAINTS;
 
+-- Generado por Oracle SQL Developer Data Modeler 18.2.0.179.0756
+--   en:        2020-10-07 23:51:53 CLST
+--   sitio:      Oracle Database 11g
+--   tipo:      Oracle Database 11g
+
+
+
 CREATE TABLE area_edificio (
     id_area_edificio    NUMBER NOT NULL,
     nombre_implemento   VARCHAR2(50) NOT NULL
@@ -143,14 +150,14 @@ CREATE TABLE departamento (
 ALTER TABLE departamento ADD CONSTRAINT departamento_pk PRIMARY KEY ( id_departamento );
 
 CREATE TABLE deta_area_edi (
-    edificio_id_edificio             NUMBER NOT NULL,
-    area_edificio_id_area_edificio   NUMBER NOT NULL,
-    cantidad_implemento              NUMBER NOT NULL
+    fk_id_edificio        NUMBER NOT NULL,
+    fk_id_area_edificio   NUMBER NOT NULL,
+    cantidad_implemento   NUMBER NOT NULL
 );
 
 CREATE TABLE deta_imp_depa (
-    id_implemento         NUMBER NOT NULL,
-    id_departamento       NUMBER NOT NULL,
+    fk_id_implemento      NUMBER NOT NULL,
+    fk_id_departamento    NUMBER NOT NULL,
     cantidad_implemento   NUMBER NOT NULL
 );
 
@@ -426,15 +433,15 @@ ALTER TABLE departamento
         REFERENCES estado ( id_estado );
 
 ALTER TABLE deta_imp_depa
-    ADD CONSTRAINT departamento_fk FOREIGN KEY ( id_departamento )
+    ADD CONSTRAINT departamento_fk FOREIGN KEY ( fk_id_departamento )
         REFERENCES departamento ( id_departamento );
 
 ALTER TABLE deta_area_edi
-    ADD CONSTRAINT deta_area_edi_area_edificio_fk FOREIGN KEY ( area_edificio_id_area_edificio )
+    ADD CONSTRAINT deta_area_edi_area_edificio_fk FOREIGN KEY ( fk_id_area_edificio )
         REFERENCES area_edificio ( id_area_edificio );
 
 ALTER TABLE deta_area_edi
-    ADD CONSTRAINT deta_area_edi_edificio_fk FOREIGN KEY ( edificio_id_edificio )
+    ADD CONSTRAINT deta_area_edi_edificio_fk FOREIGN KEY ( fk_id_edificio )
         REFERENCES edificio ( id_edificio );
 
 ALTER TABLE detalle_pago
@@ -450,7 +457,7 @@ ALTER TABLE edificio
         REFERENCES comuna ( id_comuna );
 
 ALTER TABLE deta_imp_depa
-    ADD CONSTRAINT implementos_departamento_fk FOREIGN KEY ( id_implemento )
+    ADD CONSTRAINT implementos_departamento_fk FOREIGN KEY ( fk_id_implemento )
         REFERENCES implementos_departamento ( id_implemento );
 
 ALTER TABLE modelo

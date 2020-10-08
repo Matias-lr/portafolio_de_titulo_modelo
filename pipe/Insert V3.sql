@@ -216,13 +216,13 @@ INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (198,'Cañete',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (199,'Contulmo',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (200,'Curanilahue',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (201,'Lebu',10);
-INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (202,'Los Álamos',10);
+INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (202,'Los �?lamos',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (203,'Tirúa',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (204,'Alto Biobío',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (205,'Antuco',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (206,'Cabrero',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (207,'Laja',10);
-INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (208,'Los Ángeles',10);
+INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (208,'Los �?ngeles',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (209,'Mulchén',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (210,'Nacimiento',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (211,'Negrete',10);
@@ -466,21 +466,18 @@ INSERT INTO TOUR(id_turismo,nombre,descripcion,lugar_visita,valor,fecha_salida,f
 
 
 
-INSERT INTO SERVICIO_DE_TRANSPORTE(id_servicio_transporte,fk_id_vehiculo,fk_id_chofer,fk_id_arriendo,fk_id_transporte) values(1,1,1,1,1);
-
-
 
 INSERT INTO CHECK_OUT(id_check_out,fecha_hora,validado) values (1,TO_DATE('28/09/2020','dd/mm/yyyy'),'S');
 
 
 
-INSERT INTO USUARIO(nombre,contrasenia,email,foto,rut,direccion,telefono,fk_id_tipo_usu) values('Felipe Soto','infloglobosconlaboca','pipeuchiha2005@gmail.com','mi fotito','19645364-9','Av SiempreViva','73564783',1);
+INSERT INTO USUARIO(id_usu,nombre,contrasenia,email,foto,rut,direccion,telefono,fk_id_tipo_usu) values(1,'Felipe Soto','infloglobosconlaboca','pipeuchiha2005@gmail.com','mi fotito','19645364-9','Av SiempreViva','73564783',1);
 
 
 
 INSERT INTO ARRIENDO(id_arriendo,fecha_desde,fecha_hasta,acompaniantes,precio,fk_id_departamento,fk_id_turismo,fk_id_check_out,fk_id_servicio_extra,fk_id_usu) values(1,TO_DATE('28/09/2020','dd/mm/yyyy'),TO_DATE('29/09/2020','dd/mm/yyyy'),2,50000,1,1,1,1,1);
 
-
+INSERT INTO SERVICIO_DE_TRANSPORTE(id_servicio_transporte,fk_id_vehiculo,fk_id_chofer,fk_id_arriendo,fk_id_transporte) values(1,1,1,1,1);
 
 INSERT INTO CHECK_IN(id_check_in,fecha_hora,validado,fk_id_arriendo) values (1,TO_DATE('28/09/2020','dd/mm/yyyy'),'S',1);
 
