@@ -5,6 +5,7 @@ is
 existe number;
 v_id_usu number;
 v_nombre varchar2(50);
+v_contrasenia varchar2(255);
 v_mail varchar2(50);
 v_foto varchar2(255);
 v_rut varchar2(15);
@@ -15,6 +16,7 @@ v_id_tipo NUMBER;
 begin
 v_id_usu:=0;
 v_nombre:='';
+v_contrasenia:='';
 v_mail:='';
 v_foto:='';
 v_rut:='';
@@ -29,12 +31,12 @@ select count(*) into existe from usuario where email = v_email;
   else
     existe:=0;
   end if;
-    select id_usu,nombre, email,foto,rut,direccion,telefono, tp.nombre_tipo_usuario,tp.id_tipo_usu into v_id_usu,v_nombre,
+    select id_usu,nombre,contrasenia, email,foto,rut,direccion,telefono, tp.nombre_tipo_usuario,tp.id_tipo_usu into v_id_usu,v_nombre,v_contrasenia,
            v_mail,v_foto,v_rut,v_direccion,v_telefono,v_nombre_usu,v_id_tipo
     from usuario us
     join tipo_usuario tp on tp.id_tipo_usu = us.fk_id_tipo_usu
     where email = v_email;
-  dbms_output.put_line('{ "id_usu":'|| v_id_usu || ',"nombre":"' || v_nombre || '","email":"'||v_mail || '","foto":"' || v_foto || '","rut":"' || v_rut || '","direccion":"' || v_direccion || '","telefono":"' ||v_telefono ||
+  dbms_output.put_line('{ "id_usu":'|| v_id_usu || ',"nombre":"' || v_nombre || '","contrasenia":"'||v_contrasenia || '","email":"'||v_mail || '","foto":"' || v_foto || '","rut":"' || v_rut || '","direccion":"' || v_direccion || '","telefono":"' ||v_telefono ||
                        '","tipoUsuario":"'  ||v_nombre_usu|| '","idTipoUsu":' || v_id_tipo || '}');
 exception
       when no_data_found then
