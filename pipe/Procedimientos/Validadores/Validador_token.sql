@@ -6,13 +6,13 @@ existe number;
 v_id_token NUMBER;
 v_token VARCHAR2(100);
 v_device VARCHAR2(255);
-v_adress NUMBER;
+v_adress VARCHAR2(255);
 v_baniao CHAR;
 begin
 v_id_token:=0;
 v_token:='';
 v_device:='';
-v_adress:=0;
+v_adress:='';
 v_baniao:='';
 existe:=0;
 select count(*) into existe from token where token = v_token_existe;
@@ -22,7 +22,7 @@ select count(*) into existe from token where token = v_token_existe;
     existe:=0;
   end if;
 select id_token, token, device_name,adress,baned into v_id_token,v_token,v_device,v_adress,v_baniao from token where token = v_token_existe;
-    dbms_output.put_line('{ "id_token":'|| v_id_token || ',"token":"' || v_token || '","device":"'||v_device || '","adresss":' || v_adress || ',"baned":"' || v_baniao || '"}');
+    dbms_output.put_line('{ "id_token":'|| v_id_token || ',"token":"' || v_token || '","device":"'||v_device || '","adresss":"' || v_adress || '","baned":"' || v_baniao || '"}');
 exception
       when no_data_found then
         v_id_token := NULL;

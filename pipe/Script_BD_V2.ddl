@@ -320,7 +320,7 @@ CREATE TABLE token (
     id_token      NUMBER NOT NULL,
     token         VARCHAR2(100) NOT NULL,
     device_name   VARCHAR2(255) NOT NULL,
-    adress        NUMBER NOT NULL,
+    adress        VARCHAR2(255) NOT NULL,
     baned         CHAR(1) NOT NULL,
     fk_id_usu     NUMBER NOT NULL
 );
