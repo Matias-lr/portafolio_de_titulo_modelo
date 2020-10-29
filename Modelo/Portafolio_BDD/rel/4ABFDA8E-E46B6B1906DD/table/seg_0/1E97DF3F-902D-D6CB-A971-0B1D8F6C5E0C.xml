@@ -51,18 +51,6 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="foto" id="1D30F055-0A16-7933-D9F9-BFB8D4FEECBB">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-10-29 00:15:02 UTC</createdTime>
-<ownerDesignName>Portafolio_BDD</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>2000</dataTypeSize>
-<ownDataTypeParameters>2000,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="rut" id="ED001DD2-6FE8-C045-27C5-6D2C79C103B8">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 00:40:25 UTC</createdTime>

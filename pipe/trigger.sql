@@ -94,7 +94,23 @@ begin
     :new.id_estado := estado_pago_seq.nextval;
 end;
 /
+--
+create or replace trigger foto_dep_autoincrement_id
+    before insert on foto_depa
+    for each row 
+begin
+    :new.id_foto_dep := foto_dep_seq.nextval;
+end;
 
+create or replace trigger foto_edi_autoincrement_id
+    before insert on foto_edi
+    for each row 
+begin
+    :new.id_foto_edi := foto_edi_seq.nextval;
+end;
+
+
+--
 create or replace trigger guia_turistico_auto_id
     before insert on guia_turistico
     for each row 

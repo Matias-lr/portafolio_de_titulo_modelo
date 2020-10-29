@@ -4,7 +4,7 @@ create or replace procedure proce_token (v_token_existe varchar2)
 is
 existe number;
 v_id_token NUMBER;
-v_token VARCHAR2(100);
+v_token VARCHAR2(1000);
 v_device VARCHAR2(255);
 v_adress VARCHAR2(255);
 v_baniao CHAR;

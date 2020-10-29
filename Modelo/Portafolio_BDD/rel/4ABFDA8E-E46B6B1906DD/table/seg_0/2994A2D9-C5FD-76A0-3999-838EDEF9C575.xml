@@ -78,17 +78,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="foto" id="BF5A1B49-0203-A3DE-56A3-E2A670A4872F">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-10-29 00:22:44 UTC</createdTime>
-<ownerDesignName>Portafolio_BDD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>2000</dataTypeSize>
-<ownDataTypeParameters>2000,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="fk_id_edificio" id="A4D22A26-3F08-5958-5FC5-456E5443BD69">
 <createdBy>matias</createdBy>
 <createdTime>2020-09-24 01:19:00 UTC</createdTime>

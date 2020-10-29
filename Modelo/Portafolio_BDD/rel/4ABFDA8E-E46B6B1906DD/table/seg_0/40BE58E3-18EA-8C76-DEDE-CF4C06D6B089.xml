@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F5991F26-2F38-B7DF-2661-B44AA44C20F7" name="EDIFICIO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="40BE58E3-18EA-8C76-DEDE-CF4C06D6B089" name="TOKEN">
 <createdBy>matias</createdBy>
-<createdTime>2020-09-24 01:15:44 UTC</createdTime>
+<createdTime>2020-09-24 03:45:15 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
-<ordsAlias>table_4</ordsAlias>
+<ordsAlias>table_23</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_edificio" id="A9E0702D-F56A-A3B9-D50E-D49B81E0B578">
+<Column name="id_token" id="404333BB-2D70-5C4C-4E04-723FF7131975">
 <createdBy>matias</createdBy>
-<createdTime>2020-09-24 01:17:44 UTC</createdTime>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -18,9 +18,20 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nombre" id="8E8552BA-6F60-0814-1219-5AE447DE6B1F">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-09-30 22:13:07 UTC</createdTime>
+<Column name="token" id="C35713EE-FB81-82D0-5E6D-CC015E66D7E6">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="device_name" id="CEF47355-A16D-3DC1-2AA2-698A1E8ECD91">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -29,9 +40,9 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="direccion_edificio" id="9665C9F1-54E1-C35B-97CC-8C8476BCE9C6">
+<Column name="adress" id="353EDE5D-3155-B264-76D5-37357A64405A">
 <createdBy>matias</createdBy>
-<createdTime>2020-09-24 01:17:44 UTC</createdTime>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -40,31 +51,20 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="telefono" id="D4EFD473-A424-570C-12D1-01EDC8F684DE">
+<Column name="baned" id="00747979-8635-8CCC-E744-8EAEBCED2AB2">
 <createdBy>matias</createdBy>
-<createdTime>2020-09-24 01:17:44 UTC</createdTime>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>15</dataTypePrecision>
-<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="foto" id="503BC565-6453-5B0D-6A8A-1F69268621EE">
+<Column name="fk_id_usu" id="EB1C610E-B0D8-8E5C-BCBE-B4761E3E690F">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-10-29 00:22:59 UTC</createdTime>
-<ownerDesignName>Portafolio_BDD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>2000</dataTypeSize>
-<ownDataTypeParameters>2000,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="fk_id_comuna" id="F472BA0F-213F-D624-AA2D-1AB21A3CBD8A">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-09-24 02:29:10 UTC</createdTime>
+<createdTime>2020-09-30 22:15:06 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -73,30 +73,30 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="E7D7AF6C-65FB-BB23-FB8A-825E45B9506A" referredColumn="34C2681F-5AD4-D24F-DEE6-E5B37D7C3033"/>
+<colAssociation fkAssociation="F2B8996B-9287-0593-D4AC-1E1F773FAA03" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="CDBE3C6E-7C03-CFE6-9E4F-FFFA05FCB24B" name="EDIFICIO_PK">
+<ind_PK_UK id="9CDECEAB-1A6C-699C-23E3-214BF200FA0D" name="TOKEN_PK">
 <createdBy>matias</createdBy>
-<createdTime>2020-09-24 01:17:44 UTC</createdTime>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
+<colUsage columnID="404333BB-2D70-5C4C-4E04-723FF7131975"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="636F78F7-ED5F-1C3C-52F8-F415E8408002" name="EDIFICIO_COMUNA_FK">
+<ind_PK_UK id="589A5979-1F18-DC9E-D35B-1D8329F1575D" name="TOKEN_USUARIO_FK">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-09-24 02:29:10 UTC</createdTime>
+<createdTime>2020-09-30 22:15:06 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="F472BA0F-213F-D624-AA2D-1AB21A3CBD8A"/>
+<colUsage columnID="EB1C610E-B0D8-8E5C-BCBE-B4761E3E690F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

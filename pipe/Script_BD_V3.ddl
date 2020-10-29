@@ -35,6 +35,10 @@ DROP TABLE estado CASCADE CONSTRAINTS;
 
 DROP TABLE estado_pago CASCADE CONSTRAINTS;
 
+DROP TABLE foto_depa CASCADE CONSTRAINTS;
+
+DROP TABLE foto_edi CASCADE CONSTRAINTS;
+
 DROP TABLE guia_turistico CASCADE CONSTRAINTS;
 
 DROP TABLE implementos_departamento CASCADE CONSTRAINTS;
@@ -122,7 +126,7 @@ CREATE TABLE chofer (
     nombre      VARCHAR2(255) NOT NULL,
     rut         VARCHAR2(15) NOT NULL,
     telefono    NUMBER NOT NULL,
-    foto        VARCHAR2(255)
+    foto        VARCHAR2(2000)
 );
 
 ALTER TABLE chofer ADD CONSTRAINT chofer_pk PRIMARY KEY ( id_chofer );
@@ -143,6 +147,7 @@ CREATE TABLE departamento (
     banios                NUMBER NOT NULL,
     piso                  NUMBER NOT NULL,
     precio_noche          NUMBER NOT NULL,
+    foto                  VARCHAR2(2000) NOT NULL,
     fk_id_edificio        NUMBER NOT NULL,
     fk_id_estado          NUMBER NOT NULL
 );
@@ -179,6 +184,7 @@ CREATE TABLE edificio (
     nombre               VARCHAR2(255) NOT NULL,
     direccion_edificio   VARCHAR2(255) NOT NULL,
     telefono             NUMBER(15) NOT NULL,
+    foto                 VARCHAR2(2000) NOT NULL,
     fk_id_comuna         NUMBER NOT NULL
 );
 
@@ -189,7 +195,7 @@ CREATE TABLE encargado (
     nombre         VARCHAR2(100) NOT NULL,
     rut            VARCHAR2(15) NOT NULL,
     telefono       NUMBER NOT NULL,
-    foto           VARCHAR2(255)
+    foto           VARCHAR2(2000)
 );
 
 ALTER TABLE encargado ADD CONSTRAINT encargado_pk PRIMARY KEY ( id_encargado );
@@ -209,12 +215,28 @@ CREATE TABLE estado_pago (
 
 ALTER TABLE estado_pago ADD CONSTRAINT estado_pago_pk PRIMARY KEY ( id_estado );
 
+CREATE TABLE foto_depa (
+    id_foto_dep          NUMBER NOT NULL,
+    foto_dep             VARCHAR2(2000) NOT NULL,
+    fk_id_departamento   NUMBER NOT NULL
+);
+
+ALTER TABLE foto_depa ADD CONSTRAINT foto_depa_pk PRIMARY KEY ( id_foto_dep );
+
+CREATE TABLE foto_edi (
+    id_foto_edi      NUMBER NOT NULL,
+    foto_edi         VARCHAR2(2000) NOT NULL,
+    fk_id_edificio   NUMBER NOT NULL
+);
+
+ALTER TABLE foto_edi ADD CONSTRAINT foto_edi_pk PRIMARY KEY ( id_foto_edi );
+
 CREATE TABLE guia_turistico (
     id_guia    NUMBER NOT NULL,
     nombre     VARCHAR2(255) NOT NULL,
     rut        VARCHAR2(15) NOT NULL,
     telefono   NUMBER NOT NULL,
-    foto       VARCHAR2(255)
+    foto       VARCHAR2(2000)
 );
 
 ALTER TABLE guia_turistico ADD CONSTRAINT guia_turistico_pk PRIMARY KEY ( id_guia );
@@ -325,7 +347,7 @@ ALTER TABLE tipo_usuario ADD CONSTRAINT tipo_usuario_pk PRIMARY KEY ( id_tipo_us
 
 CREATE TABLE token (
     id_token      NUMBER NOT NULL,
-    token         VARCHAR2(100) NOT NULL,
+    token         VARCHAR2(1000) NOT NULL,
     device_name   VARCHAR2(255) NOT NULL,
     adress        VARCHAR2(255) NOT NULL,
     baned         CHAR(1) NOT NULL,
@@ -367,7 +389,7 @@ CREATE TABLE usuario (
     nombre           VARCHAR2(50) NOT NULL,
     contrasenia      VARCHAR2(255) NOT NULL,
     email            VARCHAR2(50) NOT NULL,
-    foto             VARCHAR2(255),
+    foto             VARCHAR2(2000),
     rut              VARCHAR2(15) NOT NULL,
     direccion        VARCHAR2(255) NOT NULL,
     telefono         VARCHAR2(15) NOT NULL,
@@ -455,6 +477,14 @@ ALTER TABLE deta_serv_depa
 ALTER TABLE edificio
     ADD CONSTRAINT edificio_comuna_fk FOREIGN KEY ( fk_id_comuna )
         REFERENCES comuna ( id_comuna );
+        
+ALTER TABLE foto_depa
+    ADD CONSTRAINT foto_dep_fk FOREIGN KEY ( fk_id_departamento )
+        REFERENCES departamento ( id_departamento );
+
+ALTER TABLE foto_edi
+    ADD CONSTRAINT foto_edi_edificio_fk FOREIGN KEY ( fk_id_edificio )
+        REFERENCES edificio ( id_edificio );
 
 ALTER TABLE deta_imp_depa
     ADD CONSTRAINT implementos_departamento_fk FOREIGN KEY ( fk_id_implemento )

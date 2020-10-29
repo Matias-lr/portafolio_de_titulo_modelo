@@ -12,7 +12,7 @@ is
 BEGIN
     DECLARE 
     v_id_token NUMBER;
-    v_token VARCHAR2(100);
+    v_token VARCHAR2(1000);
     v_device_name VARCHAR2(255);
     v_adress VARCHAR2(255);
     v_baned CHAR;
@@ -42,7 +42,7 @@ is
 BEGIN
     DECLARE 
     v_id_token NUMBER;
-    v_token VARCHAR2(100);
+    v_token VARCHAR2(1000);
     v_device_name VARCHAR2(255);
     v_adress VARCHAR2(255);
     v_baned CHAR;
@@ -72,7 +72,7 @@ is
 BEGIN
     DECLARE 
     v_id_token NUMBER;
-    v_token VARCHAR2(100);
+    v_token VARCHAR2(1000);
     v_device_name VARCHAR2(255);
     v_adress VARCHAR2(255);
     v_baned CHAR;
@@ -103,7 +103,7 @@ is
 BEGIN
     DECLARE 
     v_id_token NUMBER;
-    v_token VARCHAR2(100);
+    v_token VARCHAR2(1000);
     v_device_name VARCHAR2(255);
     v_adress VARCHAR2(255);
     v_baned CHAR;

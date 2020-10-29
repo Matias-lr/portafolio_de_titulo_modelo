@@ -75,7 +75,17 @@ drop sequence estado_pago_seq;
 
 CREATE SEQUENCE estado_pago_seq START WITH 1
 increment by 1;
+--
+drop sequence foto_dep_seq;
 
+CREATE SEQUENCE foto_dep_seq START WITH 1
+increment by 1;
+
+drop sequence foto_edi_seq;
+
+CREATE SEQUENCE foto_edi_seq START WITH 1
+increment by 1;
+--
 drop sequence guia_turistico_seq;
 
 CREATE SEQUENCE guia_turistico_seq START WITH 1

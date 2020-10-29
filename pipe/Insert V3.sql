@@ -442,14 +442,14 @@ INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(4,'Agua Cali
 
 
 
-INSERT INTO EDIFICIO(id_edificio,nombre,direccion_edificio,telefono,fk_id_comuna) values(1,'Turismo Real Pescadito','Avenida PlayaPescadito #1647',73547846,83);
+INSERT INTO EDIFICIO(id_edificio,nombre,direccion_edificio,telefono,foto,fk_id_comuna) values(1,'Turismo Real Pescadito','Avenida PlayaPescadito #1647',73547846,'Foto edificio',83);
 
 
 
-INSERT INTO DEPARTAMENTO(id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,fk_id_edificio,fk_id_estado) values(1,32,2,500,1,2,12000,1,1);
-INSERT INTO DEPARTAMENTO(id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,fk_id_edificio,fk_id_estado) values(2,33,2,500,1,2,12000,1,2);
-INSERT INTO DEPARTAMENTO(id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,fk_id_edificio,fk_id_estado) values(3,34,2,500,1,2,12000,1,2);
-INSERT INTO DEPARTAMENTO(id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,fk_id_edificio,fk_id_estado) values(4,35,2,500,1,2,12000,1,1);
+INSERT INTO DEPARTAMENTO(id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,foto,fk_id_edificio,fk_id_estado) values(1,32,2,500,1,2,12000,'Foto departamento',1,1);
+INSERT INTO DEPARTAMENTO(id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,foto,fk_id_edificio,fk_id_estado) values(2,33,2,500,1,2,12000,'Foto departamento',1,2);
+INSERT INTO DEPARTAMENTO(id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,foto,fk_id_edificio,fk_id_estado) values(3,34,2,500,1,2,12000,'Foto departamento',1,2);
+INSERT INTO DEPARTAMENTO(id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,foto,fk_id_edificio,fk_id_estado) values(4,35,2,500,1,2,12000,'Foto departamento',1,1);
 
 
 
