@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C5D43104-5A6C-B8EB-243E-57B52C4D900C" name="FOTO_EDI">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-10-28 23:36:38 UTC</createdTime>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9D9CDD35-D0F0-A462-D57E-103881E266C1" name="IMPLEMENTOS_DEPARTAMENTO">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:13:15 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
-<ordsAlias>table_39</ordsAlias>
+<ordsAlias>table_16</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_foto_edi" id="6E2751B7-6517-0E41-61C3-DEB5D84E65E8">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-10-28 23:38:07 UTC</createdTime>
+<Column name="id_implemento" id="EC88FB9D-862F-6757-5F27-B4F902572079">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:14:25 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -18,34 +18,30 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="foto_edi" id="667C12BD-D731-E1FE-F5FE-E3EB3952C91D">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-10-28 23:38:07 UTC</createdTime>
+<Column name="nombre_implemento" id="AA32006B-4093-348C-5B18-3088049F2465">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:14:25 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>2000</dataTypeSize>
-<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fk_id_edificio" id="038CCE38-791A-9F4E-C712-2EC62166F62E">
+<Column name="valor_implemento" id="FDC8B833-B9BA-F336-682C-326AD0E068E6">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-10-28 23:38:12 UTC</createdTime>
+<createdTime>2020-09-25 18:49:14 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="7D66F535-46CC-FF03-30F7-3D138AEDBA90" referredColumn="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
-</associations>
 </Column>
-<Column name="activo" id="016736B1-2975-70CF-010D-48BB5BF0998B">
+<Column name="activo" id="C533FB8A-2038-DFAC-82BA-73CEDB31A1D3">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-10-29 03:27:08 UTC</createdTime>
+<createdTime>2020-10-29 03:24:47 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -56,25 +52,15 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="14ADBFCC-2604-5823-B766-5724CBB74AA3" name="FOTO_EDI_PK">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-10-28 23:38:07 UTC</createdTime>
+<ind_PK_UK id="F387C740-22F9-FE8E-0B60-01AC7DAF4674" name="IMPLEMENTOS_DEPARTAMENTO_PK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:14:25 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="6E2751B7-6517-0E41-61C3-DEB5D84E65E8"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="80E26A57-EA52-5EDE-3611-81A485F57A0A" name="FOTO_EDI_EDIFICIO_FK">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-10-28 23:38:12 UTC</createdTime>
-<ownerDesignName>Portafolio_BDD</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="038CCE38-791A-9F4E-C712-2EC62166F62E"/>
+<colUsage columnID="EC88FB9D-862F-6757-5F27-B4F902572079"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

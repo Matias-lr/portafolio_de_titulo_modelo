@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1E97DF3F-902D-D6CB-A971-0B1D8F6C5E0C" name="USUARIO">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:31:19 UTC</createdTime>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="307AB782-29D9-440E-D5FD-A455725D2DC0" name="TRANSPORTE">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:45:39 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
-<ordsAlias>table_1</ordsAlias>
+<ordsAlias>table_6</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_usu" id="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:40:25 UTC</createdTime>
+<Column name="id_transporte" id="EE1A05BC-32E8-926C-F503-4E3C29A5242E">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:49:12 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -18,65 +18,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nombre" id="230DE24F-FDC7-AC73-42EA-425A747318C8">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:40:25 UTC</createdTime>
-<ownerDesignName>Portafolio_BDD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="contrasenia" id="417070D9-0902-5CAF-F655-80DEBA9D00CE">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:40:25 UTC</createdTime>
-<ownerDesignName>Portafolio_BDD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
-<ownDataTypeParameters>255,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="email" id="C4E5690D-95F5-885C-E4DB-B02127B1DACB">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:40:25 UTC</createdTime>
-<ownerDesignName>Portafolio_BDD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="foto" id="1D30F055-0A16-7933-D9F9-BFB8D4FEECBB">
+<Column name="nombre_transporte" id="246599CA-7467-FBD2-78EF-CDB3D3A79D9D">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-10-29 00:15:02 UTC</createdTime>
-<ownerDesignName>Portafolio_BDD</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>2000</dataTypeSize>
-<ownDataTypeParameters>2000,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="rut" id="ED001DD2-6FE8-C045-27C5-6D2C79C103B8">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:40:25 UTC</createdTime>
-<ownerDesignName>Portafolio_BDD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="direccion" id="F89CF95E-D45E-35F2-1573-9A17808C9427">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:43:16 UTC</createdTime>
+<createdTime>2020-09-24 01:50:23 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -85,20 +29,72 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="telefono" id="F415B335-BCC0-6704-33B7-A4EF2AC81872">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:45:17 UTC</createdTime>
+<Column name="descripcion_transporte" id="0520912D-F37E-6AD3-D877-9FFA9F6CD31E">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:49:12 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fk_id_tipo_usu" id="E5055A30-FE01-0AB5-7DAE-8072C6CBF871">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:46:48 UTC</createdTime>
+<Column name="lugar_salida" id="0ADB0B44-49D4-230F-E200-AD3CF35074F9">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:49:12 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lugar_llegada" id="91F5246B-1056-5617-3BD6-F7AF26BF276F">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:49:12 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salida" id="D6E8B67E-045B-5542-84C4-AFE862FA1FD0">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 02:21:53 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="llegada" id="39C78040-77B4-72FE-5267-93501559CEF5">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 02:21:53 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valor" id="668DEC57-5DCC-87E0-27D5-65D4A77B979A">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:49:12 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fk_id_edificio" id="76791A5D-AD28-2526-1B3A-6C0BA3C78D24">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:51:22 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -107,12 +103,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="06DF34F2-848A-57C8-6F87-61CB6F1F4A93" referredColumn="AB965F24-CED2-3D79-18A9-F8E7F93702F1"/>
+<colAssociation fkAssociation="B333F059-5AF2-08D3-9C39-828D570639C6" referredColumn="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
 </associations>
 </Column>
-<Column name="activo" id="E91BF2DC-18B3-6F87-98C3-2723DDDD23D9">
+<Column name="activo" id="51F81A89-7DD9-F329-EDC1-CF9CE8C8F787">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-10-29 01:50:07 UTC</createdTime>
+<createdTime>2020-10-29 03:28:40 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -123,25 +119,25 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="888B1C95-ED30-F0CD-6056-512B4D78233C" name="Usuario_PK">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:40:25 UTC</createdTime>
+<ind_PK_UK id="B8AC33C0-EECF-A0FD-5D08-5DDC50C2746E" name="TRANSPORTE_PK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:49:12 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
+<colUsage columnID="EE1A05BC-32E8-926C-F503-4E3C29A5242E"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9378E710-98F2-B4A8-504A-4F684EE2C18B" name="Usuario_TIPO_USUARIO_FK">
-<createdBy>matias</createdBy>
-<createdTime>2020-09-24 00:46:48 UTC</createdTime>
+<ind_PK_UK id="A20D763A-F029-0EBC-7DEE-FCDC8A617B0F" name="TRANSPORTE_EDIFICIO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 01:51:22 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="E5055A30-FE01-0AB5-7DAE-8072C6CBF871"/>
+<colUsage columnID="76791A5D-AD28-2526-1B3A-6C0BA3C78D24"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

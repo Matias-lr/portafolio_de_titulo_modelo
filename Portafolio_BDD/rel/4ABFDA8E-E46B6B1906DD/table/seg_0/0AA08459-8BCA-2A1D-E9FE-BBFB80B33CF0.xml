@@ -43,9 +43,9 @@
 <colAssociation fkAssociation="788C1B5E-0829-E352-1CEF-5FFF7D8C3565" referredColumn="3230EACA-B457-9A16-9AB3-0C9E7425C7AE"/>
 </associations>
 </Column>
-<Column name="principal_depa" id="D1967813-B8FE-2969-E40A-86F49D3A0A1A">
+<Column name="activo" id="89BB0A33-CD4F-B3DA-C50E-D9E1E556D86B">
 <createdBy>Pipe</createdBy>
-<createdTime>2020-10-29 00:20:44 UTC</createdTime>
+<createdTime>2020-10-29 03:23:30 UTC</createdTime>
 <ownerDesignName>Portafolio_BDD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>

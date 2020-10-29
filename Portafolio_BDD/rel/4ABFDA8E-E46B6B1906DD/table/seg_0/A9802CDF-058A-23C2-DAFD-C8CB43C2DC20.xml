@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A9802CDF-058A-23C2-DAFD-C8CB43C2DC20" name="TIPO_USUARIO">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 00:44:20 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_tipo_usu" id="AB965F24-CED2-3D79-18A9-F8E7F93702F1">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 00:44:43 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_tipo_usuario" id="46162365-0F3E-F2B3-9BF5-24D962053D08">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 00:45:46 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="activo" id="0DAFC1D1-5307-BD86-5390-298035256FE2">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-10-29 01:50:24 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E80D0D4E-BADE-3D37-49C1-FBE93BB00671" name="TIPO_USUARIO_PK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 00:44:43 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB965F24-CED2-3D79-18A9-F8E7F93702F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

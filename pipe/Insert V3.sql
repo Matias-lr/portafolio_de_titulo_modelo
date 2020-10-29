@@ -379,6 +379,7 @@ INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(6,'Comedor'
 
 
 
+
 INSERT INTO CHOFER(id_chofer,nombre,rut,telefono,foto) values(1,'Leandro Lagos','19546836-6',12345678,'Foto Leandrito');
 INSERT INTO CHOFER(id_chofer,nombre,rut,telefono,foto) values(2,'Pablo Saldaña','12857362-2',12345678,'Foto Saldaña');
 

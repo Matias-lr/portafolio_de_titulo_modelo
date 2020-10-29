@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4AAC2FBF-C5D1-C171-CB2E-019BDE07C66A" name="CHECK_OUT">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:28:22 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<ordsAlias>table_19</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_check_out" id="47869D5A-0F09-2B4E-B564-E47BD902BA6A">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:28:22 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_hora" id="CA3D333A-6306-0B21-A427-82500C82869A">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:28:22 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="validado" id="BB74A8B3-70C9-52A3-A7E2-94A9DD1609B7">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:28:22 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="activo" id="FEE0FC9F-1F45-304F-DCBC-86193D3458B0">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-10-29 03:20:15 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="587E7375-EBCB-EA6C-3AE7-89685646D2A3" name="CHECK_INv1_PK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:28:22 UTC</createdTime>
+<ownerDesignName>Portafolio_BDD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47869D5A-0F09-2B4E-B564-E47BD902BA6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -84,7 +84,9 @@ DROP TABLE vehiculo CASCADE CONSTRAINTS;
 
 CREATE TABLE area_edificio (
     id_area_edificio    NUMBER NOT NULL,
-    nombre_implemento   VARCHAR2(50) NOT NULL
+    nombre_implemento   VARCHAR2(50) NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
+
 );
 
 ALTER TABLE area_edificio ADD CONSTRAINT implementos_edificio_pk PRIMARY KEY ( id_area_edificio );
@@ -99,7 +101,8 @@ CREATE TABLE arriendo (
     fk_id_turismo          NUMBER,
     fk_id_check_out        NUMBER NOT NULL,
     fk_id_servicio_extra   NUMBER,
-    fk_id_usu              NUMBER NOT NULL
+    fk_id_usu              NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE arriendo ADD CONSTRAINT arriendo_pk PRIMARY KEY ( id_arriendo );
@@ -108,7 +111,8 @@ CREATE TABLE check_in (
     id_check_in      NUMBER NOT NULL,
     fecha_hora       DATE NOT NULL,
     validado         CHAR(1) NOT NULL,
-    fk_id_arriendo   NUMBER NOT NULL
+    fk_id_arriendo   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE check_in ADD CONSTRAINT check_in_pk PRIMARY KEY ( id_check_in );
@@ -116,7 +120,8 @@ ALTER TABLE check_in ADD CONSTRAINT check_in_pk PRIMARY KEY ( id_check_in );
 CREATE TABLE check_out (
     id_check_out   NUMBER NOT NULL,
     fecha_hora     DATE NOT NULL,
-    validado       CHAR(1) NOT NULL
+    validado       CHAR(1) NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE check_out ADD CONSTRAINT check_inv1_pk PRIMARY KEY ( id_check_out );
@@ -126,7 +131,8 @@ CREATE TABLE chofer (
     nombre      VARCHAR2(255) NOT NULL,
     rut         VARCHAR2(15) NOT NULL,
     telefono    NUMBER NOT NULL,
-    foto        VARCHAR2(2000)
+    foto        VARCHAR2(2000),
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE chofer ADD CONSTRAINT chofer_pk PRIMARY KEY ( id_chofer );
@@ -134,7 +140,8 @@ ALTER TABLE chofer ADD CONSTRAINT chofer_pk PRIMARY KEY ( id_chofer );
 CREATE TABLE comuna (
     id_comuna      NUMBER NOT NULL,
     nombre         VARCHAR2(255) NOT NULL,
-    fk_id_region   NUMBER NOT NULL
+    fk_id_region   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE comuna ADD CONSTRAINT comuna_pk PRIMARY KEY ( id_comuna );
@@ -149,7 +156,8 @@ CREATE TABLE departamento (
     precio_noche          NUMBER NOT NULL,
     foto                  VARCHAR2(2000) NOT NULL,
     fk_id_edificio        NUMBER NOT NULL,
-    fk_id_estado          NUMBER NOT NULL
+    fk_id_estado          NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE departamento ADD CONSTRAINT departamento_pk PRIMARY KEY ( id_departamento );
@@ -157,24 +165,28 @@ ALTER TABLE departamento ADD CONSTRAINT departamento_pk PRIMARY KEY ( id_departa
 CREATE TABLE deta_area_edi (
     fk_id_edificio        NUMBER NOT NULL,
     fk_id_area_edificio   NUMBER NOT NULL,
-    cantidad_implemento   NUMBER NOT NULL
+    cantidad_implemento   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 CREATE TABLE deta_imp_depa (
     fk_id_implemento      NUMBER NOT NULL,
     fk_id_departamento    NUMBER NOT NULL,
-    cantidad_implemento   NUMBER NOT NULL
+    cantidad_implemento   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 CREATE TABLE deta_serv_depa (
     fk_id_servi_depa     NUMBER NOT NULL,
-    fk_id_departamento   NUMBER NOT NULL
+    fk_id_departamento   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 CREATE TABLE detalle_pago (
     id_detalle_pago   NUMBER NOT NULL,
     codigo            VARCHAR2(50) NOT NULL,
-    fk_id_pago        NUMBER NOT NULL
+    fk_id_pago        NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE detalle_pago ADD CONSTRAINT detalle_pago_pk PRIMARY KEY ( id_detalle_pago );
@@ -185,7 +197,8 @@ CREATE TABLE edificio (
     direccion_edificio   VARCHAR2(255) NOT NULL,
     telefono             NUMBER(15) NOT NULL,
     foto                 VARCHAR2(2000) NOT NULL,
-    fk_id_comuna         NUMBER NOT NULL
+    fk_id_comuna         NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE edificio ADD CONSTRAINT edificio_pk PRIMARY KEY ( id_edificio );
@@ -195,7 +208,8 @@ CREATE TABLE encargado (
     nombre         VARCHAR2(100) NOT NULL,
     rut            VARCHAR2(15) NOT NULL,
     telefono       NUMBER NOT NULL,
-    foto           VARCHAR2(2000)
+    foto           VARCHAR2(2000),
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE encargado ADD CONSTRAINT encargado_pk PRIMARY KEY ( id_encargado );
@@ -203,14 +217,16 @@ ALTER TABLE encargado ADD CONSTRAINT encargado_pk PRIMARY KEY ( id_encargado );
 CREATE TABLE estado (
     id_estado     NUMBER NOT NULL,
     nombre        VARCHAR2(50) NOT NULL,
-    descripcion   VARCHAR2(255) NOT NULL
+    descripcion   VARCHAR2(255) NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE estado ADD CONSTRAINT estado_pk PRIMARY KEY ( id_estado );
 
 CREATE TABLE estado_pago (
     id_estado   NUMBER NOT NULL,
-    nombre      VARCHAR2(50) NOT NULL
+    nombre      VARCHAR2(50) NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE estado_pago ADD CONSTRAINT estado_pago_pk PRIMARY KEY ( id_estado );
@@ -218,7 +234,8 @@ ALTER TABLE estado_pago ADD CONSTRAINT estado_pago_pk PRIMARY KEY ( id_estado );
 CREATE TABLE foto_depa (
     id_foto_dep          NUMBER NOT NULL,
     foto_dep             VARCHAR2(2000) NOT NULL,
-    fk_id_departamento   NUMBER NOT NULL
+    fk_id_departamento   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE foto_depa ADD CONSTRAINT foto_depa_pk PRIMARY KEY ( id_foto_dep );
@@ -226,7 +243,8 @@ ALTER TABLE foto_depa ADD CONSTRAINT foto_depa_pk PRIMARY KEY ( id_foto_dep );
 CREATE TABLE foto_edi (
     id_foto_edi      NUMBER NOT NULL,
     foto_edi         VARCHAR2(2000) NOT NULL,
-    fk_id_edificio   NUMBER NOT NULL
+    fk_id_edificio   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE foto_edi ADD CONSTRAINT foto_edi_pk PRIMARY KEY ( id_foto_edi );
@@ -236,7 +254,8 @@ CREATE TABLE guia_turistico (
     nombre     VARCHAR2(255) NOT NULL,
     rut        VARCHAR2(15) NOT NULL,
     telefono   NUMBER NOT NULL,
-    foto       VARCHAR2(2000)
+    foto       VARCHAR2(2000),
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE guia_turistico ADD CONSTRAINT guia_turistico_pk PRIMARY KEY ( id_guia );
@@ -244,14 +263,16 @@ ALTER TABLE guia_turistico ADD CONSTRAINT guia_turistico_pk PRIMARY KEY ( id_gui
 CREATE TABLE implementos_departamento (
     id_implemento       NUMBER NOT NULL,
     nombre_implemento   VARCHAR2(50) NOT NULL,
-    valor_implemento    NUMBER NOT NULL
+    valor_implemento    NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE implementos_departamento ADD CONSTRAINT implementos_departamento_pk PRIMARY KEY ( id_implemento );
 
 CREATE TABLE marca (
     id_marca   NUMBER NOT NULL,
-    nombre     VARCHAR2(255) NOT NULL
+    nombre     VARCHAR2(255) NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE marca ADD CONSTRAINT marca_pk PRIMARY KEY ( id_marca );
@@ -259,7 +280,8 @@ ALTER TABLE marca ADD CONSTRAINT marca_pk PRIMARY KEY ( id_marca );
 CREATE TABLE modelo (
     id_modelo     NUMBER NOT NULL,
     nombre        VARCHAR2(255) NOT NULL,
-    fk_id_marca   NUMBER NOT NULL
+    fk_id_marca   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE modelo ADD CONSTRAINT modelo_pk PRIMARY KEY ( id_modelo );
@@ -270,7 +292,8 @@ CREATE TABLE multa (
     periodo_de_gracia           NUMBER NOT NULL,
     fecha_expiracion_del_pago   DATE NOT NULL,
     fk_id_multas                NUMBER NOT NULL,
-    fk_id_arriendo              NUMBER NOT NULL
+    fk_id_arriendo              NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE multa ADD CONSTRAINT multa_pk PRIMARY KEY ( id_multa );
@@ -280,14 +303,16 @@ CREATE TABLE pago (
     monto            NUMBER NOT NULL,
     fk_id_tipo       NUMBER NOT NULL,
     fk_id_arriendo   NUMBER NOT NULL,
-    fk_id_estado     NUMBER NOT NULL
+    fk_id_estado     NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE pago ADD CONSTRAINT pago_pk PRIMARY KEY ( id_pago );
 
 CREATE TABLE region (
     id_region   NUMBER NOT NULL,
-    nombre      VARCHAR2(255) NOT NULL
+    nombre      VARCHAR2(255) NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE region ADD CONSTRAINT region_pk PRIMARY KEY ( id_region );
@@ -297,7 +322,8 @@ CREATE TABLE servicio_de_transporte (
     fk_id_vehiculo           NUMBER NOT NULL,
     fk_id_chofer             NUMBER NOT NULL,
     fk_id_arriendo           NUMBER NOT NULL,
-    fk_id_transporte         NUMBER NOT NULL
+    fk_id_transporte         NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE servicio_de_transporte ADD CONSTRAINT servicio_de_transporte_pk PRIMARY KEY ( id_servicio_transporte );
@@ -308,7 +334,8 @@ CREATE TABLE servicio_extra (
     descripcion         VARCHAR2(255) NOT NULL,
     valor               NUMBER NOT NULL,
     fk_id_encargado     NUMBER NOT NULL,
-    fk_id_edificio      NUMBER NOT NULL
+    fk_id_edificio      NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE servicio_extra ADD CONSTRAINT servicio_extra_pk PRIMARY KEY ( id_servicio_extra );
@@ -316,7 +343,8 @@ ALTER TABLE servicio_extra ADD CONSTRAINT servicio_extra_pk PRIMARY KEY ( id_ser
 CREATE TABLE servicios_depa (
     id_servi_depa   NUMBER NOT NULL,
     nombre          VARCHAR2(70) NOT NULL,
-    descripcion     VARCHAR2(255) NOT NULL
+    descripcion     VARCHAR2(255) NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE servicios_depa ADD CONSTRAINT servicios_depa_pk PRIMARY KEY ( id_servi_depa );
@@ -326,21 +354,24 @@ CREATE TABLE tipo_multas (
     nombre              VARCHAR2(50) NOT NULL,
     descripcion_multa   VARCHAR2(250) NOT NULL,
     monto               NUMBER NOT NULL,
-    interes             FLOAT NOT NULL
+    interes             FLOAT NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE tipo_multas ADD CONSTRAINT multas_pk PRIMARY KEY ( id_multas );
 
 CREATE TABLE tipo_pago (
     id_tipo   NUMBER NOT NULL,
-    nombre    VARCHAR2(255) NOT NULL
+    nombre    VARCHAR2(255) NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE tipo_pago ADD CONSTRAINT tipo_pago_pk PRIMARY KEY ( id_tipo );
 
 CREATE TABLE tipo_usuario (
     id_tipo_usu           NUMBER NOT NULL,
-    nombre_tipo_usuario   VARCHAR2(50) NOT NULL
+    nombre_tipo_usuario   VARCHAR2(50) NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE tipo_usuario ADD CONSTRAINT tipo_usuario_pk PRIMARY KEY ( id_tipo_usu );
@@ -351,7 +382,8 @@ CREATE TABLE token (
     device_name   VARCHAR2(255) NOT NULL,
     adress        VARCHAR2(255) NOT NULL,
     baned         CHAR(1) NOT NULL,
-    fk_id_usu     NUMBER NOT NULL
+    fk_id_usu     NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE token ADD CONSTRAINT token_pk PRIMARY KEY ( id_token );
@@ -365,7 +397,8 @@ CREATE TABLE tour (
     fecha_salida     DATE NOT NULL,
     fecha_llegada    DATE NOT NULL,
     fk_id_edificio   NUMBER NOT NULL,
-    fk_id_guia       NUMBER NOT NULL
+    fk_id_guia       NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE tour ADD CONSTRAINT turismo_pk PRIMARY KEY ( id_turismo );
@@ -379,7 +412,8 @@ CREATE TABLE transporte (
     salida                   DATE NOT NULL,
     llegada                  DATE NOT NULL,
     valor                    NUMBER NOT NULL,
-    fk_id_edificio           NUMBER NOT NULL
+    fk_id_edificio           NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE transporte ADD CONSTRAINT transporte_pk PRIMARY KEY ( id_transporte );
@@ -393,7 +427,8 @@ CREATE TABLE usuario (
     rut              VARCHAR2(15) NOT NULL,
     direccion        VARCHAR2(255) NOT NULL,
     telefono         VARCHAR2(15) NOT NULL,
-    fk_id_tipo_usu   NUMBER NOT NULL
+    fk_id_tipo_usu   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id_usu );
@@ -401,11 +436,12 @@ ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id_usu );
 CREATE TABLE vehiculo (
     id_vehiculo    NUMBER NOT NULL,
     puertas        NUMBER NOT NULL,
-    maleta         CHAR 
+    maleta         CHAR(1)
 --  WARNING: CHAR size not specified 
      NOT NULL,
     patente        VARCHAR2(6) NOT NULL,
-    fk_id_modelo   NUMBER NOT NULL
+    fk_id_modelo   NUMBER NOT NULL,
+    activo                 CHAR(1) DEFAULT 1 NOT NULL
 );
 
 ALTER TABLE vehiculo ADD CONSTRAINT vehiculo_pk PRIMARY KEY ( id_vehiculo );
