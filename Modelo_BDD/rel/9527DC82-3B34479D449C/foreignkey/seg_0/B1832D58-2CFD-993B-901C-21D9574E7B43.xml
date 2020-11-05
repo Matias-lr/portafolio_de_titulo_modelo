@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B1832D58-2CFD-993B-901C-21D9574E7B43" containerWithKeyObject="8A315A92-FAA5-E402-7F05-23CEE10A3E61" localFKIndex="EC3CE516-9A97-53DC-AB72-94086EB90E0B" name="multa_tipo_multas_fk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>097B6A7E-D7A6-9E2D-21C0-4B033F590961</importedID>
+<referredTableLongName>TIPO_MULTAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C0C983D1-6877-6D0A-5A45-CF07D9A71878</referredTableID>
+<keyObject>ED919E6D-55F9-3E93-06E4-657EB72B22C1</keyObject>
+<referredKeyID>ED919E6D-55F9-3E93-06E4-657EB72B22C1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_multas</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

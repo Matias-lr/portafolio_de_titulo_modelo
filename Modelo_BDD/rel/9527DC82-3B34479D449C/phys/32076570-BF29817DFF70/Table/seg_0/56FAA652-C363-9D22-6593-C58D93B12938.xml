@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="DETA_IMP_DEPA" directorySegmentName="seg_0" id="56FAA652-C363-9D22-6593-C58D93B12938">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="fk_id_implemento" id="4854A635-FB84-1F79-0303-5CD0786743CE">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="cantidad_implemento" id="A6483BF2-4525-6B55-E147-8E0A1B9269CB">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="activo" id="A9D809A8-6527-3C45-04C0-349A916AF8F5">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<defaultValue>1</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="fk_id_departamento" id="F9944E90-F5B2-3B46-75DD-F321C56AEB95">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="implementos_departamento_fk" id="62570ED4-5A93-A401-F710-4E2B85510E2A">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="departamento_fk" id="BA23E483-E6B3-8140-CD42-B0F0DF48BCAA">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+</TableProxyOraclev11g>

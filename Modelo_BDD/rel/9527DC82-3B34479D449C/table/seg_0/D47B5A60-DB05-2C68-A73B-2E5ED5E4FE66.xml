@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D47B5A60-DB05-2C68-A73B-2E5ED5E4FE66" name="TIPO_USUARIO">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>08A70CE5-3601-D72C-0873-51AEDBAD4875</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_tipo_usu" id="F6DC2FF7-4700-7A49-049E-DC5D3A9EED11">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>FCDC20AF-51BB-F30D-6808-6D92604EA23D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_tipo_usuario" id="60A1C2AF-C087-F03B-9E50-B91655C94EFD">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>E098A413-BDA8-021B-678F-E676A8994A39</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>35844EF6-984E-A2E1-D4C4-FC935441A5D5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="activo" id="6A915770-38D7-87F3-C920-0FFCA489A6E5">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>FCEBCC6C-A285-D7BB-6536-AFC4EED81F5D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>9227B604-FA6E-A130-88E5-D8497E3D4E28</domain>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB4AFAB4-18D0-151B-09BF-9CADB6BA487E" name="tipo_usuario_pk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>D9F7A99B-7994-FDB5-523D-192B56A8B274</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6DC2FF7-4700-7A49-049E-DC5D3A9EED11"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

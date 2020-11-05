@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1B1B7AEE-050C-A418-BC3E-2B0301ECFE66" name="ESTADO">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:50:35 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<ordsAlias>table_26</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_estado" id="D406BE04-6C68-A238-4ECF-4FB8916E69B2">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:51:15 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="901F5A6E-3351-855F-3262-659E97739AC6">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:51:15 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="05FA723B-7C68-1B9E-A310-2E385E61EEB6">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:51:15 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7E4AB875-88D5-9004-AA6A-34C53EC31BEA" name="ESTADO_PK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:51:15 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D406BE04-6C68-A238-4ECF-4FB8916E69B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

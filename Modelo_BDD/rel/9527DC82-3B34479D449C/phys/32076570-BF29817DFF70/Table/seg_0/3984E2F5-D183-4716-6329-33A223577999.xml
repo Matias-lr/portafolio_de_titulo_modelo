@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="ESTADO_PAGO" directorySegmentName="seg_0" id="3984E2F5-D183-4716-6329-33A223577999">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_estado" id="281DD29D-BC9E-760F-E5BE-06BA03281D85">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="activo" id="3F3743CC-B1BD-7A73-D9E5-0038799D7A9B">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<defaultValue>1</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="nombre" id="D0B653BA-735C-F777-78A3-3CE8373249B7">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="estado_pago_pk" id="A62BC7FF-2BDD-D3EB-210E-198955A4B8FA">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

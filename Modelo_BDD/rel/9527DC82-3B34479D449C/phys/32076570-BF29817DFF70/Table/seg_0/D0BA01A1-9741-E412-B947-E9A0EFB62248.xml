@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="FOTO_DEPA" directorySegmentName="seg_0" id="D0BA01A1-9741-E412-B947-E9A0EFB62248">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="activo" id="01FAA149-AE73-0247-1F40-2397F515CC87">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<defaultValue>1</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="fk_id_departamento" id="BC2251DD-45DE-6834-F800-B37B7E275D68">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_foto_dep" id="F29D727F-4A37-C2A0-74D0-0A314C0FF366">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="foto_dep" id="FFAD01FF-F9D0-3C61-E4B6-AEBF41C38127">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="foto_dep_fk" id="55ED71BF-0EC2-A916-0DB8-A58E33CAB329">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="foto_depa_pk" id="0DFE4082-29BE-A79B-51A1-46035E92BB74">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

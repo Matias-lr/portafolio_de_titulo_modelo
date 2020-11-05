@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="GUIA_TURISTICO" directorySegmentName="seg_0" id="A0762FDE-C437-C2E0-6BEB-A39E794BC90D">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nombre" id="21710D7D-7580-58EE-E82A-F38F20FACD73">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_guia" id="46EF5816-5197-7827-4ACB-7B86EB60AE9E">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="foto" id="6D4D9431-203F-079B-5B4B-48F76084B6FA">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="rut" id="8F6AE584-5572-9ED7-2C1C-046024BD74DB">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="telefono" id="BDF71048-8192-7692-B806-6389308CFBEA">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="activo" id="D14BA16C-A3BC-E994-6246-E40F40DA377D">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<defaultValue>1</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="guia_turistico_pk" id="FDE2CCB6-FBC1-BC65-F610-A37206947577">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="66DBB7C7-AEB3-B9D1-6046-644694E3C020" name="AREA_EDIFICIO">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>0B5C0324-992A-EF84-3730-61975B63DA38</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_area_edificio" id="532BD325-F5BA-EFE7-041D-6DEC2B36F82E">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>0E10DE5A-2644-4AB5-98A6-AB8DAEEFA7B1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_implemento" id="B10C7E24-EA86-E381-F03A-5FB61F7119D3">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>0EBD1FB9-CC3D-DB33-8C25-DB6CBC616213</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>35844EF6-984E-A2E1-D4C4-FC935441A5D5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="activo" id="2716DD3F-A446-B712-727F-C3FD3CEE7172">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>F40BCCBE-B6E5-E2F1-289E-C47A94F6DB55</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>9227B604-FA6E-A130-88E5-D8497E3D4E28</domain>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4DB10D43-7E27-D9DE-D639-B896B4CAA9BF" name="implementos_edificio_pk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>1ABA4E9B-6BC4-9AFC-FC00-73D87B84597B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="532BD325-F5BA-EFE7-041D-6DEC2B36F82E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

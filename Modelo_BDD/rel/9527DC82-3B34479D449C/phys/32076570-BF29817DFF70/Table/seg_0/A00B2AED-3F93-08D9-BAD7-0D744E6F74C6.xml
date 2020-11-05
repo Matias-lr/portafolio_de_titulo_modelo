@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="VEHICULO" directorySegmentName="seg_0" id="A00B2AED-3F93-08D9-BAD7-0D744E6F74C6">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="maleta" id="4A88F0E8-03DA-43BE-EC13-C82E5F0D1B3F">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="patente" id="4E4B019F-907A-658D-89B8-EE7C993AACFD">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_vehiculo" id="69742BCD-78FA-083B-FC48-5D67431E4854">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="fk_id_modelo" id="9273ACB6-CAAE-3330-B2FE-B922338375C2">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="puertas" id="A1E74B00-469F-2B36-E98D-D38E44A0580E">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="activo" id="D2A95661-BD71-1FB4-3987-061FDD8438C5">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<defaultValue>1</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="vehiculo_modelo_fk" id="9B3325D1-27B2-394E-07D6-F00EADA5790B">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="vehiculo_pk" id="4E670E0F-83A2-9DA8-01C4-CC802099E14A">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:20:42 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

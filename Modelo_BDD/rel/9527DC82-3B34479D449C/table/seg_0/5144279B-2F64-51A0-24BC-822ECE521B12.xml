@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5144279B-2F64-51A0-24BC-822ECE521B12" name="DETALLE_PAGO">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>205EB5B7-394D-7D9B-4795-361A3EAD4E31</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_detalle_pago" id="BDF0CBBC-896C-BC45-25A0-710954680D01">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>3BBAED62-C8D8-8D38-2538-B3E2DC2E3D85</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="codigo" id="C296D213-7123-A198-5B5D-FD76132A4691">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>CF0BB908-971E-27B2-D58E-33C7F6F08343</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>35844EF6-984E-A2E1-D4C4-FC935441A5D5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fk_id_pago" id="14EC9ABB-598E-7148-DBE2-35C39A6BFA8C">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>49867C9F-6A50-B7C6-9270-1E497A4A98FA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E193313D-C704-7F63-62B8-63A30B939BAD" referredColumn="8BE86BBA-C396-5339-0814-C68BEE62EFC6"/>
+</associations>
+</Column>
+<Column name="activo" id="974ECC06-618E-9B75-5902-21BEAE60A60A">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>9C4CA474-FEED-5E39-C01E-B2AC64CD106B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>9227B604-FA6E-A130-88E5-D8497E3D4E28</domain>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AD252A67-0473-F190-C4BD-E15172C4989F" name="detalle_pago_pk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>53EECD50-2A73-E892-D911-E424850795E8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDF0CBBC-896C-BC45-25A0-710954680D01"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="798233DE-E564-CB5C-CED1-1475809EAE62" name="detalle_pago_pago_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14EC9ABB-598E-7148-DBE2-35C39A6BFA8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DEA0D32A-8E9B-D92C-DE6A-CFE491ED2FE3" name="TOKEN">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>98FE6D37-E555-ADA5-8410-7FE36DD73C9C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_token" id="72138590-B7C6-CA00-57BC-770F87463C43">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>F8729268-FF5E-991D-085C-0F767610B512</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="token" id="55EF9F18-950A-8FBE-FDEB-7A141B891538">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>26FAC8D2-6C50-23EF-8250-3BE999A6C3AF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>85822578-9B3A-0B0D-E313-94F336B044D9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="device_name" id="04DE74C5-45F4-7182-3261-B61A240CB729">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>DD9F0144-3DFE-35F3-1872-F0BF9F7E1FDD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>708A6927-973E-CD95-9E0C-B6A6BC4F2760</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="adress" id="460F8B75-08FD-CBFA-AEE2-99D0C2A9929B">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>88ED525C-EBE7-9543-0CB8-D39CBADCAE37</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>708A6927-973E-CD95-9E0C-B6A6BC4F2760</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="baned" id="3FB1A876-2575-89CE-20EC-A99F29B7B7AD">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>0AF84113-A7DA-F966-2000-53AEEA4FA0C1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>9227B604-FA6E-A130-88E5-D8497E3D4E28</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fk_id_usu" id="DCDF86D5-35B1-DBC4-E6DA-5373B1AF0EF2">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>57D14119-E510-AFE7-A47E-9DE98A2C348C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="46978624-93C9-16B9-6243-3965185EA0FE" referredColumn="52E2F8FE-3841-3BDF-6BD3-E8762263C02A"/>
+</associations>
+</Column>
+<Column name="activo" id="981F1C46-FFA1-FE27-3F26-56B2A8D78283">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>2733A476-13F2-E30C-6EC5-C229FE81D2E7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>9227B604-FA6E-A130-88E5-D8497E3D4E28</domain>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="24536BE8-78F1-9F65-AC9D-D911E30B4031" name="token_pk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>5809245A-7BC9-8223-67F8-8540B362FFE3</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72138590-B7C6-CA00-57BC-770F87463C43"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2A260F37-F1AC-8D52-57C4-C1E2F2013429" name="token_usuario_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:07 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DCDF86D5-35B1-DBC4-E6DA-5373B1AF0EF2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

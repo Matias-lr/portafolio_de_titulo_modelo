@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2F24B1BD-7773-413A-E0DB-6803377C2558" containerWithKeyObject="0EB43B5A-DA1C-C40C-685F-0E98E8E79535" localFKIndex="87824312-D86C-FF92-C22C-3FA00EAD6B35" name="pago_estado_pago_fk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>2C7856F6-A113-8CF0-077A-84B4A47E90D0</importedID>
+<referredTableLongName>ESTADO_PAGO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3984E2F5-D183-4716-6329-33A223577999</referredTableID>
+<keyObject>A62BC7FF-2BDD-D3EB-210E-198955A4B8FA</keyObject>
+<referredKeyID>A62BC7FF-2BDD-D3EB-210E-198955A4B8FA</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_estado</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F6DEFA87-E772-42D0-FF58-F2318055A16A" name="COMUNA">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 02:26:44 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_comuna" id="34C2681F-5AD4-D24F-DEE6-E5B37D7C3033">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 02:27:40 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="F6295E4D-3187-CCCA-FE6E-ECCA5AEC61FC">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 02:27:40 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fk_id_region" id="5676BFD2-AE3E-1D65-1117-E06522188E0A">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-28 05:04:17 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0BFF1880-76DD-436A-711C-DDDFF859FF03" referredColumn="7F0BFECD-66B0-CF44-3741-663819A263E7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B356FFE7-19A8-82BC-F9FE-4CB50EC4AFF3" name="COMUNA_PK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-24 02:28:51 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="34C2681F-5AD4-D24F-DEE6-E5B37D7C3033"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="294EF119-8751-FC56-E1BA-E4F76D5688B3" name="COMUNA_REGION_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-28 05:04:17 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5676BFD2-AE3E-1D65-1117-E06522188E0A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

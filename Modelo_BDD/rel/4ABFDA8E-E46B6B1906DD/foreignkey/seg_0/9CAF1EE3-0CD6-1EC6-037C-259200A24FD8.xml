@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9CAF1EE3-0CD6-1EC6-037C-259200A24FD8" containerWithKeyObject="89D22093-AAB1-609D-2576-5CE016CCFCF8" localFKIndex="D8DE8927-DEAA-326C-ED99-3D647046B583" name="SERVICIO_EXTRA_ENCARGADO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:55:32 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<referredTableLongName>ENCARGADO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6738AFBE-213C-3A26-D36B-7E06281DC15A</referredTableID>
+<keyObject>4DEA9920-17C6-6587-8A1A-445322DEE037</keyObject>
+<referredKeyID>4DEA9920-17C6-6587-8A1A-445322DEE037</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_encargado</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

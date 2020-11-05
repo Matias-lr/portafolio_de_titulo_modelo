@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="739614C6-A1E9-A72A-DCF4-FE25D38B4069" name="SERVICIO_DE_TRANSPORTE">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>5C9AD3EB-4476-1C41-D26D-2475A2076F9B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_servicio_transporte" id="4FFCC4EA-E8E9-FB87-E0ED-A1987E2B3388">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>E26621C4-5999-A71A-90F0-74A2EFA0F6E9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fk_id_vehiculo" id="D8A99450-A2E9-B75F-45A2-5648DD1380C1">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>6B8D36DF-9776-8F5F-0D11-178941A5C952</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7301CCD7-4E1C-186B-07B8-AD9FDD9A80FA" referredColumn="69742BCD-78FA-083B-FC48-5D67431E4854"/>
+</associations>
+</Column>
+<Column name="fk_id_chofer" id="3A25AB59-F565-D26A-C340-8E8665A70DAB">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>BB8FBBC1-D2AE-3EE2-ED57-777224FE32E1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87F7DC93-B6D2-6103-9155-BEBDE6D534E1" referredColumn="CABCD794-6840-6759-BD40-7BAE4C203EED"/>
+</associations>
+</Column>
+<Column name="fk_id_arriendo" id="ED57BFDB-138E-5986-D338-8CFE58EEADDC">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>F9D5315D-566C-36F9-5E0C-5009607B9403</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="35740344-3B6F-9F6E-6795-1E28FB56151D" referredColumn="183AA05E-1C16-1FA7-61AE-14052EEFD63F"/>
+</associations>
+</Column>
+<Column name="fk_id_transporte" id="EF5C7BE8-9734-AE68-A94D-92A8D61C9389">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>51E4C4C9-A163-C8BD-F19C-12EAC8E44739</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3FC53EE1-A9E8-16C0-EDB5-08CDEB144D63" referredColumn="5C6D2817-99E7-7DBD-0E93-89F5375E0097"/>
+</associations>
+</Column>
+<Column name="activo" id="530D3991-05D7-4443-51D0-76A6FD3E008E">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>CFD63DD8-F534-B62B-4D99-1BF390AFDBDF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>9227B604-FA6E-A130-88E5-D8497E3D4E28</domain>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA528256-230A-B0A6-590A-B3CC772672D3" name="servicio_de_transporte_pk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>11BA112C-6CD7-339E-12D9-E5C97D30E9D2</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FFCC4EA-E8E9-FB87-E0ED-A1987E2B3388"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B513C9D7-5958-2F04-DD6D-3752BB5195F1" name="arriendo_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED57BFDB-138E-5986-D338-8CFE58EEADDC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B1FEE8C-62F8-3060-4F4A-2C9CDF6E13DB" name="chofer_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A25AB59-F565-D26A-C340-8E8665A70DAB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="44619A9A-AFD5-0311-DB92-104A93B337D5" name="transporte_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:07 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF5C7BE8-9734-AE68-A94D-92A8D61C9389"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0347682F-E066-7914-876B-40B324906CAE" name="vehiculo_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:07 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D8A99450-A2E9-B75F-45A2-5648DD1380C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

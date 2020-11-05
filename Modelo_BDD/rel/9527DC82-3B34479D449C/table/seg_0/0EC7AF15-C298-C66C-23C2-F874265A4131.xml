@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0EC7AF15-C298-C66C-23C2-F874265A4131" name="DETA_AREA_EDIi">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>620C443C-1B50-1988-2DE1-0196D1F75B33</importedID>
+<ordsAlias>deta_area_edi</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="fk_id_edificio" id="0B8BB748-9D88-632D-713D-0A02B0A5E227">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>EC75BBAB-AA96-89F9-0F38-5D1E0AC37695</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0040E8F5-AF8E-5AEB-4A1B-7ECBDBF90C7D" referredColumn="5D11C6B4-0FAC-44FE-E132-719A8253B8C7"/>
+</associations>
+</Column>
+<Column name="fk_id_area_edificio" id="4E8AFE72-FC0F-DF24-277A-73BEB7AA0CCA">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>BDD61000-B574-BF77-D682-B37DB9FFECC2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6961B3AA-6371-67E0-5CCB-9E7EAE5145B0" referredColumn="532BD325-F5BA-EFE7-041D-6DEC2B36F82E"/>
+</associations>
+</Column>
+<Column name="cantidad_implemento" id="8C8AB951-4B1D-3D9C-A6D2-CC85AB8ECF1F">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>9A9D9112-6391-DFE2-6B7C-F6CA289B6A6C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="activo" id="18F6B649-E1E6-DA09-755A-0F37977AE9B1">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>DC7E7EF5-3380-D149-87DC-4613FE5BE861</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>9227B604-FA6E-A130-88E5-D8497E3D4E28</domain>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E885B149-E4ED-C97E-1D66-BF3D8304EE14" name="deta_area_edi_area_edificio_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E8AFE72-FC0F-DF24-277A-73BEB7AA0CCA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4DEBAF4-DE36-3155-3663-4F1EEDEB1F69" name="deta_area_edi_edificio_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B8BB748-9D88-632D-713D-0A02B0A5E227"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

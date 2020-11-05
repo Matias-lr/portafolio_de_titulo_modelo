@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A03F9C46-E9C5-AE61-7858-2A8C7261ABB5" containerWithKeyObject="F39F8227-233C-01B0-461F-B465FD3086E5" localFKIndex="D3F93FC6-1EA7-9E1F-D89C-0E498D12E2EE" name="transporte_edificio_fk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:07 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>53810E6F-EB9C-4A7A-08E4-37CF72FA4F81</importedID>
+<referredTableLongName>EDIFICIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D3B46461-ACBD-8393-9985-74100CADF04E</referredTableID>
+<keyObject>ED9605F8-9821-C98C-3A35-C34062EA6DCC</keyObject>
+<referredKeyID>ED9605F8-9821-C98C-3A35-C34062EA6DCC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_edificio</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

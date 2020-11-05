@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="89D22093-AAB1-609D-2576-5CE016CCFCF8" name="SERVICIO_EXTRA">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:53:26 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<ordsAlias>table_27</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_servicio_extra" id="991CC07B-4AC8-6B38-AE75-ECE6EBF849E5">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:53:53 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="8665D031-69B1-0D61-9912-BA14B973AEA4">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 20:00:13 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="58C0AB82-8CF6-7829-802F-5665303C336C">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 20:00:13 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valor" id="C2FA19F7-0DCE-5539-E393-BB3F6C029073">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 20:00:13 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fk_id_encargado" id="BF2DEF54-2957-7076-C2B4-85FA6314C7B6">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:55:32 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9CAF1EE3-0CD6-1EC6-037C-259200A24FD8" referredColumn="6D019CE0-741E-640A-2F8D-20BEC2A74D4F"/>
+</associations>
+</Column>
+<Column name="fk_id_edificio" id="4F63D740-824B-6EBE-344F-20495CC4732D">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 19:59:04 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7C939F45-BC3F-6AD2-55BD-0D59703785B9" referredColumn="A9E0702D-F56A-A3B9-D50E-D49B81E0B578"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F14EC972-1E8D-1C69-47FD-9D3C1EF7CF83" name="SERVICIO_EXTRA_PK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:53:53 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="991CC07B-4AC8-6B38-AE75-ECE6EBF849E5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8DE8927-DEAA-326C-ED99-3D647046B583" name="SERVICIO_EXTRA_ENCARGADO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 18:55:32 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF2DEF54-2957-7076-C2B4-85FA6314C7B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B0E83B24-871F-F679-3B7F-6A1986C182B0" name="SERVICIO_EXTRA_EDIFICIO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-25 19:59:04 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F63D740-824B-6EBE-344F-20495CC4732D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

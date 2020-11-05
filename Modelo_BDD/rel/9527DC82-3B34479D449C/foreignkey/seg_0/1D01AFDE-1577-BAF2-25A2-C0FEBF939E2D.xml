@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1D01AFDE-1577-BAF2-25A2-C0FEBF939E2D" containerWithKeyObject="CC41B887-8A46-C789-F5F1-526EAD2F7266" localFKIndex="A5EA68A8-3A4E-80D9-406E-F11531F44715" name="tour_guia_turistico_fk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:07 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>5569FE40-C563-D670-AE20-FEA380427E74</importedID>
+<referredTableLongName>GUIA_TURISTICO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A0762FDE-C437-C2E0-6BEB-A39E794BC90D</referredTableID>
+<keyObject>FDE2CCB6-FBC1-BC65-F610-A37206947577</keyObject>
+<referredKeyID>FDE2CCB6-FBC1-BC65-F610-A37206947577</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_guia</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="87192179-78B3-EF4A-D003-8D398A9C1FF6" containerWithKeyObject="CAD856B6-1907-E51A-AAC8-B40D6F0BFA9B" localFKIndex="06973D5B-3A91-A32A-C540-81CA28C839B9" name="servicio_extra_encargado_fk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:07 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>439FDFB5-EE5F-216E-DE5E-972AFAB6F9D2</importedID>
+<referredTableLongName>ENCARGADO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0ED5B908-84A4-E0B5-2C23-DCB7B3D11A08</referredTableID>
+<keyObject>D5F1DE40-ECE3-2262-F8BC-10401E9FA904</keyObject>
+<referredKeyID>D5F1DE40-ECE3-2262-F8BC-10401E9FA904</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_encargado</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

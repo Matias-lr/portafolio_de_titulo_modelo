@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E4FE95C5-C1B7-FB59-8492-BC87112C0B65" containerWithKeyObject="D5748385-E4BB-3397-3389-ECBBB07B06D4" localFKIndex="327C2DF8-16B4-C8CF-419A-11558A4B855D" name="DETA_AREA_EDI_AREA_EDIFICIO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-28 04:28:18 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<referredTableLongName>AREA_EDIFICIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EAEBFC0C-D260-3675-A71A-0AACEC41C846</referredTableID>
+<keyObject>4D3019D8-4C4B-E72B-BFCC-88D8D4A44BAF</keyObject>
+<referredKeyID>4D3019D8-4C4B-E72B-BFCC-88D8D4A44BAF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_area_edificio</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

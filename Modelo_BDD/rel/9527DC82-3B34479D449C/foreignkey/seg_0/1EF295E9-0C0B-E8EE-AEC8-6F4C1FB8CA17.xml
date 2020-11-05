@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1EF295E9-0C0B-E8EE-AEC8-6F4C1FB8CA17" containerWithKeyObject="4D6C49C3-F845-E46E-E070-C31FC2BC318E" localFKIndex="906CA068-21EB-BD60-92C8-B181ED4634DB" name="check_in_arriendo_fk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>10677B02-A15B-F03C-E69E-6D7D79BFBE76</importedID>
+<referredTableLongName>ARRIENDO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>97206840-9CEB-FC8A-19C8-FBE6467C9867</referredTableID>
+<keyObject>6D3385DF-AA71-4AD6-2825-E90AAADA1DCE</keyObject>
+<referredKeyID>6D3385DF-AA71-4AD6-2825-E90AAADA1DCE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_arriendo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3BA65509-FE7B-02EE-A812-08F87C2354E6" containerWithKeyObject="97206840-9CEB-FC8A-19C8-FBE6467C9867" localFKIndex="2819D268-6C22-ACBF-6BB5-EA988DBCAB64" name="arriendo_tour_fk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>B0F07689-E071-AD7D-C49D-A37E8B350C84</importedID>
+<referredTableLongName>TOUR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CC41B887-8A46-C789-F5F1-526EAD2F7266</referredTableID>
+<keyObject>8024623F-9D47-FF38-AE8B-AA43C4A57A6F</keyObject>
+<referredKeyID>8024623F-9D47-FF38-AE8B-AA43C4A57A6F</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id_turismo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

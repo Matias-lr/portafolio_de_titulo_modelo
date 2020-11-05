@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="06D5B3D2-1E7C-A3CB-4E5A-A763E3ACC8E7" name="DETA_SERV_DEPA">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>0D0806B1-36A5-CD7E-C6BE-3382ECCDAD2B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="fk_id_servi_depa" id="C4D4D760-1B12-413D-0E3C-F7DE8CE02163">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>DACBE00D-F1FE-BF17-407D-18427BAA2597</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="065FDC36-85C9-B326-33DA-350CFE5BDAF7" referredColumn="741398C6-3D7B-3A42-25FE-8515798DACBC"/>
+</associations>
+</Column>
+<Column name="fk_id_departamento" id="BAEEB063-5D51-2A41-6275-E6B76EB0F550">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>477A607E-80D9-B85D-A2CB-DD9E0F885B71</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1DA15C1C-86EA-97A3-795F-385D4C3D51D5" referredColumn="68947940-3E68-5709-011E-F986F9816745"/>
+</associations>
+</Column>
+<Column name="activo" id="1B51CD68-2F99-B4C2-443B-06D53020A4BE">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>8176AE78-267B-0EAF-8307-B409C14DD4F0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>9227B604-FA6E-A130-88E5-D8497E3D4E28</domain>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="30F14DBF-2374-AEE1-71D2-D874848EC022" name="dt_departamento_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BAEEB063-5D51-2A41-6275-E6B76EB0F550"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="968AFB83-CB64-4BAF-A457-C280313D69DF" name="servicios_depa_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:07 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4D4D760-1B12-413D-0E3C-F7DE8CE02163"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

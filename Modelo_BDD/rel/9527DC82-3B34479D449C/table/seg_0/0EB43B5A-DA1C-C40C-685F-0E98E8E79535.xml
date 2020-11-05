@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0EB43B5A-DA1C-C40C-685F-0E98E8E79535" name="PAGO">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>57740222-A19F-F013-28B4-0F4BB714BB84</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_pago" id="8BE86BBA-C396-5339-0814-C68BEE62EFC6">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>23C9050A-F6C0-5CF1-2C2E-6A0F36E9C8D0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="monto" id="69C1A023-375D-D801-24DA-6B727D57CC2F">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>F7CBA458-E8CB-9327-3432-615E5EF1DFF7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fk_id_tipo" id="41DB4040-A92D-CA7E-F298-B559D28E9BAD">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>41146FFD-5942-BC47-1F47-4D5ED75DB4BC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E4E10084-6E05-5A8C-CE65-D2A0F6DD7867" referredColumn="D33E1651-5119-5938-FDBE-F4E9CB22FB78"/>
+</associations>
+</Column>
+<Column name="fk_id_arriendo" id="916A4E8F-3A4A-B59B-9533-1A42A713868C">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>0EACC335-67E4-7DAA-0F29-518239FAE4B3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA097460-F374-116A-80D1-FC554DDA600B" referredColumn="183AA05E-1C16-1FA7-61AE-14052EEFD63F"/>
+</associations>
+</Column>
+<Column name="fk_id_estado" id="DD4B5A6C-2011-1DBE-D905-DF68BA1DE26F">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>DF65679A-CF7D-7549-3972-A857EA3FCF86</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2F24B1BD-7773-413A-E0DB-6803377C2558" referredColumn="281DD29D-BC9E-760F-E5BE-06BA03281D85"/>
+</associations>
+</Column>
+<Column name="activo" id="74BCDAC0-14BA-E0DE-BB24-701F5A170F62">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>ADC7205B-9E9D-19C6-B406-3C260DA8CF37</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>9227B604-FA6E-A130-88E5-D8497E3D4E28</domain>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="14AB5B9D-46A5-D3C4-C027-3EB71FA670CB" name="pago_pk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>A71C733B-204A-6CD2-6BF0-A09F092D6445</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8BE86BBA-C396-5339-0814-C68BEE62EFC6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="918A77B9-C84E-9F9C-CC2F-426E16CA27E2" name="pago_arriendo_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="916A4E8F-3A4A-B59B-9533-1A42A713868C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="87824312-D86C-FF92-C22C-3FA00EAD6B35" name="pago_estado_pago_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD4B5A6C-2011-1DBE-D905-DF68BA1DE26F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71864DDB-DB2E-8F8E-60CC-71118B14120D" name="pago_tipo_pago_fk">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41DB4040-A92D-CA7E-F298-B559D28E9BAD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="87F7DC93-B6D2-6103-9155-BEBDE6D534E1" containerWithKeyObject="739614C6-A1E9-A72A-DCF4-FE25D38B4069" localFKIndex="7B1FEE8C-62F8-3060-4F4A-2C9CDF6E13DB" name="chofer_fk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>3FBAE22D-0602-F15E-9A50-EDE4C0993CF6</importedID>
+<referredTableLongName>CHOFER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F29BE4D0-66BD-9ACE-3702-AD50A0FBDD0C</referredTableID>
+<keyObject>AA4874F4-0408-7F2B-DAD8-E8B124F26ADD</keyObject>
+<referredKeyID>AA4874F4-0408-7F2B-DAD8-E8B124F26ADD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_chofer</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

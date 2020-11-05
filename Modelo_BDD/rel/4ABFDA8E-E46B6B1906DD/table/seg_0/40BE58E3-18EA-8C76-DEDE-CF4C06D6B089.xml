@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="40BE58E3-18EA-8C76-DEDE-CF4C06D6B089" name="TOKEN">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:45:15 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<ordsAlias>table_23</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_token" id="404333BB-2D70-5C4C-4E04-723FF7131975">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="token" id="C35713EE-FB81-82D0-5E6D-CC015E66D7E6">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="device_name" id="CEF47355-A16D-3DC1-2AA2-698A1E8ECD91">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="adress" id="353EDE5D-3155-B264-76D5-37357A64405A">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="baned" id="00747979-8635-8CCC-E744-8EAEBCED2AB2">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fk_id_usu" id="EB1C610E-B0D8-8E5C-BCBE-B4761E3E690F">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:15:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F2B8996B-9287-0593-D4AC-1E1F773FAA03" referredColumn="54ABFC2E-B35B-F32B-2DEE-69EB74F2D3DE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9CDECEAB-1A6C-699C-23E3-214BF200FA0D" name="TOKEN_PK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-24 03:46:23 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="404333BB-2D70-5C4C-4E04-723FF7131975"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="589A5979-1F18-DC9E-D35B-1D8329F1575D" name="TOKEN_USUARIO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-09-30 22:15:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB1C610E-B0D8-8E5C-BCBE-B4761E3E690F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

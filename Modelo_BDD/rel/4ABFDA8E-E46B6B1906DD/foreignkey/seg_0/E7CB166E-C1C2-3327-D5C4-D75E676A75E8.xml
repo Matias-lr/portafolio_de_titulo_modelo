@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E7CB166E-C1C2-3327-D5C4-D75E676A75E8" containerWithKeyObject="A0005D3D-5FC0-BC9D-E18C-2E402CFB2BFE" localFKIndex="83B093E9-143A-8F00-E960-CD863D7E9FD1" name="PAGO_ESTADO_PAGO_FK">
+<createdBy>matias</createdBy>
+<createdTime>2020-09-25 20:22:45 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<referredTableLongName>ESTADO_PAGO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8FE893C1-8410-A986-E2AD-C2C45EE75E78</referredTableID>
+<keyObject>86850150-9418-958B-70EF-8CC51DFE7141</keyObject>
+<referredKeyID>86850150-9418-958B-70EF-8CC51DFE7141</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_estado</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

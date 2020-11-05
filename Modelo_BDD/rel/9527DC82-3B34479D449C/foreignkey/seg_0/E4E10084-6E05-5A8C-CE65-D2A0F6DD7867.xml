@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E4E10084-6E05-5A8C-CE65-D2A0F6DD7867" containerWithKeyObject="0EB43B5A-DA1C-C40C-685F-0E98E8E79535" localFKIndex="71864DDB-DB2E-8F8E-60CC-71118B14120D" name="pago_tipo_pago_fk">
+<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-05 00:21:06 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<importedID>32B77DDF-47BE-5A22-D5FA-0CBA54D27210</importedID>
+<referredTableLongName>TIPO_PAGO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4AE9C86A-33CA-45BA-8884-AB5F095D1E3B</referredTableID>
+<keyObject>BA0BC5D8-0920-68BC-B95A-B8C198A5D78E</keyObject>
+<referredKeyID>BA0BC5D8-0920-68BC-B95A-B8C198A5D78E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_tipo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
