@@ -1,0 +1,6 @@
+Runear Script_BD
+luego secuencias
+despues triggers
+finalmente insert
+
+despues de todo eso runear procedimiento_bug

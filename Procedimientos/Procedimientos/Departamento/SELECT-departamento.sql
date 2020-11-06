@@ -29,7 +29,7 @@ BEGIN
    LOOP 
    FETCH departamento_cur into v_id_departamento,v_num_habitacion, v_numero_habitaciones, v_metros_cuadrados,v_banios,v_piso,v_precio_noche,v_nombre_edificio,v_nombre_es; 
       EXIT WHEN departamento_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_departamento ||',"num_habitacion":'||v_num_habitacion|| ',"num_habitaciones":' || v_numero_habitaciones || ',"metros_cuadradros":' || v_metros_cuadrados  || ',"banios":' || v_banios || ',"piso":' || v_piso || ',"precio_noche":' || v_precio_noche || ',"edificio":"' || v_nombre_edificio || '","estado":' || v_nombre_es||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_departamento ||',"num_habitacion":'||v_num_habitacion|| ',"num_habitaciones":' || v_numero_habitaciones || ',"metros_cuadradros":' || v_metros_cuadrados  || ',"banios":' || v_banios || ',"piso":' || v_piso || ',"precio_noche":' || v_precio_noche || ',"edificio":"' || v_nombre_edificio || '","estado":"' || v_nombre_es||'"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE departamento_cur; 
