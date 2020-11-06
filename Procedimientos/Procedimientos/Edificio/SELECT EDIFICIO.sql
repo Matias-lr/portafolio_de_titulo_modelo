@@ -8,20 +8,20 @@ BEGIN
     v_telefono NUMBER(15);
     v_comuna VARCHAR2(255);
     v_region VARCHAR2(255);
-    v_foto_edi VARCHAR2(2000);
+
    CURSOR edificio_cur is 
-        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION,fe.foto_edi
+        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
         JOIN REGION RE on RE.id_region=CO.fk_id_region
-        JOIN FOTO_EDI FE on FE.fk_id_edificio = EF.id_edificio;
+       
     BEGIN 
    OPEN edificio_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH edificio_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region,v_foto_edi; 
+   FETCH edificio_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region; 
       EXIT WHEN edificio_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region||'","foto":"'|| v_foto_edi|| '"},'); 
+      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE edificio_cur; 
@@ -41,19 +41,18 @@ BEGIN
     v_comuna VARCHAR2(255);
     v_region VARCHAR2(255);
    CURSOR edificio_id_cur is 
-        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION,fe.foto_edi
+        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
         JOIN REGION RE on RE.id_region=CO.fk_id_region
-        JOIN FOTO_EDI FE on FE.fk_id_edificio = EF.id_edificio
         WHERE id_edificio=id_edi;
     BEGIN 
    OPEN edificio_id_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region,v_foto_edi; 
+   FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region; 
       EXIT WHEN edificio_id_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region||'","foto":"'|| v_foto_edi|| '"},'); 
+      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '"},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE edificio_id_cur; 
