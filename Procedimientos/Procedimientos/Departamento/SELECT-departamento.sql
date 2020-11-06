@@ -4,7 +4,7 @@ SET SERVEROUTPUT ON
 -----------------------
 --Procedure llamar departamentos
 -----------------------
-CREATE OR REPLACE PROCEDURE depa_select
+CREATE OR REPLACE PROCEDURE departamento_select
 is
 BEGIN
     DECLARE 
@@ -46,7 +46,7 @@ END;
 --Procedure llamar departamentos por id
 -----------------------
 
-CREATE OR REPLACE PROCEDURE depa_id_select
+CREATE OR REPLACE PROCEDURE departamento_id_select
 (v_id_dep number)
 is
 BEGIN
@@ -85,7 +85,7 @@ END;
 --Procedure llamar departamentos por estado
 -----------------------
 
-CREATE OR REPLACE PROCEDURE depa_estado_select
+CREATE OR REPLACE PROCEDURE departamento_estado_select
 (v_id_estado_depa number)
 is
 BEGIN
