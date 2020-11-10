@@ -9,16 +9,17 @@ BEGIN
     DECLARE 
     v_id_area NUMBER;
     v_nombre VARCHAR2(255);
+    v_activo CHAR;
     
    CURSOR area_cur is 
-        select id_area_edificio,nombre_implemento FROM AREA_EDIFICIO;
+        select id_area_edificio,nombre_implemento,activo FROM AREA_EDIFICIO;
     BEGIN 
    OPEN area_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH area_cur into v_id_area, v_nombre; 
+   FETCH area_cur into v_id_area, v_nombre,v_activo; 
       EXIT WHEN area_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_area || ',"nombre":"'|| v_nombre ||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_area || ',"nombre":"'|| v_nombre ||'","activo":' ||v_activo|| '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE area_cur; 
@@ -35,17 +36,19 @@ BEGIN
     DECLARE 
     v_id_area NUMBER;
     v_nombre VARCHAR2(255);
+    v_activo CHAR;
+
     
    CURSOR area_cur_id is 
-        select id_area_edificio,nombre_implemento FROM AREA_EDIFICIO
+        select id_area_edificio,nombre_implemento,activo FROM AREA_EDIFICIO
         WHERE id_area_edificio=v_id_ar;
     BEGIN 
    OPEN area_cur_id; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH area_cur_id into v_id_area, v_nombre; 
+   FETCH area_cur_id into v_id_area, v_nombre,v_activo; 
       EXIT WHEN area_cur_id%notfound; 
-      dbms_output.put_line('{"id":'||v_id_area || ',"nombre":"'|| v_nombre ||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_area || ',"nombre":"'|| v_nombre ||'","activo":' ||v_activo|| '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE area_cur_id; 
@@ -72,15 +75,16 @@ BEGIN
     v_id_implemento NUMBER;
     v_nombre VARCHAR2(50);
     v_valor NUMBER;
+    v_activo CHAR;
    CURSOR implemento_cur is 
-        select id_implemento,nombre_implemento,valor_implemento FROM IMPLEMENTOS_DEPARTAMENTO;
+        select id_implemento,nombre_implemento,valor_implemento,activo FROM IMPLEMENTOS_DEPARTAMENTO;
     BEGIN 
    OPEN implemento_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH implemento_cur into v_id_implemento, v_nombre,v_valor; 
+   FETCH implemento_cur into v_id_implemento, v_nombre,v_valor,v_activo; 
       EXIT WHEN implemento_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_implemento || ',"nombre":"'|| v_nombre ||'","valor":'|| v_valor ||'},'); 
+      dbms_output.put_line('{"id":'||v_id_implemento || ',"nombre":"'|| v_nombre ||'","valor":'|| v_valor ||',"activo":' || v_activo|| '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE implemento_cur; 
@@ -98,16 +102,17 @@ BEGIN
     v_id_implemento NUMBER;
     v_nombre VARCHAR2(50);
     v_valor NUMBER;
+    v_activo CHAR;
    CURSOR implemento_cur is 
-        select id_implemento,nombre_implemento,valor_implemento FROM IMPLEMENTOS_DEPARTAMENTO
+        select id_implemento,nombre_implemento,valor_implemento,activo FROM IMPLEMENTOS_DEPARTAMENTO
         WHERE id_implemento=v_id_im;
     BEGIN 
    OPEN implemento_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH implemento_cur into v_id_implemento, v_nombre,v_valor; 
+   FETCH implemento_cur into v_id_implemento, v_nombre,v_valor,v_activo; 
       EXIT WHEN implemento_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_implemento || ',"nombre":"'|| v_nombre ||'","valor":'|| v_valor ||'},'); 
+      dbms_output.put_line('{"id":'||v_id_implemento || ',"nombre":"'|| v_nombre ||'","valor":'|| v_valor ||',"activo":'||v_activo || '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE implemento_cur; 
@@ -133,15 +138,16 @@ BEGIN
     v_id_servi NUMBER;
     v_nombre VARCHAR2(70);
     v_descripcion VARCHAR2(255);
+    v_activo CHAR;
    CURSOR servi_depa_cur is 
-        select id_servi_depa,nombre,descripcion FROM SERVICIOS_DEPA;
+        select id_servi_depa,nombre,descripcion,activo FROM SERVICIOS_DEPA;
     BEGIN 
    OPEN servi_depa_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH servi_depa_cur into v_id_servi, v_nombre,v_descripcion; 
+   FETCH servi_depa_cur into v_id_servi, v_nombre,v_descripcion,v_activo; 
       EXIT WHEN servi_depa_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_servi || ',"nombre":"'|| v_nombre ||'","descripcion":"'|| v_descripcion ||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_servi || ',"nombre":"'|| v_nombre ||'","descripcion":"'|| v_descripcion ||'","activo":'||v_activo || '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE servi_depa_cur; 
@@ -161,16 +167,17 @@ BEGIN
     v_id_servi NUMBER;
     v_nombre VARCHAR2(70);
     v_descripcion VARCHAR2(255);
+    v_activo CHAR;
    CURSOR servi_depa_cur_id is 
-        select id_servi_depa,nombre,descripcion FROM SERVICIOS_DEPA
+        select id_servi_depa,nombre,descripcion,activo FROM SERVICIOS_DEPA
         where id_servi_depa = v_id_sd;
     BEGIN 
    OPEN servi_depa_cur_id; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH servi_depa_cur_id into v_id_servi, v_nombre,v_descripcion; 
+   FETCH servi_depa_cur_id into v_id_servi, v_nombre,v_descripcion,v_activo; 
       EXIT WHEN servi_depa_cur_id%notfound; 
-      dbms_output.put_line('{"id":'||v_id_servi || ',"nombre":"'|| v_nombre ||'","descripcion":"'|| v_descripcion ||'"},'); 
+      dbms_output.put_line('{"id":'||v_id_servi || ',"nombre":"'|| v_nombre ||'","descripcion":"'|| v_descripcion ||'","activo":'||v_activo || '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE servi_depa_cur_id; 

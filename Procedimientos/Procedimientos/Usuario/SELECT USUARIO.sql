@@ -14,18 +14,19 @@ BEGIN
     v_direccion VARCHAR2(255);
     v_telefono VARCHAR2(15);
     v_usuario_tipo VARCHAR2(50);
+    v_activo CHAR;
    CURSOR usuario_cur is 
-        SELECT id_usu,nombre,contrasenia,email,foto,rut,direccion,telefono,tp.nombre_tipo_usuario AS "TIPO USUARIO"
+        SELECT id_usu,nombre,contrasenia,email,foto,rut,direccion,telefono,tp.nombre_tipo_usuario AS "TIPO USUARIO", usu.activo
         FROM USUARIO USU
         JOIN TIPO_USUARIO TP on TP.id_tipo_usu = usu.fk_id_tipo_usu;
     BEGIN 
    OPEN usuario_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH usuario_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo; 
+   FETCH usuario_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo,v_activo; 
       EXIT WHEN usuario_cur%notfound; 
       dbms_output.put_line('{"id":'||v_id_usu || ',"nombre":"'|| v_nombre ||'","contrasenia":"'|| v_contrasenia ||'","email":"'||v_email||'","foto":"'||v_foto||'","rut":"'||v_rut||'","direccion":"'||v_direccion||
-                            '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'"},'); 
+                            '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'","activo":' ||v_activo || '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE usuario_cur; 
@@ -50,8 +51,9 @@ BEGIN
     v_direccion VARCHAR2(255);
     v_telefono VARCHAR2(15);
     v_usuario_tipo VARCHAR2(50);
+    v_activo CHAR;
    CURSOR usuario_id_cur is 
-        SELECT id_usu,nombre,contrasenia,email,foto,rut,direccion,telefono,tp.nombre_tipo_usuario AS "TIPO USUARIO"
+        SELECT id_usu,nombre,contrasenia,email,foto,rut,direccion,telefono,tp.nombre_tipo_usuario AS "TIPO USUARIO", usu.activo 
         FROM USUARIO USU
         JOIN TIPO_USUARIO TP on TP.id_tipo_usu = usu.fk_id_tipo_usu
         WHERE id_usu=v_id_usuario;
@@ -59,10 +61,10 @@ BEGIN
    OPEN usuario_id_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH usuario_id_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo; 
+   FETCH usuario_id_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo,v_activo; 
       EXIT WHEN usuario_id_cur%notfound; 
          dbms_output.put_line('{"id":'||v_id_usu || ',"nombre":"'|| v_nombre ||'","contrasenia":"'|| v_contrasenia ||'","email":"'||v_email||'","foto":"'||v_foto||'","rut":"'||v_rut||'","direccion":"'||v_direccion||
-                            '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'"},');  
+                            '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'","activo":' ||v_activo || '},');  
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE usuario_id_cur; 
@@ -86,8 +88,9 @@ BEGIN
     v_direccion VARCHAR2(255);
     v_telefono VARCHAR2(15);
     v_usuario_tipo VARCHAR2(50);
+    v_activo CHAR;
    CURSOR usuario_tipo_cur is 
-        SELECT id_usu,nombre,contrasenia,email,foto,rut,direccion,telefono,tp.nombre_tipo_usuario AS "TIPO USUARIO"
+        SELECT id_usu,nombre,contrasenia,email,foto,rut,direccion,telefono,tp.nombre_tipo_usuario AS "TIPO USUARIO", usu.activo
         FROM USUARIO USU
         JOIN TIPO_USUARIO TP on TP.id_tipo_usu = usu.fk_id_tipo_usu
         WHERE tp.id_tipo_usu=v_id_tipo_usu;
@@ -95,10 +98,10 @@ BEGIN
    OPEN usuario_tipo_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH usuario_tipo_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo; 
+   FETCH usuario_tipo_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo,v_activo; 
       EXIT WHEN usuario_tipo_cur%notfound; 
         dbms_output.put_line('{"id":'||v_id_usu || ',"nombre":"'|| v_nombre ||'","contrasenia":"'|| v_contrasenia ||'","email":"'||v_email||'","foto":"'||v_foto||'","rut":"'||v_rut||'","direccion":"'||v_direccion||
-                            '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'"},'); 
+                            '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'","activo":' || v_activo || '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE usuario_tipo_cur; 

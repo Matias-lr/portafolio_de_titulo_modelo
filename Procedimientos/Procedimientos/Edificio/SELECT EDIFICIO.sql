@@ -8,9 +8,10 @@ BEGIN
     v_telefono NUMBER(15);
     v_comuna VARCHAR2(255);
     v_region VARCHAR2(255);
+    v_activo CHAR;
 
    CURSOR edificio_cur is 
-        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION
+        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
         JOIN REGION RE on RE.id_region=CO.fk_id_region;
@@ -19,9 +20,9 @@ BEGIN
    OPEN edificio_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH edificio_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region; 
+   FETCH edificio_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region,v_activo; 
       EXIT WHEN edificio_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '"},'); 
+      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' || v_activo|| '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE edificio_cur; 
@@ -40,8 +41,9 @@ BEGIN
     v_telefono NUMBER(15);
     v_comuna VARCHAR2(255);
     v_region VARCHAR2(255);
+    v_activo CHAR;
    CURSOR edificio_id_cur is 
-        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION
+        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
         JOIN REGION RE on RE.id_region=CO.fk_id_region
@@ -50,9 +52,9 @@ BEGIN
    OPEN edificio_id_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region; 
+   FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region,v_activo; 
       EXIT WHEN edificio_id_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '"},'); 
+      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' ||v_activo || '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE edificio_id_cur; 
@@ -61,24 +63,7 @@ END;
 
 
 
-        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION,fe.foto_edi
-        FROM EDIFICIO EF
-        JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
-        JOIN REGION RE on RE.id_region=CO.fk_id_region
-        JOIN FOTO_EDI FE on FE.fk_id_edificio = EF.id_edificio;
 
-
-SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION
- FROM EDIFICIO EF
-        JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
-        JOIN REGION RE on RE.id_region=CO.fk_id_region;
-
-
-
-SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION
-FROM EDIFICIO EF
-JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
-JOIN REGION RE on RE.id_region=CO.fk_id_region;
 
 BEGIN
     edificio_select();
