@@ -61,13 +61,11 @@ BEGIN
         WHERE id_vehiculo=id_carro;
     BEGIN 
    OPEN vehiculo_cur_id; 
-    DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH vehiculo_cur_id into v_id_vehiculo, v_puertas,v_maleta,v_patente,v_modelo,v_marca,v_activo; 
       EXIT WHEN vehiculo_cur_id%notfound; 
       dbms_output.put_line('{"id":'||v_id_vehiculo || ',"puertas":'|| v_puertas ||',"maleta":"'|| v_maleta ||'","patente":"'||v_patente||'","modelo":"'||v_modelo||'","marca":"'||v_marca||'","activo":' ||v_activo || '},'); 
    END LOOP; 
-   DBMS_OUTPUT.put_line(']');
    CLOSE vehiculo_cur_id; 
 END; 
 END;

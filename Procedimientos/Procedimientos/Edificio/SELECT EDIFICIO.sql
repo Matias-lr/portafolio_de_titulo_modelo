@@ -50,13 +50,11 @@ BEGIN
         WHERE id_edificio=id_edi;
     BEGIN 
    OPEN edificio_id_cur; 
-    DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region,v_activo; 
       EXIT WHEN edificio_id_cur%notfound; 
       dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' ||v_activo || '},'); 
    END LOOP; 
-   DBMS_OUTPUT.put_line(']');
    CLOSE edificio_id_cur; 
 END; 
 END;

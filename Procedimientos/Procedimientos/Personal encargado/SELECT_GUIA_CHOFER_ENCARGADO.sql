@@ -50,13 +50,11 @@ BEGIN
         WHERE id_encargado = v_id_enc;
     BEGIN 
    OPEN encargado_id_cur; 
-    DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH encargado_id_cur into v_id_encargado, v_nombre, v_rut,v_telefono,v_foto,v_activo; 
       EXIT WHEN encargado_id_cur%notfound; 
       dbms_output.put_line('{"id":'||v_id_encargado || ',"nombre":"' || v_nombre || '","rut":"' || v_rut  || '","telefono":' || v_telefono || ',"foto":"' || v_foto || '","activo":' ||v_activo || '},'); 
    END LOOP; 
-   DBMS_OUTPUT.put_line(']');
    CLOSE encargado_id_cur; 
 END; 
 END;
@@ -122,13 +120,11 @@ BEGIN
         WHERE id_guia = v_id_g;
     BEGIN 
    OPEN guia_cur_id; 
-    DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH guia_cur_id into v_id_guia, v_nombre, v_rut,v_telefono,v_foto,v_activo; 
       EXIT WHEN guia_cur_id%notfound; 
       dbms_output.put_line('{"id":'||v_id_guia || ',"nombre":"' || v_nombre || '","rut":"' || v_rut  || '","telefono":' || v_telefono || ',"foto":"' || v_foto || '","activo":' ||v_activo ||' },'); 
    END LOOP; 
-   DBMS_OUTPUT.put_line(']');
    CLOSE guia_cur_id; 
 END; 
 END;
@@ -192,13 +188,11 @@ BEGIN
         WHERE id_chofer = v_id_cho;
     BEGIN 
    OPEN chofer_cur_id; 
-    DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH chofer_cur_id into v_id_chofer, v_nombre, v_rut,v_telefono,v_foto,v_activo; 
       EXIT WHEN chofer_cur_id%notfound; 
       dbms_output.put_line('{"id":'||v_id_chofer || ',"nombre":"' || v_nombre || '","rut":"' || v_rut  || '","telefono":' || v_telefono || ',"foto":"' || v_foto || '","activo":' ||v_activo ||' },'); 
    END LOOP; 
-   DBMS_OUTPUT.put_line(']');
    CLOSE chofer_cur_id; 
 END; 
 END;

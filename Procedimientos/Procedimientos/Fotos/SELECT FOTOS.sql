@@ -33,13 +33,11 @@ BEGIN
        select id_foto_edi, foto_edi,fk_id_edificio from foto_edi;
     BEGIN 
    OPEN edi_cur; 
-    DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH edi_cur into v_id_foto_edi, v_foto_edi,v_fk_id_edificio; 
       EXIT WHEN edi_cur%notfound; 
       dbms_output.put_line('{"id":'||v_id_foto_edi || ',"foto":"'|| v_foto_edi ||'","departamento":'|| v_fk_id_edificio ||'},'); 
    END LOOP; 
-   DBMS_OUTPUT.put_line(']');
    CLOSE edi_cur; 
 END; 
 END;

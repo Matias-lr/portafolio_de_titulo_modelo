@@ -75,13 +75,11 @@ BEGIN
         JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio;
     BEGIN 
    OPEN departamento_cur_id; 
-    DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH departamento_cur_id into v_id_departamento,v_num_habitacion, v_numero_habitaciones, v_metros_cuadrados,v_banios,v_piso,v_precio_noche,v_nombre_edificio,v_nombre_es,v_activo; 
       EXIT WHEN departamento_cur_id%notfound; 
       dbms_output.put_line('{"id":'||v_id_departamento ||',"num_habitacion":'||v_num_habitacion|| ',"num_habitaciones":' || v_numero_habitaciones || ',"metros_cuadradros":' || v_metros_cuadrados  || ',"banios":' || v_banios || ',"piso":' || v_piso || ',"precio_noche":' || v_precio_noche || ',"edificio":"' || v_nombre_edificio || '","estado":"' || v_nombre_es||'","activo":' ||v_activo || '},'); 
    END LOOP; 
-    DBMS_OUTPUT.put_line(']');
    CLOSE departamento_cur_id; 
 END; 
 END;

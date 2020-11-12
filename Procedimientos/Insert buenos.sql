@@ -14,7 +14,6 @@ INSERT INTO region (id_region,nombre) VALUES (13,'Los Lagos');
 INSERT INTO region (id_region,nombre) VALUES (14,'Aisén del General Carlos Ibáñez del Campo');
 INSERT INTO region (id_region,nombre) VALUES (15,'Magallanes y de la Antártica Chilena');
 
-
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (1,'Arica',1);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (2,'Camarones',1);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (3,'General Lagos',1);
@@ -38,7 +37,7 @@ INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (20,'Tocopilla',3);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (21,'Chañaral',4);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (22,'Diego de Almagro',4);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (23,'Caldera',4);
-INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (24,'Copiapó',4);
+INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (24,'Copiapó³',4);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (25,'Tierra Amarilla',4);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (26,'Alto del Carmen',4);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (27,'Freirina',4);
@@ -128,7 +127,7 @@ INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (110,'Lo Barnechea',7)
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (111,'Lo Espejo',7);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (112,'Lo Prado',7);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (113,'Macul',7);
-INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (114,'Maipú',7);
+INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (114,'Maipí',7);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (115,'Ñuñoa',7);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (116,'Pedro Aguirre Cerda',7);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (117,'Peñalolén',7);
@@ -216,13 +215,13 @@ INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (198,'Cañete',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (199,'Contulmo',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (200,'Curanilahue',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (201,'Lebu',10);
-INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (202,'Los �?lamos',10);
+INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (202,'Los Álamos',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (203,'Tirúa',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (204,'Alto Biobío',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (205,'Antuco',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (206,'Cabrero',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (207,'Laja',10);
-INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (208,'Los �?ngeles',10);
+INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (208,'Los ángeles',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (209,'Mulchén',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (210,'Nacimiento',10);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (211,'Negrete',10);
@@ -361,14 +360,12 @@ INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (343,'Timaukel',15);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (344,'Natales',15);
 INSERT INTO COMUNA (id_comuna,nombre,fk_id_region) values (345,'Torres del Paine',15);
 
-
-INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(1,'Sofá',150000);
+INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(1,'Sofa¡',150000);
 INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(3,'Televisor',170000);
 INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(2,'Puf',23000);
 INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(4,'Mesa',30000);
 INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(5,'Jarron',7000);
 INSERT INTO IMPLEMENTOS_DEPARTAMENTO(id_implemento,nombre_implemento,valor_implemento) values(6,'Minibar',45000);
-
 
 INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(1,'Piscina');
 INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(2,'Restaurante');
@@ -377,52 +374,36 @@ INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(4,'Casino')
 INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(5,'Spa');
 INSERT INTO AREA_EDIFICIO(id_area_edificio,nombre_implemento) values(6,'Comedor');
 
-
-
-
 INSERT INTO CHOFER(id_chofer,nombre,rut,telefono,foto) values(1,'Leandro Lagos','19546836-6',12345678,'Foto Leandrito');
-INSERT INTO CHOFER(id_chofer,nombre,rut,telefono,foto) values(2,'Pablo Saldaña','12857362-2',12345678,'Foto Saldaña');
-
-
+INSERT INTO CHOFER(id_chofer,nombre,rut,telefono,foto) values(2,'Pablo Saldania','12857362-2',12345678,'Foto Saldania');
 
 INSERT INTO GUIA_TURISTICO(id_guia,nombre,rut,telefono,foto) values(1,'Juan Carrasco','19546836-6',12345678,'Foto Juan');
 INSERT INTO GUIA_TURISTICO(id_guia,nombre,rut,telefono,foto) values(2,'Esteban Paredes','19546836-6',12345678,'Foto Esteban');
 
 
-
 INSERT INTO ENCARGADO(id_encargado,nombre,rut,telefono,foto) values(1,'Felipe Vidal','19546836-6',12345678,'Foto Felipe');
-INSERT INTO ENCARGADO(id_encargado,nombre,rut,telefono,foto) values(2,'Jonatan Muñoz','19546836-6',12345678,'Foto Jonatan');
-
-
+INSERT INTO ENCARGADO(id_encargado,nombre,rut,telefono,foto) values(2,'Jonatan Munioz','19546836-6',12345678,'Foto Jonatan');
 
 INSERT INTO MARCA(id_marca,nombre) values(1,'Hyundai');
 
-
-
 INSERT INTO MODELO(id_modelo,nombre,fk_id_marca) values(1,'Accent',1);
 
-
-
 INSERT INTO VEHICULO(id_vehiculo,puertas,maleta,patente,fk_id_modelo) values(1,5,'S','ASDF34',1);
-
-
 
 INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(1,'Disponible','El apartamento esta disponible para su arriendo');
 INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(2,'Ocupado','El apartamento no esta disponible para su arriendo');
 INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(3,'Mantenimiento','El apartamento se ecuentra en mantimiento o realizando mejoras');
 INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(4,'Reservado','El apartamento se encuentra reservado');
-INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(5,'Reparación','El apartamento se encuentra en reparación');
+INSERT INTO ESTADO(id_Estado,nombre,descripcion) values(5,'Reparacion','El apartamento se encuentra en reparacion');
+
 
 
 INSERT INTO TIPO_USUARIO(id_tipo_usu,nombre_tipo_usuario) values(1,'Cliente');
 INSERT INTO TIPO_USUARIO(id_tipo_usu,nombre_tipo_usuario) values(2,'Administrador');
 INSERT INTO TIPO_USUARIO(id_tipo_usu,nombre_tipo_usuario) values(3,'Funcionario');
 
-
-
 INSERT INTO TIPO_MULTAS(id_multas,nombre,descripcion_multa,monto,interes) values(1,'Ruidos Molestos','Se generan ruidos molestos dentro del apartamento',100000,1.2);
-INSERT INTO TIPO_MULTAS(id_multas,nombre,descripcion_multa,monto,interes) values(2,'Daños Menores de Estructura','Se producieron daños menores a la estructura del apartamento',150000,1.2);
-
+INSERT INTO TIPO_MULTAS(id_multas,nombre,descripcion_multa,monto,interes) values(2,'Datos Menores de Estructura','Se producieron datos menores a la estructura del apartamento',150000,1.2);
 
 
 INSERT INTO ESTADO_PAGO(id_estado,nombre) values(1,'Pagado');
@@ -431,19 +412,19 @@ INSERT INTO ESTADO_PAGO(id_estado,nombre) values(3,'Por pagar');
 INSERT INTO ESTADO_PAGO(id_estado,nombre) values(4,'Medio pagar');
 
 
+
 INSERT INTO TIPO_PAGO(id_tipo,nombre) values(1,'Transferencia');
 INSERT INTO TIPO_PAGO(id_tipo,nombre) values(2,'Tarjeta de Credito');
 
-
-
 INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(1,'Aire Acondicionado','La habitacion cuenta con aire acondicionado');
-INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(2,'Wifi','La habitacion cuenta con señal wifi para conectarse a internet');
+INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(2,'Wifi','La habitacion cuenta con senial wifi para conectarse a internet');
 INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(3,'TV Cable','La habitacion cuenta con televisio  por cable');
-INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(4,'Agua Caliente','La habitacion cuenta con agua caliente con la habitacion de baño');
-
-
-
-
+INSERT INTO SERVICIOS_DEPA(id_servi_depa,nombre,descripcion) values(4,'Agua Caliente','La habitacion cuenta con agua caliente con la habitacion de banio');
 
 
 commit;
+
+
+
+
+

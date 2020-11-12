@@ -35,6 +35,8 @@ DROP TABLE estado CASCADE CONSTRAINTS;
 
 DROP TABLE estado_pago CASCADE CONSTRAINTS;
 
+DROP TABLE fecha_peri_arr CASCADE CONSTRAINTS;
+
 DROP TABLE foto_depa CASCADE CONSTRAINTS;
 
 DROP TABLE foto_edi CASCADE CONSTRAINTS;
@@ -93,8 +95,7 @@ ALTER TABLE area_edificio ADD CONSTRAINT implementos_edificio_pk PRIMARY KEY ( i
 
 CREATE TABLE arriendo (
     id_arriendo            NUMBER NOT NULL,
-    fecha_desde            DATE NOT NULL,
-    fecha_hasta            DATE NOT NULL,
+    fecha_arriendo         DATE NOT NULL,
     acompaniantes          NUMBER NOT NULL,
     precio                 NUMBER NOT NULL,
     fk_id_departamento     NUMBER NOT NULL,
@@ -230,6 +231,14 @@ CREATE TABLE estado_pago (
 );
 
 ALTER TABLE estado_pago ADD CONSTRAINT estado_pago_pk PRIMARY KEY ( id_estado );
+
+CREATE TABLE fecha_peri_arr (
+    id_fecha_periodo   NUMBER NOT NULL,
+    fecha_periodo      DATE NOT NULL,
+    fk_id_arriendo     NUMBER NOT NULL
+);
+
+ALTER TABLE fecha_peri_arr ADD CONSTRAINT fecha_peri_arr_pk PRIMARY KEY ( id_fecha_periodo );
 
 CREATE TABLE foto_depa (
     id_foto_dep          NUMBER NOT NULL,
@@ -521,6 +530,10 @@ ALTER TABLE foto_depa
 ALTER TABLE foto_edi
     ADD CONSTRAINT foto_edi_edificio_fk FOREIGN KEY ( fk_id_edificio )
         REFERENCES edificio ( id_edificio );
+
+ALTER TABLE fecha_peri_arr
+    ADD CONSTRAINT fe_pe_ar_arri_fk FOREIGN KEY ( fk_id_arriendo )
+        REFERENCES arriendo ( id_arriendo );
 
 ALTER TABLE deta_imp_depa
     ADD CONSTRAINT implementos_departamento_fk FOREIGN KEY ( fk_id_implemento )

@@ -59,14 +59,12 @@ BEGIN
         WHERE id_usu=v_id_usuario;
     BEGIN 
    OPEN usuario_id_cur; 
-    DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH usuario_id_cur into v_id_usu, v_nombre,v_contrasenia,v_email,v_foto,v_rut,v_direccion,v_telefono,v_usuario_tipo,v_activo; 
       EXIT WHEN usuario_id_cur%notfound; 
          dbms_output.put_line('{"id":'||v_id_usu || ',"nombre":"'|| v_nombre ||'","contrasenia":"'|| v_contrasenia ||'","email":"'||v_email||'","foto":"'||v_foto||'","rut":"'||v_rut||'","direccion":"'||v_direccion||
                             '","telefono":"'||v_telefono||'","tipoUsuario":"'||v_usuario_tipo||'","activo":' ||v_activo || '},');  
-   END LOOP; 
-   DBMS_OUTPUT.put_line(']');
+   END LOOP;
    CLOSE usuario_id_cur; 
 END; 
 END;
