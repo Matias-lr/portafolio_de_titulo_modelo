@@ -101,14 +101,14 @@ create or replace trigger foto_dep_autoincrement_id
 begin
     :new.id_foto_dep := foto_dep_seq.nextval;
 end;
-
+/
 create or replace trigger foto_edi_autoincrement_id
     before insert on foto_edi
     for each row 
 begin
     :new.id_foto_edi := foto_edi_seq.nextval;
 end;
-
+/
 
 --
 create or replace trigger guia_turistico_auto_id
@@ -252,6 +252,14 @@ create or replace trigger vehiculo_autoincrement_id
     for each row 
 begin
     :new.id_vehiculo := vehiculo_seq.nextval;
+end;
+/
+
+create or replace trigger fecha_autoincrement_id
+    before insert on fecha_peri_arr
+    for each row 
+begin
+    :new.id_fecha_periodo := fecha_arriendo_seq.nextval;
 end;
 /
 --estado secuencia

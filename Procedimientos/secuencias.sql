@@ -176,5 +176,11 @@ drop sequence vehiculo_seq;
 CREATE SEQUENCE vehiculo_seq START WITH 1
 increment by 1;
 
+drop sequence fecha_arriendo_seq;
+
+CREATE SEQUENCE fecha_arriendo_seq START WITH 1
+increment by 1;
+
+
 
 ---------SECUENCIAS

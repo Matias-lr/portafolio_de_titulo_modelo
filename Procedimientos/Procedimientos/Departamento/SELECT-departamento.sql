@@ -23,7 +23,8 @@ BEGIN
    CURSOR departamento_cur is 
      SELECT id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,edi.direccion_edificio ,es.nombre, dep.activo FROM DEPARTAMENTO dep
         JOIN ESTADO es on es.id_estado = dep.fk_id_estado
-        JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio;
+        JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio
+        where dep.activo = 1;
     BEGIN 
    OPEN departamento_cur; 
     DBMS_OUTPUT.put_line('[');
@@ -110,7 +111,7 @@ BEGIN
      SELECT id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,edi.direccion_edificio ,es.nombre,dep.activo  FROM DEPARTAMENTO dep
         JOIN ESTADO es on es.id_estado = dep.fk_id_estado
         JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio
-    WHERE es.id_estado = v_id_estado_depa;
+    WHERE es.id_estado = v_id_estado_depa and dep.activo = 1;
     BEGIN 
    OPEN departamento_cur_estado; 
    DBMS_OUTPUT.put_line('[');

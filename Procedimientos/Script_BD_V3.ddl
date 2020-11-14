@@ -100,10 +100,9 @@ CREATE TABLE arriendo (
     precio                 NUMBER NOT NULL,
     fk_id_departamento     NUMBER NOT NULL,
     fk_id_turismo          NUMBER,
-    fk_id_check_out        NUMBER NOT NULL,
     fk_id_servicio_extra   NUMBER,
     fk_id_usu              NUMBER NOT NULL,
-    activo                 CHAR(1) DEFAULT 1 NOT NULL
+    activo                 CHAR(1) DEFAULT '1' NOT NULL
 );
 
 ALTER TABLE arriendo ADD CONSTRAINT arriendo_pk PRIMARY KEY ( id_arriendo );
@@ -119,10 +118,11 @@ CREATE TABLE check_in (
 ALTER TABLE check_in ADD CONSTRAINT check_in_pk PRIMARY KEY ( id_check_in );
 
 CREATE TABLE check_out (
-    id_check_out   NUMBER NOT NULL,
-    fecha_hora     DATE NOT NULL,
-    validado       CHAR(1) NOT NULL,
-    activo                 CHAR(1) DEFAULT 1 NOT NULL
+    id_check_out     NUMBER NOT NULL,
+    fecha_hora       DATE NOT NULL,
+    validado         CHAR(1) NOT NULL,
+    activo           CHAR(1) DEFAULT '1' NOT NULL,
+    fk_id_arriendo   NUMBER NOT NULL
 );
 
 ALTER TABLE check_out ADD CONSTRAINT check_inv1_pk PRIMARY KEY ( id_check_out );
@@ -455,9 +455,6 @@ CREATE TABLE vehiculo (
 
 ALTER TABLE vehiculo ADD CONSTRAINT vehiculo_pk PRIMARY KEY ( id_vehiculo );
 
-ALTER TABLE arriendo
-    ADD CONSTRAINT arriendo_check_out_fk FOREIGN KEY ( fk_id_check_out )
-        REFERENCES check_out ( id_check_out );
 
 ALTER TABLE arriendo
     ADD CONSTRAINT arriendo_departamento_fk FOREIGN KEY ( fk_id_departamento )
@@ -481,6 +478,10 @@ ALTER TABLE arriendo
 
 ALTER TABLE check_in
     ADD CONSTRAINT check_in_arriendo_fk FOREIGN KEY ( fk_id_arriendo )
+        REFERENCES arriendo ( id_arriendo );
+        
+ALTER TABLE check_out
+    ADD CONSTRAINT check_out_arriendo_fk FOREIGN KEY ( fk_id_arriendo )
         REFERENCES arriendo ( id_arriendo );
 
 ALTER TABLE servicio_de_transporte

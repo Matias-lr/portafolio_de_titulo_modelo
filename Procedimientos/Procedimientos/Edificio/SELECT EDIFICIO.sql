@@ -14,7 +14,8 @@ BEGIN
         SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
-        JOIN REGION RE on RE.id_region=CO.fk_id_region;
+        JOIN REGION RE on RE.id_region=CO.fk_id_region
+        where ef.activo =1;
        
     BEGIN 
    OPEN edificio_cur; 
