@@ -2,14 +2,19 @@
 --Procedure Eliminar General
 -------
 
+
 CREATE OR REPLACE PROCEDURE delete_general(
     v_nombre_tabla varchar2,
-    v_id_columna varchar2,
     v_id NUMBER)
     IS
     all_delete varchar2(1000);
+    id_tabla varchar2(255);
 BEGIN
-     all_delete:='delete from '||v_nombre_tabla||' where '||v_id_columna||' = '||v_id;
+      SELECT column_name into id_tabla FROM all_cons_columns WHERE constraint_name = (
+      SELECT constraint_name FROM all_constraints 
+      WHERE UPPER(table_name) = UPPER(v_nombre_tabla) AND CONSTRAINT_TYPE = 'P'
+    );
+     all_delete:='delete from '||v_nombre_tabla||' where '||id_tabla||' = '||v_id;
                         
     EXECUTE IMMEDIATE all_delete;
     
