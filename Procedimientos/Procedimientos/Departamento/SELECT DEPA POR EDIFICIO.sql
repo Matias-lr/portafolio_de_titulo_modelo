@@ -33,17 +33,4 @@ END;
 END;
 
 
-begin
-depa_id_edificio_select(1);
-end;
 
-
-     SELECT id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,edi.direccion_edificio ,es.nombre, dep.activo FROM DEPARTAMENTO dep
-        JOIN ESTADO es on es.id_estado = dep.fk_id_estado
-        JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio
-        WHERE edi.id_edificio=1;
-        
-        
-        
-
-        

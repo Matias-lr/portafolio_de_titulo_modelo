@@ -88,21 +88,6 @@
 <colAssociation fkAssociation="3BA65509-FE7B-02EE-A812-08F87C2354E6" referredColumn="1C0DF71F-4432-19C9-0FC6-2DDD909E3B38"/>
 </associations>
 </Column>
-<Column name="fk_id_check_out" id="C9D3EAE0-6809-193D-BA89-26518C5D81D9">
-<sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
-<createdBy>Pipe</createdBy>
-<createdTime>2020-11-05 00:21:06 UTC</createdTime>
-<ownerDesignName>Modelo_BDD</ownerDesignName>
-<importedID>5A145874-DE5C-0E19-B9C0-2FC3A3D21F5D</importedID>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="55880488-E7E6-A773-3924-EB9D86BC1373" referredColumn="8E583301-EA52-4D61-C793-B05B2924C970"/>
-</associations>
-</Column>
 <Column name="fk_id_servicio_extra" id="9D390279-CE86-972C-16AE-7EEB98B9E8A3">
 <sourceDDLFile>Script_BD_V3.ddl</sourceDDLFile>
 <createdBy>Pipe</createdBy>
@@ -160,16 +145,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="183AA05E-1C16-1FA7-61AE-14052EEFD63F"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="2E6892ED-B1F7-3106-5F9E-09CCEC17667E" name="arriendo_check_out_fk">
-<createdBy>Pipe</createdBy>
-<createdTime>2020-11-05 00:21:06 UTC</createdTime>
-<ownerDesignName>Modelo_BDD</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="C9D3EAE0-6809-193D-BA89-26518C5D81D9"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="58545101-EE42-3B17-6062-CC157603A86D" name="arriendo_departamento_fk">

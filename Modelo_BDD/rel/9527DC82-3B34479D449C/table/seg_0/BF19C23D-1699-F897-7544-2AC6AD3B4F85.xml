@@ -58,6 +58,20 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="fk_id_arriendo" id="E73C3C21-7DFF-24B1-E918-98A5237F56FB">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-14 18:32:56 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>45182A8C-05A8-196B-61B1-E60739498AB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F45DF258-85F2-C564-04A0-BF2ECAA3C685" referredColumn="183AA05E-1C16-1FA7-61AE-14052EEFD63F"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="3E109DDB-AC43-7CAE-B4A9-DD1DE9658CD5" name="check_inv1_pk">
@@ -71,6 +85,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="8E583301-EA52-4D61-C793-B05B2924C970"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29573692-8912-ABEF-A863-DAB0CF7F759B" name="check_out_ARRIENDO_FK">
+<createdBy>Pipe</createdBy>
+<createdTime>2020-11-14 18:32:56 UTC</createdTime>
+<ownerDesignName>Modelo_BDD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E73C3C21-7DFF-24B1-E918-98A5237F56FB"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
