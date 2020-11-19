@@ -38,6 +38,7 @@ BEGIN
 END; 
 END;
 
+/*
 select * from departamento;
 
 begin
@@ -49,6 +50,8 @@ end;
         JOIN ESTADO es on es.id_estado = dep.fk_id_estado
         JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio
         JOIN FOTO_DEPA ft on ft.fk_id_departamento = dep.id_departamento;
+        
+*/
 
 -----------------------
 --Procedure llamar departamentos por id
@@ -127,6 +130,7 @@ END;
 
 ---------------
 ---------------
+/*
 BEGIN
     select_depa();
 END;
@@ -138,6 +142,6 @@ END;
 BEGIN
     select_depa_estado(1);
 END;
-
+*/
 
       

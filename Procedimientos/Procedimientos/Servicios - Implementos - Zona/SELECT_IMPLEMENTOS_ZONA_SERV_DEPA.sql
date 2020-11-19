@@ -54,13 +54,6 @@ END;
 END;
 
 
-BEGIN
-area_edi_select();
-END;
-
-BEGIN
-area_edi_select_id(1);
-END;
 
 
 -----------
@@ -115,13 +108,6 @@ BEGIN
 END; 
 END;
 
-BEGIN
-imple_depa_select();
-END;
-
-BEGIN
-imple_depa_select_id(1);
-END;
 
 
 -----------
@@ -179,10 +165,4 @@ END;
 END;
 
 
-BEGIN
-serv_depa_select();
-END;
 
-BEGIN
-serv_depa_select_id(1);
-END;

@@ -36,11 +36,5 @@ exception
         v_id_usu := NULL;
 dbms_output.put_line(existe);
 end;
-begin
-    proce_token('token');
-end;
 
-select * from token;
-
-insert into token values (1,'token','compuPipe',1,'N',1);
 

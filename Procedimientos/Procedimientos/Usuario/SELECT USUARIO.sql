@@ -109,19 +109,3 @@ END;
 -----------------------
 
 -----------------------
-BEGIN
-    usuario_select();
-END;
-
-BEGIN
-    usuario_select_id(2);
-END;
-
-BEGIN
-    usuario_select_tipo(1);
-END;
------------------------
------------------------
-SELECT id_usu,nombre,contrasenia,email,foto,rut,direccion,telefono,tp.nombre_tipo_usuario AS "TIPO USUARIO"
-FROM USUARIO USU
-JOIN TIPO_USUARIO TP on TP.id_tipo_usu = usu.fk_id_tipo_usu;

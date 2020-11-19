@@ -53,9 +53,6 @@ exception
 end;
 
 
-begin
-    proce_email2('pipeuchiha2005@gmail.com');
-end;
 
 
 

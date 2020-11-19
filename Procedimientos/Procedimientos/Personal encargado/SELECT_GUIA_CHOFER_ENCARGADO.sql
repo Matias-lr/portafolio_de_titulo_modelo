@@ -197,10 +197,3 @@ BEGIN
 END; 
 END;
 
-BEGIN
-select_chofer();
-END;
-
-BEGIN
-select_chofer_id(1);
-END;

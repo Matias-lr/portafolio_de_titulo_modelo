@@ -51,9 +51,7 @@ END;
 --------------------------
 --------------------------
 --------------------------
-BEGIN
-    arriendo_select();
-END;
+
 ---------------------------
 ---------------------------
 ---------------------------
@@ -61,7 +59,7 @@ END;
 
 
 
-select id_arriendo,arr.fecha_arriendo,acompaniantes,precio,DEP.numero_habitacion "NUMERO HABITACION DPTO",EDD.nombre AS "NOMBRE EDIFICIO",
+ /*   select id_arriendo,arr.fecha_arriendo,acompaniantes,precio,DEP.numero_habitacion "NUMERO HABITACION DPTO",EDD.nombre AS "NOMBRE EDIFICIO",
     TUR.nombre AS "NOMBRE TOUR",cin.fecha_hora AS "FECHA CHECK IN",cin.validado AS "CHECK IN VALIDADO",cout.fecha_hora AS "HORA CHECK OUT",cout.validado AS "CHECK OUT VALIDADO",se.nombre AS "SERVICIO EXTRA",usu.nombre CLIENTE,
     fpa.fecha_periodo AS "FECHA ARRIENDO" ,arr.activo AS ACTIVO 
         FROM ARRIENDO ARR
@@ -90,6 +88,6 @@ select id_arriendo,arr.fecha_arriendo,acompaniantes,precio,DEP.numero_habitacion
         
         
 
-
+*/
 
 

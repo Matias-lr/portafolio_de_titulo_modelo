@@ -1,6 +1,7 @@
-select id_token, token, device_name,adress,baned,fk_id_usu from token;
+/*select id_token, token, device_name,adress,baned,fk_id_usu from token;
 
 insert into token values(2,'token2','device','direccion','n',1);
+*/
 
  SET serveroutput ON
 
@@ -122,19 +123,3 @@ BEGIN
 END; 
 END;
 
-BEGIN
-    token_token_select('token');
-END;
-
-
-BEGIN
-    token_select();
-END;
-
-BEGIN
-    token_id_select(1);
-END;
-
-BEGIN
-    token_id_usu_select(1);
-END;

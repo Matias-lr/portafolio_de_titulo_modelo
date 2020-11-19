@@ -4,9 +4,7 @@
 -- realizar grant select on v_$session to portafolio;
 -- Reiniciar conexión;
 
-select * from v$session;
 
-SELECT SID , SERIAL#  FROM v$session;
 
 create or replace procedure test_proceso
 is

@@ -53,6 +53,3 @@ END;
 
 
 
-
-select * from foto_edi;
-select * from foto_depa;

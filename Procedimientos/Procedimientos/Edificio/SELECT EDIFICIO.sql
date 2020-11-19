@@ -92,6 +92,7 @@ END;
 END;
 
 
+/*
 
 BEGIN
     edificio_select();
@@ -106,3 +107,5 @@ select * from edificio;
 BEGIN
     edificio_nombre_select('edificio');
 END;
+
+*/

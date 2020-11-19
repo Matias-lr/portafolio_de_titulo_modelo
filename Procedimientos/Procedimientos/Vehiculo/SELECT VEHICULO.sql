@@ -31,11 +31,7 @@ BEGIN
 END; 
 END;
 
-select * from vehiculo;
-SELECT id_vehiculo, puertas, maleta, patente, mo.nombre, mr.nombre 
-FROM VEHICULO VE
-JOIN MODELO mo on mo.id_modelo = ve.fk_id_modelo
-JOIN MARCA mr on mr.id_marca = mo. fk_id_marca;
+
 
 -----------
 --SELECT SERVICIOS DEPARTAMENTO ID
@@ -71,10 +67,3 @@ END;
 END;
 
 
-BEGIN
-vehiculo_select();
-END;
-
-BEGIN
-vehiculo_select_id(1);
-END;
