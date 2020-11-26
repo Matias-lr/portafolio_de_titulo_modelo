@@ -44,11 +44,13 @@ BEGIN
         WHERE id_area_edificio=v_id_ar;
     BEGIN 
    OPEN area_cur_id; 
+	DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH area_cur_id into v_id_area, v_nombre,v_activo; 
       EXIT WHEN area_cur_id%notfound; 
       dbms_output.put_line('{"id":'||v_id_area || ',"nombre":"'|| v_nombre ||'","activo":' ||v_activo|| '},'); 
    END LOOP; 
+	DBMS_OUTPUT.put_line('[');
    CLOSE area_cur_id; 
 END; 
 END;
@@ -99,11 +101,13 @@ BEGIN
         WHERE id_implemento=v_id_im;
     BEGIN 
    OPEN implemento_cur; 
+	DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH implemento_cur into v_id_implemento, v_nombre,v_valor,v_activo; 
       EXIT WHEN implemento_cur%notfound; 
       dbms_output.put_line('{"id":'||v_id_implemento || ',"nombre":"'|| v_nombre ||'","valor":'|| v_valor ||',"activo":'||v_activo || '},'); 
    END LOOP; 
+	DBMS_OUTPUT.put_line('[');
    CLOSE implemento_cur; 
 END; 
 END;
@@ -155,11 +159,13 @@ BEGIN
         where id_servi_depa = v_id_sd;
     BEGIN 
    OPEN servi_depa_cur_id; 
+	DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH servi_depa_cur_id into v_id_servi, v_nombre,v_descripcion,v_activo; 
       EXIT WHEN servi_depa_cur_id%notfound; 
       dbms_output.put_line('{"id":'||v_id_servi || ',"nombre":"'|| v_nombre ||'","descripcion":"'|| v_descripcion ||'","activo":'||v_activo || '},'); 
    END LOOP; 
+	DBMS_OUTPUT.put_line('[');
    CLOSE servi_depa_cur_id; 
 END; 
 END;
