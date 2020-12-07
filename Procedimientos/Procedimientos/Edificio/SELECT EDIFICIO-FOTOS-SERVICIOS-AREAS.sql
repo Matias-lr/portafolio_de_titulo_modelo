@@ -78,12 +78,12 @@ BEGIN
    CLOSE edificio_id_cur; 
 END; 
 END;
-
+/*
 begin
     edi_area_servi();
 end;
 
-/*
+
 insert into deta_area_edi values (1,1,2,1);
 insert into deta_area_edi values (1,2,1,1);
 insert into deta_area_edi values (1,3,1,1);

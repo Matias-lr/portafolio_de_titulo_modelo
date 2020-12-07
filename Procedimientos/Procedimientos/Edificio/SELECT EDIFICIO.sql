@@ -10,10 +10,11 @@ BEGIN
     v_telefono NUMBER(15);
     v_comuna VARCHAR2(255);
     v_region VARCHAR2(255);
+    v_foto varchar2(2000);
     v_activo CHAR;
 
    CURSOR edificio_cur is 
-        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
+        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,ef.foto,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
         JOIN REGION RE on RE.id_region=CO.fk_id_region
@@ -23,14 +24,15 @@ BEGIN
    OPEN edificio_cur; 
     DBMS_OUTPUT.put_line('[');
    LOOP 
-   FETCH edificio_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region,v_activo; 
+   FETCH edificio_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_foto,v_comuna,v_region,v_activo; 
       EXIT WHEN edificio_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' || v_activo|| '},'); 
+      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono|| ',"foto":"'|| v_foto || '","comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' || v_activo|| '},'); 
    END LOOP; 
    DBMS_OUTPUT.put_line(']');
    CLOSE edificio_cur; 
 END; 
 END;
+
 
 
 CREATE OR REPLACE PROCEDURE edificio_id_select
@@ -44,9 +46,10 @@ BEGIN
     v_telefono NUMBER(15);
     v_comuna VARCHAR2(255);
     v_region VARCHAR2(255);
+    v_foto varchar2(2000);
     v_activo CHAR;
    CURSOR edificio_id_cur is 
-        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
+        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,ef.foto,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
         JOIN REGION RE on RE.id_region=CO.fk_id_region
@@ -54,9 +57,9 @@ BEGIN
     BEGIN 
    OPEN edificio_id_cur; 
    LOOP 
-   FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region,v_activo; 
+   FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_foto,v_comuna,v_region,v_activo; 
       EXIT WHEN edificio_id_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' ||v_activo || '},'); 
+      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono|| ',"foto":"'|| v_foto || '","comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' || v_activo|| '},'); 
    END LOOP; 
    CLOSE edificio_id_cur; 
 END; 
@@ -73,9 +76,10 @@ BEGIN
     v_telefono NUMBER(15);
     v_comuna VARCHAR2(255);
     v_region VARCHAR2(255);
+    v_foto varchar2(2000);
     v_activo CHAR;
    CURSOR edificio_id_cur is 
-        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
+        SELECT id_edificio, EF.nombre,direccion_edificio,telefono,ef.foto,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
         JOIN REGION RE on RE.id_region=CO.fk_id_region
@@ -83,9 +87,9 @@ BEGIN
     BEGIN 
    OPEN edificio_id_cur; 
    LOOP 
-   FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_comuna,v_region,v_activo; 
+   FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_foto,v_comuna,v_region,v_activo; 
       EXIT WHEN edificio_id_cur%notfound; 
-      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono||',"comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' ||v_activo || '},'); 
+      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion ||'","telefono":'||v_telefono|| ',"foto":"'|| v_foto || '","comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' || v_activo|| '},'); 
    END LOOP; 
    CLOSE edificio_id_cur; 
 END; 
