@@ -1,5 +1,5 @@
 set serveroutput on;
-CREATE OR REPLACE PROCEDURE edi_area_servi
+CREATE OR REPLACE PROCEDURE edificio_select
 is
 BEGIN
     DECLARE 
