@@ -1,7 +1,7 @@
 
 
-CREATE OR REPLACE PROCEDURE departamento_id_select
-(v_depa number)
+CREATE OR REPLACE PROCEDURE depa_id_edificio_select
+(v_ed number)
 is
 BEGIN
     DECLARE 
@@ -30,24 +30,28 @@ BEGIN
      SELECT id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,dep.foto,edi.direccion_edificio ,es.nombre as ESTADO FROM DEPARTAMENTO dep
         JOIN ESTADO es on es.id_estado = dep.fk_id_estado
         JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio
-        where dep.activo = 1 and id_departamento=v_depa;
+        where dep.activo = 1 and edi.id_edificio=v_ed;
     
     CURSOR prueba_cur_1 is 
         select sd.id_servi_depa, sd.nombre
         from departamento dep
-        LEFT JOIN DETA_SERV_DEPA serv on dep.id_departamento = serv.fk_id_departamento
-        LEFT JOIN servicios_depa sd on serv.fk_id_servi_depa = sd.id_servi_depa
-        WHERE dep.id_departamento = v_depa and dep.activo = 1;
+        JOIN DETA_SERV_DEPA serv on dep.id_departamento = serv.fk_id_departamento
+        JOIN servicios_depa sd on serv.fk_id_servi_depa = sd.id_servi_depa
+        JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio
+        where dep.activo = 1 and edi.id_edificio=v_ed;
           
     CURSOR prueba_cur_2 is
         SELECT id_implemento,ide.nombre_implemento as IMPLEMENTO, did.cantidad_implemento FROM DEPARTAMENTO dep
-        LEFT JOIN deta_imp_depa did ON dep.id_departamento = did.fk_id_departamento
-        LEFT JOIN implementos_departamento ide ON ide.id_implemento = did.fk_id_implemento
-        where dep.id_departamento = v_depa and dep.activo = 1;
+        JOIN deta_imp_depa did ON dep.id_departamento = did.fk_id_departamento
+        jOIN implementos_departamento ide ON ide.id_implemento = did.fk_id_implemento
+        JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio
+        where dep.activo = 1 and edi.id_edificio=v_ed;
 
     CURSOR fotos_cur is
-        SELECT id_foto_dep, foto_dep FROM foto_depa
-        WHERE fk_id_departamento = v_depa and activo=1;
+        SELECT fd.id_foto_dep, fd.foto_dep FROM foto_depa fd
+        join departamento dp on dp.id_departamento = fd.fk_id_departamento 
+        JOIN EDIFICIO edi on edi.id_edificio = dp.fk_id_edificio
+        WHERE edi.id_edificio =v_ed and fd.activo=1;
     BEGIN 
    OPEN prueba_cur; 
     DBMS_OUTPUT.put_line('[');
@@ -84,6 +88,10 @@ BEGIN
 END; 
 END;
 
+
+begin 
+    depa_id_edificio_select(1);
+end;
 
 
 

@@ -1,6 +1,5 @@
 set serveroutput on;
-CREATE OR REPLACE PROCEDURE edificio_id_select
-(id_edi NUMBER)
+CREATE OR REPLACE PROCEDURE edi_area_servi
 is
 BEGIN
     DECLARE 
@@ -29,24 +28,18 @@ BEGIN
         SELECT id_edificio, EF.nombre,direccion_edificio,telefono,foto,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
-        JOIN REGION RE on RE.id_region=CO.fk_id_region
-        WHERE id_edificio=id_edi;
-    
+        JOIN REGION RE on RE.id_region=CO.fk_id_region;    
     CURSOR area_cur is
         select ae.id_area_edificio,ae.nombre_implemento,dae.cantidad_implemento from edificio edi
         left join deta_area_edi dae on dae.fk_id_edificio = edi.id_edificio
-        left join area_edificio ae on ae.id_area_edificio = dae.fk_id_area_edificio
-        where edi.id_edificio = id_edi; 
-        
+        left join area_edificio ae on ae.id_area_edificio = dae.fk_id_area_edificio;        
     CURSOR servicio_cur is
-        select id_servicio_extra,nombre,descripcion,valor from servicio_extra
-        where fk_id_edificio = id_edi;
-        
+        select id_servicio_extra,nombre,descripcion,valor from servicio_extra;        
     CURSOR foto_cur is
-        select id_foto_edi,foto_edi from foto_edi
-        where fk_id_edificio = id_edi and activo=1;
+        select id_foto_edi,foto_edi from foto_edi;
     BEGIN 
    OPEN edificio_id_cur; 
+   DBMS_OUTPUT.put_line('[');
    LOOP 
    FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_foto,v_comuna,v_region,v_activo; 
       EXIT WHEN edificio_id_cur%notfound; 
@@ -81,12 +74,13 @@ BEGIN
         
       dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion || '","telefono":'||v_telefono||',"servicio": [' ||v_servicios ||'],"areas": ['||v_areas ||'],"fotos": [' || v_fotos|| '],"fotoEdificio":"'||v_foto ||'","comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' ||v_activo || '},'); 
    END LOOP; 
+    DBMS_OUTPUT.put_line(']');
    CLOSE edificio_id_cur; 
 END; 
 END;
 
 begin
-    edificio_id_select(1);
+    edi_area_servi();
 end;
 
 /*
