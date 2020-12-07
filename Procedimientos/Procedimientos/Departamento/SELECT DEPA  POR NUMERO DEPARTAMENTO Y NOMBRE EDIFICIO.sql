@@ -31,7 +31,7 @@ BEGIN
       EXIT WHEN departamento_cur%notfound; 
       dbms_output.put_line('{"id":'||v_id_departamento ||',"num_habitacion":'||v_num_habitacion|| ',"num_habitaciones":' || v_numero_habitaciones || ',"metros_cuadradros":' || v_metros_cuadrados  || ',"banios":' || v_banios || ',"piso":' || v_piso || ',"precio_noche":' || v_precio_noche || ',"foto":"' ||v_foto || '","edificio":"' || v_edificio_dire || '","estado":"' || v_nombre_es|| '","nombreEdificio":"' ||v_nombre_edificio || '","activo":' ||v_activo || '},'); 
    END LOOP; 
-   DBMS_OUTPUT.put_line(']');
+   DBMS_OUTPUT.put_line('],');
    CLOSE departamento_cur; 
 END; 
 END;

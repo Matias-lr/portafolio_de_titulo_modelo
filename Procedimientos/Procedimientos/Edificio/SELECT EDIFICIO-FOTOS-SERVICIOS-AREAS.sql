@@ -31,8 +31,8 @@ BEGIN
         JOIN REGION RE on RE.id_region=CO.fk_id_region;    
     CURSOR area_cur is
         select ae.id_area_edificio,ae.nombre_implemento,dae.cantidad_implemento from edificio edi
-        left join deta_area_edi dae on dae.fk_id_edificio = edi.id_edificio
-        left join area_edificio ae on ae.id_area_edificio = dae.fk_id_area_edificio;        
+        join deta_area_edi dae on dae.fk_id_edificio = edi.id_edificio
+        join area_edificio ae on ae.id_area_edificio = dae.fk_id_area_edificio;        
     CURSOR servicio_cur is
         select id_servicio_extra,nombre,descripcion,valor from servicio_extra;        
     CURSOR foto_cur is
@@ -43,12 +43,12 @@ BEGIN
    LOOP 
    FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_foto,v_comuna,v_region,v_activo; 
       EXIT WHEN edificio_id_cur%notfound; 
-      
+      v_areas := '';
       OPEN area_cur;
           LOOP
             FETCH area_cur into v_idarea,v_implemento_nombre,v_cantidad_implemento;
             EXIT WHEN area_cur%notfound;
-             v_areas:= v_areas || '{"idArea":' || v_idarea|| ',"nombre":"'|| v_implemento_nombre ||'","cantiad":' ||v_cantidad_implemento || '},';
+             v_areas:= v_areas || '{"idArea":' || v_idarea|| ',"nombre":"'|| v_implemento_nombre ||'","cantidad":' ||v_cantidad_implemento || '},';
             
           END LOOP;
       CLOSE area_cur;
@@ -57,7 +57,7 @@ BEGIN
           LOOP
             FETCH servicio_cur into v_idservicio,v_nombre_servicio,v_descripcion,v_valor_servicio;
             EXIT WHEN servicio_cur%notfound;
-             v_servicios:= v_servicios || '{"idServicio":' || v_idservicio|| ',"nombre":"'|| v_nombre_servicio ||'","descripcion":' ||v_descripcion || '","valor":'||v_valor_servicio || '},';
+             v_servicios:= v_servicios || '{"idServicio":' || v_idservicio|| ',"nombre":"'|| v_nombre_servicio ||'","descripcion":"' ||v_descripcion || '","valor":'||v_valor_servicio || '},';
             
           END LOOP;
       CLOSE servicio_cur;
@@ -74,13 +74,15 @@ BEGIN
         
       dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion || '","telefono":'||v_telefono||',"servicio": [' ||v_servicios ||'],"areas": ['||v_areas ||'],"fotos": [' || v_fotos|| '],"fotoEdificio":"'||v_foto ||'","comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' ||v_activo || '},'); 
    END LOOP; 
-    DBMS_OUTPUT.put_line(']');
+    DBMS_OUTPUT.put_line('],');
    CLOSE edificio_id_cur; 
 END; 
 END;
+
+
 /*
 begin
-    edi_area_servi();
+    edificio_select();
 end;
 
 
@@ -93,6 +95,12 @@ insert into foto_edi values(1,'Fotito edificio',1,1);
 insert into foto_edi values(2,'Fotito 2',1,1);
 insert into foto_edi values(3,'Fotito 3',1,1);
 
+select * from edificio;
+insert into edificio values(2,'direccion',56912345678,1,'edificio','foto',1);
+insert into edificio values(2,'edificio','direccion','+56912345678','foto',1,1);
+insert into edificio values(3,'edificio','direccion','+56912345678','foto',1,1);
+insert into edificio values(4,'edificio','direccion','+56912345678','foto',1,1);
+insert into edificio values(5,'edificio','direccion','+56912345678','foto',1,1);
         
 select ae.nombre_implemento,dae.cantidad_implemento from edificio edi
 left join deta_area_edi dae on dae.fk_id_edificio = edi.id_edificio
@@ -104,4 +112,4 @@ where fk_id_edificio = 1;
 
 select id_foto_edi,foto_edi from foto_edi
 where fk_id_edificio = 1 and activo=1;
-**/
+*/
