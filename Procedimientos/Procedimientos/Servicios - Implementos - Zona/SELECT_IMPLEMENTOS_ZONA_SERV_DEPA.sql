@@ -97,8 +97,10 @@ BEGIN
     v_valor NUMBER;
     v_activo CHAR;
    CURSOR implemento_cur is 
-        select id_implemento,nombre_implemento,valor_implemento,activo FROM IMPLEMENTOS_DEPARTAMENTO
-        WHERE id_implemento=v_id_im;
+        select id_implemento,nombre_implemento,valor_implemento,imd.activo FROM IMPLEMENTOS_DEPARTAMENTO imd
+        join deta_imp_depa dip on dip.fk_id_implemento = imd.id_implemento
+        join departamento dep on dep.id_departamento = dip.fk_id_departamento
+        WHERE dep.id_departamento=v_id_im;
     BEGIN 
    OPEN implemento_cur; 
 	DBMS_OUTPUT.put_line('[');
@@ -112,6 +114,12 @@ BEGIN
 END; 
 END;
 
+begin
+    imple_depa_id_select(1);
+end;
+
+select * from IMPLEMENTOS_DEPARTAMENTO;
+select * from deta_imp_depa;
 
 
 -----------

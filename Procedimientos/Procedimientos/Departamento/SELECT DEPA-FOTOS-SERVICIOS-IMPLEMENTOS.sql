@@ -87,11 +87,4 @@ BEGIN
    CLOSE prueba_cur; 
 END; 
 END;
-/*
-
-begin 
-    depa_id_edificio_select(1);
-end;
-
-*/
 

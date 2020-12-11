@@ -87,3 +87,12 @@ begin
 insert_global('usuario','''matias'',''1234'',''email@email.com'',''hdjaskdhasjkd'',''hsdjakhdsjkad'',''dsjdhkshdjksd'',''dhsj'',1');
 end;
 
+
+begin
+insert_global('arriendo','''to_date(''23-03-2020'',''dd-mm-yyy'')'',1,234000,2,null,null,1');
+end;
+
+
+begin
+insert_global('arriendo','''23-03-2020'',1,234000,2,null,null,1');
+end;

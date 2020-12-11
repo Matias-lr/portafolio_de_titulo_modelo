@@ -1,4 +1,96 @@
 set serveroutput on;
+
+
+
+CREATE OR REPLACE FUNCTION area_funcion
+(id_edi int)  return varchar
+ IS
+    area_cur varchar(2000);
+ BEGIN  
+    DECLARE
+    id_area int;
+    nombre_implemento varchar2(50);
+    cantidad_implemento number;
+    v_area_cursor varchar(2000);
+    
+    CURSOR cursor_area is
+        SELECT ae.id_area_edificio,ae.nombre_implemento,dae.cantidad_implemento from edificio edi
+        JOIN deta_area_edi dae on dae.fk_id_edificio = edi.id_edificio
+        JOIN area_edificio ae on ae.id_area_edificio = dae.fk_id_area_edificio
+        WHERE id_edificio = id_edi;    
+     begin   
+    OPEN cursor_area;
+        LOOP
+            FETCH cursor_area into id_area,nombre_implemento,cantidad_implemento;
+            EXIT WHEN cursor_area%notfound;
+             v_area_cursor:= v_area_cursor || '{"idArea":' || id_area|| ',"nombre":"'|| nombre_implemento ||'","cantidad":' ||cantidad_implemento || '},';
+            area_cur := v_area_cursor;
+        END LOOP;
+    CLOSE cursor_area;
+    end;
+    
+    
+   return area_cur;
+ end area_funcion; 
+/
+
+CREATE OR REPLACE FUNCTION servicio_function
+ (id_edi int) return varchar
+ IS
+    servicio_fun varchar2(2000);
+BEGIN 
+    DECLARE
+    id_servicio number;
+    nombre_servicio varchar2(70);
+    decripcion_servicio varchar2(255);
+    valor number;
+    v_servicios VARCHAR2(2000);
+    
+    CURSOR servicio_cur is
+        select se.id_servicio_extra,se.nombre,se.descripcion,se.valor from servicio_extra se
+        join edificio edi on edi.id_edificio = se.fk_id_edificio
+        where fk_id_edificio = id_edi; 
+    BEGIN
+    OPEN servicio_cur;
+        LOOP
+            FETCH servicio_cur INTO id_servicio,nombre_servicio,decripcion_servicio,valor;
+            EXIT WHEN servicio_cur%notfound;
+            v_servicios:= v_servicios || '{"idServicio":' || id_servicio|| ',"nombre":"'|| nombre_servicio ||'","descripcion":"' ||decripcion_servicio || '","valor":'||valor || '},';
+            servicio_fun:=v_servicios;
+        END LOOP;
+    END;
+    RETURN servicio_fun;
+END servicio_function;
+/
+ 
+CREATE OR REPLACE FUNCTION foto_function
+ (id_edi int) return varchar
+ IS
+    foto_fun varchar2(2000);
+BEGIN 
+    DECLARE
+    id_foto number;
+    foto varchar2(70);
+    v_fotos VARCHAR2(2000);
+    
+    CURSOR foto_cur is
+        select id_foto_edi,foto_edi from foto_edi;
+    BEGIN
+    OPEN foto_cur;
+        LOOP
+            FETCH foto_cur INTO id_foto,foto;
+            EXIT WHEN foto_cur%notfound;
+             v_fotos:= v_fotos || '{"idFoto":' ||id_foto || ',"foto":"' || foto || '"},';
+            foto_fun:=v_fotos;
+        END LOOP;
+    END;
+    RETURN foto_fun;
+END foto_function;
+/
+
+
+
+
 CREATE OR REPLACE PROCEDURE edificio_select
 is
 BEGIN
@@ -23,18 +115,16 @@ BEGIN
     v_servicios varchar2(2000);
     v_idarea number;
     v_idservicio number;
+    v_fotos_coma varchar2(2000);
+    v_areas_coma varchar2(2000);
+    v_servicios_coma varchar2(2000);
+    v_jsonF varchar2(4000);
     
    CURSOR edificio_id_cur is 
         SELECT id_edificio, EF.nombre,direccion_edificio,telefono,foto,CO.nombre COMUNA,RE.nombre REGION, EF.activo ACTIVO
         FROM EDIFICIO EF
         JOIN COMUNA CO on CO.id_comuna=EF.fk_id_comuna
-        JOIN REGION RE on RE.id_region=CO.fk_id_region;    
-    CURSOR area_cur is
-        select ae.id_area_edificio,ae.nombre_implemento,dae.cantidad_implemento from edificio edi
-        join deta_area_edi dae on dae.fk_id_edificio = edi.id_edificio
-        join area_edificio ae on ae.id_area_edificio = dae.fk_id_area_edificio;        
-    CURSOR servicio_cur is
-        select id_servicio_extra,nombre,descripcion,valor from servicio_extra;        
+        JOIN REGION RE on RE.id_region=CO.fk_id_region;                  
     CURSOR foto_cur is
         select id_foto_edi,foto_edi from foto_edi;
     BEGIN 
@@ -43,49 +133,22 @@ BEGIN
    LOOP 
    FETCH edificio_id_cur into v_id_edificio, v_nombre,v_direccion,v_telefono,v_foto,v_comuna,v_region,v_activo; 
       EXIT WHEN edificio_id_cur%notfound; 
-      v_areas := '';
-      OPEN area_cur;
-          LOOP
-            FETCH area_cur into v_idarea,v_implemento_nombre,v_cantidad_implemento;
-            EXIT WHEN area_cur%notfound;
-             v_areas:= v_areas || '{"idArea":' || v_idarea|| ',"nombre":"'|| v_implemento_nombre ||'","cantidad":' ||v_cantidad_implemento || '},';
-            
-          END LOOP;
-      CLOSE area_cur;
       
-      OPEN servicio_cur;
-          LOOP
-            FETCH servicio_cur into v_idservicio,v_nombre_servicio,v_descripcion,v_valor_servicio;
-            EXIT WHEN servicio_cur%notfound;
-             v_servicios:= v_servicios || '{"idServicio":' || v_idservicio|| ',"nombre":"'|| v_nombre_servicio ||'","descripcion":"' ||v_descripcion || '","valor":'||v_valor_servicio || '},';
-            
-          END LOOP;
-      CLOSE servicio_cur;
-      
-      OPEN foto_cur;
-          LOOP
-            FETCH foto_cur into v_i_foto_edi,v_foto_edi;
-            EXIT WHEN foto_cur%notfound;
-            v_fotos:= v_fotos || '{"idFoto":' ||v_i_foto_edi || ',"foto":"' || v_foto_edi || '"},';
-
-            
-          END LOOP;
-      CLOSE foto_cur;
+        v_areas:= area_funcion(v_id_edificio);
+        v_servicios:= servicio_function(v_id_edificio);
+        v_fotos:= foto_function(v_id_edificio);
         
-      dbms_output.put_line('{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion || '","telefono":'||v_telefono||',"servicio": [' ||v_servicios ||'],"areas": ['||v_areas ||'],"fotos": [' || v_fotos|| '],"fotoEdificio":"'||v_foto ||'","comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' ||v_activo || '},'); 
+      v_jsonF := '{"id":'||v_id_edificio || ',"nombre":"'|| v_nombre ||'","direccion":"'|| v_direccion || '","telefono":'||v_telefono||',"servicio": [' || v_servicios ||'],"areas": ['||v_areas ||'],"fotos": [' || v_fotos|| '],"fotoEdificio":"'||v_foto ||'","comuna":"'||v_comuna||'","region":"'||v_region|| '","activo":' ||v_activo || '},';
+      v_jsonF := REPLACE(v_jsonF,',]',']');
+      dbms_output.put_line(v_jsonF); 
    END LOOP; 
-    DBMS_OUTPUT.put_line('],');
+    DBMS_OUTPUT.put_line(']');
    CLOSE edificio_id_cur; 
 END; 
 END;
 
 
 /*
-begin
-    edificio_select();
-end;
-
-
 insert into deta_area_edi values (1,1,2,1);
 insert into deta_area_edi values (1,2,1,1);
 insert into deta_area_edi values (1,3,1,1);

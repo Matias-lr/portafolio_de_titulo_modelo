@@ -1,6 +1,3 @@
----------------
---SELECT ARRIENDO GENERAL
----------------
 
 CREATE OR REPLACE PROCEDURE arriendo_select
 is
@@ -65,19 +62,31 @@ BEGIN
 END; 
 END;
 
+/
 
-
-
-/*
-begin
-arriendo_select();
-end;
-
-
-insert into check_in values(1,to_date('12-07-2020','dd-mm-yyyy'),1,1,1);
-*/
-
-
-
-
- 
+CREATE OR REPLACE PROCEDURE imple_depa_id_select
+(v_id_im number)
+is
+BEGIN
+    DECLARE 
+    v_id_implemento NUMBER;
+    v_nombre VARCHAR2(50);
+    v_valor NUMBER;
+    v_activo CHAR;
+   CURSOR implemento_cur is 
+        select id_implemento,nombre_implemento,valor_implemento,imd.activo FROM IMPLEMENTOS_DEPARTAMENTO imd
+        join deta_imp_depa dip on dip.fk_id_implemento = imd.id_implemento
+        join departamento dep on dep.id_departamento = dip.fk_id_departamento
+        WHERE dep.id_departamento=v_id_im;
+    BEGIN 
+   OPEN implemento_cur; 
+	DBMS_OUTPUT.put_line('[');
+   LOOP 
+   FETCH implemento_cur into v_id_implemento, v_nombre,v_valor,v_activo; 
+      EXIT WHEN implemento_cur%notfound; 
+      dbms_output.put_line('{"id":'||v_id_implemento || ',"nombre":"'|| v_nombre ||'","valor":'|| v_valor ||',"activo":'||v_activo || '},'); 
+   END LOOP; 
+	DBMS_OUTPUT.put_line('[');
+   CLOSE implemento_cur; 
+END; 
+END;

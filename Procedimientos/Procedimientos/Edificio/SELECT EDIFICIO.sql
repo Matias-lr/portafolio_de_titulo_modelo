@@ -34,6 +34,8 @@ END;
 END;
 
 
+/
+
 
 CREATE OR REPLACE PROCEDURE edificio_id_select
 (id_edi NUMBER)
@@ -64,6 +66,7 @@ BEGIN
    CLOSE edificio_id_cur; 
 END; 
 END;
+/
 
 CREATE OR REPLACE PROCEDURE edificio_nombre_select
 (nombre_edi varchar2)
@@ -96,20 +99,4 @@ END;
 END;
 
 
-/*
-
-BEGIN
-    edificio_select();
-END;
-
-BEGIN
-    edificio_select_id(1);
-END;
-
-select * from edificio;
-
-BEGIN
-    edificio_nombre_select('edificio');
-END;
-
-*/
+/

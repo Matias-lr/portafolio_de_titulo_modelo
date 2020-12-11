@@ -36,9 +36,3 @@ BEGIN
 END; 
 END;
 
-
-/*
-begin
-depa_numero_edificio_select(2,'edificio');
-end;
-*/

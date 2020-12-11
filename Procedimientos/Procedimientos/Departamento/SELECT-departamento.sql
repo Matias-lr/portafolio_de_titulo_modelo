@@ -38,23 +38,7 @@ BEGIN
    CLOSE departamento_cur; 
 END; 
 END;
-
-
-
-/*
-select * from departamento;
-
-begin
-departamento_select();
-    
-end;
-
-     SELECT id_departamento,numero_habitacion,numero_habitaciones,metros_cuadrados,banios,piso,precio_noche,edi.direccion_edificio ,es.nombre, ft.foto_dep FROM DEPARTAMENTO dep
-        JOIN ESTADO es on es.id_estado = dep.fk_id_estado
-        JOIN EDIFICIO edi on edi.id_edificio = dep.fk_id_edificio
-        JOIN FOTO_DEPA ft on ft.fk_id_departamento = dep.id_departamento;
-        
-*/
+/
 
 -----------------------
 --Procedure llamar departamentos por id
@@ -91,7 +75,7 @@ BEGIN
    CLOSE departamento_cur_id; 
 END; 
 END;
-
+/
 
 -----------------------
 --Procedure llamar departamentos por estado
@@ -132,21 +116,5 @@ BEGIN
    CLOSE departamento_cur_estado; 
 END; 
 END;
-
----------------
----------------
-/*
-BEGIN
-    select_depa();
-END;
-
-BEGIN
-    select_depa_id(1);
-END;
-
-BEGIN
-    departamento_estado_select(1);
-END;
-*/
-
+/
       

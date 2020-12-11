@@ -41,7 +41,6 @@ BEGIN
         from fecha_peri_arr fp
         join arriendo ar on ar.id_arriendo=fp.fk_id_arriendo
         WHERE TRUNC(fp.fecha_periodo, 'IW') = TRUNC(SYSDATE, 'IW')
-        and TO_CHAR(fp.fecha_periodo, 'YYYY')= anio
         GROUP BY
         TO_CHAR(fp.fecha_periodo, 'YYYY'),
         TRUNC(fp.fecha_periodo, 'IW');
@@ -80,3 +79,6 @@ begin
     dash_proce(2020);
 end;
     
+    insert into arriendo values(5,to_date('17-11-2020','DD-MM-yyyy'),1,15000,1,null,null,1,1);
+    ''23-03-2020'',1,234000,2,null,null,1
+    select* from arriendo;
